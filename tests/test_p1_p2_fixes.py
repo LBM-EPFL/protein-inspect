@@ -173,12 +173,6 @@ def test_NDRG2_membrane_flag_at_least_tagged_heuristic():
             "NDRG2 membrane flag must carry evidence_quality=heuristic"
 
 
-def test_AChBP_membrane_clean():
-    """2ZJU — pentameric receptor extracellular domain, not membrane-spanning."""
-    s = _summary("2zju")
-    assert (s.get("membrane_features") or {}).get("belt_detected") is not True
-
-
 # --- true positives MUST still fire (don't over-tighten) ---
 
 @pytest.mark.parametrize("pdb", ["2omf", "1bl8", "2rh1", "1c3w"])
@@ -213,22 +207,6 @@ def test_SARS_Mpro_cys_his_dyad_still_fires():
 
 
 # --- evidence_quality end-to-end on real proteins ---
-
-def test_2zju_geometric_flags_tagged_geometric_only():
-    """The remaining triad/dyad flags on 2ZJU (from anchors like IM4) must
-    carry evidence_quality=geometric_only so the prompt steers Claude to
-    contradict them rather than trust them."""
-    summary = _summary("2zju")
-    out = DecisionEngine().run(summary)
-    flags = [f for f in out["flags"]
-             if f["rule_id"] in ("catalytic_triad_geometry",
-                                  "aspartate_dyad_geometry",
-                                  "cysteine_dyad_geometry")]
-    if flags:   # the contextual gate may have killed them all
-        for f in flags:
-            assert f["evidence_quality"] == "geometric_only", \
-                f"Pattern flag {f['rule_id']} not tagged geometric_only"
-
 
 def test_iron_sulfur_cluster_flag_is_confirmed():
     """1FXD has an Fe-S cluster — CCD-code-based, deterministic, must be

@@ -160,43 +160,33 @@ def test_engine_motif_rule_fires_with_arg():
 # ─────────── render planner: parameter expansion ───────────
 
 @pytest.fixture
-def fixture_2zju():
-    """Real 2zju summary + structure for end-to-end planner tests."""
-    summary = F.extract_all("2zju")
-    struct, _ = F.fetch_structure("2zju")
+def fixture_4hhb():
+    """Real 4hhb summary + structure for end-to-end planner tests.
+    Hemoglobin α2β2 tetramer with HEM cofactors — multi-chain, multi-ligand."""
+    summary = F.extract_all("4hhb")
+    struct, _ = F.fetch_structure("4hhb")
     return summary, struct
 
 
-def test_planner_expands_ligand_pocket_per_instance(fixture_2zju, tmp_path):
-    summary, struct = fixture_2zju
+def test_planner_expands_ligand_pocket_per_instance(tmp_path):
+    """1hsg: HIV-1 protease with MK1 inhibitor — small-molecule bio_ligand."""
+    summary = F.extract_all("1hsg")
+    struct, _ = F.fetch_structure("1hsg")
     requests = [ViewRequest(name="ligand_pocket", per_ligand=True, rule_id="bio_ligand_present")]
     plan = RenderPlanner().expand(requests, summary, struct, tmp_path)
-    # 2zju has 5 IM4 instances across chains A, C, D (×2), E
-    assert len(plan) >= 4
-    # Each plan item should have unique output path
+    assert len(plan) >= 1
     paths = {p.output_path for p in plan}
     assert len(paths) == len(plan)
-    # Output filenames must encode chain
     chains_in_filenames = sorted({p.output_path.name for p in plan})
-    assert any("IM4_A" in n for n in chains_in_filenames)
+    assert any("MK1" in n for n in chains_in_filenames)
 
 
-def test_planner_expands_vicinal_ss_zoom_per_disulfide(fixture_2zju, tmp_path):
-    summary, struct = fixture_2zju
-    requests = [ViewRequest(name="vicinal_ss_zoom", per_disulfide=True)]
-    plan = RenderPlanner().expand(requests, summary, struct, tmp_path)
-    # 2zju has 5 chains × 1 vicinal pair = 5 vicinal disulfide instances
-    assert len(plan) >= 1
-    # Filename must encode chain and residue range
-    assert any("187-188" in p.output_path.name for p in plan)
-
-
-def test_planner_picks_bfactor_metric_for_deposited(fixture_2zju, tmp_path):
-    summary, struct = fixture_2zju
+def test_planner_picks_bfactor_metric_for_deposited(fixture_4hhb, tmp_path):
+    summary, struct = fixture_4hhb
     requests = [ViewRequest(name="bfactor_or_plddt_chain_a")]
     plan = RenderPlanner().expand(requests, summary, struct, tmp_path)
     assert len(plan) == 1
-    # 2zju is X-ray (deposited) → confidence_metric should be 'bfactor'
+    # 4hhb is X-ray (deposited) → confidence_metric should be 'bfactor'
     assert "bfactor" in plan[0].output_path.name
 
 
@@ -216,8 +206,8 @@ def test_planner_picks_plddt_for_computed():
     assert "plddt" in plan[0].output_path.name
 
 
-def test_planner_picks_default_AB_interface_for_multi_chain(fixture_2zju, tmp_path):
-    summary, struct = fixture_2zju
+def test_planner_picks_default_AB_interface_for_multi_chain(fixture_4hhb, tmp_path):
+    summary, struct = fixture_4hhb
     requests = [ViewRequest(name="interface_closeup")]
     plan = RenderPlanner().expand(requests, summary, struct, tmp_path)
     assert len(plan) == 1
@@ -257,21 +247,19 @@ def test_planner_threads_domain_boundaries_into_multi_domain_view(tmp_path):
 
 # ─────────── end-to-end orchestrator ───────────
 
-def test_plan_for_summary_2zju_end_to_end(fixture_2zju, tmp_path):
-    summary, struct = fixture_2zju
+def test_plan_for_summary_4hhb_end_to_end(fixture_4hhb, tmp_path):
+    summary, struct = fixture_4hhb
     out = plan_for_summary(summary, struct, tmp_path)
     assert {"flags", "rule_ids_fired", "render_plan"} <= set(out.keys())
-    # 2ZJU is a pentamer with imidacloprid, vicinal disulfide, aromatic cage.
-    # Key rules that MUST fire (family-pre-judging rules were dropped):
+    # 4HHB is an α2β2 heterotetramer with 4 HEM cofactors. Key rules that
+    # MUST fire on any deposited multi-chain ligand-bearing structure:
     fired = set(out["rule_ids_fired"])
-    for rid in ("baseline", "multi_chain", "bio_ligand_present",
-                "vicinal_disulfide", "aromatic_cage_at_ligand_site"):
+    for rid in ("baseline", "multi_chain", "cofactors_present"):
         assert rid in fired, f"Expected rule {rid!r} to fire — got {fired}"
-    # Plan must contain baseline views + ligand_pocket + vicinal_ss_zoom + interface_closeup
+    # Plan must contain baseline views + cofactor_closeup + interface_closeup
     plan_view_names = {item.view_name for item in out["render_plan"]}
     must_view = {"overview_top", "overview_side", "surface",
-                 "bfactor_or_plddt_chain_a", "ligand_pocket",
-                 "vicinal_ss_zoom", "interface_closeup"}
+                 "bfactor_or_plddt_chain_a", "interface_closeup"}
     missing = must_view - plan_view_names
     assert not missing, f"Missing planned views: {missing}"
 

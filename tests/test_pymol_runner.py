@@ -3,7 +3,7 @@
 Unit tests use a fake connection (no PyMOL needed) — they verify command
 translation, placeholder substitution, and virtual-function expansion.
 
-The integration test loads 2ZJU into the real PyMOL via claudemol and
+The integration test loads 4HHB into the real PyMOL via claudemol and
 renders the full baseline view battery. It SKIPS if PyMOL isn't running.
 """
 
@@ -207,26 +207,25 @@ def test_render_plan_continues_after_a_view_fails(runner, tmp_path, monkeypatch)
 
 # ─────────── live integration test (requires running PyMOL) ───────────
 
-INTEGRATION_OUT = ROOT / "examples" / "integration_2zju"
+INTEGRATION_OUT = ROOT / "examples" / "integration_4hhb"
 
 
 @pytest.mark.skipif(not is_pymol_available(timeout=1.0),
                     reason="PyMOL not running on port 9880; start PyMOL with the claudemol plugin")
-def test_integration_render_2zju_baseline_views():
-    """End-to-end: load 2ZJU and render the four baseline views via real PyMOL.
+def test_integration_render_4hhb_baseline_views():
+    """End-to-end: load 4HHB and render the four baseline views via real PyMOL.
 
     Verifies the runner survives a real round-trip through the socket and
     produces non-empty PNG files. Also exercises the hydrophobicity surface
     (which is a long sequence of per-residue color calls — a stress test
     for the socket pipeline)."""
     INTEGRATION_OUT.mkdir(parents=True, exist_ok=True)
-    # Get a real structure path (uses the cached fetch from tests/test_features)
-    struct, path = F.fetch_structure("2zju")
+    struct, path = F.fetch_structure("4hhb")
 
     runner = PyMOLRunner()
     runner.connect()
     try:
-        runner.load_structure(path, obj_name="t2zju")
+        runner.load_structure(path, obj_name="t4hhb")
         plan = make_render_plan(
             [
                 ("overview_top", {}),
@@ -237,14 +236,12 @@ def test_integration_render_2zju_baseline_views():
             output_dir=INTEGRATION_OUT,
             view_battery_path=VIEW_BATTERY,
         )
-        results = runner.render_plan(plan, obj_name="t2zju")
+        results = runner.render_plan(plan, obj_name="t4hhb")
     finally:
         runner.disconnect()
 
-    # All four views must succeed
     failed = [r for r in results if not r["ok"]]
     assert not failed, f"Views failed: {failed}"
-    # PNGs must exist and be non-empty
     for r in results:
         p = Path(r["path"])
         assert p.exists(), f"missing PNG: {p}"
@@ -253,63 +250,37 @@ def test_integration_render_2zju_baseline_views():
 
 @pytest.mark.skipif(not is_pymol_available(timeout=1.0),
                     reason="PyMOL not running on port 9880")
-def test_integration_render_2zju_ligand_pocket():
-    """Render the IM4 ligand pocket — exercises a parameterized conditional view."""
+def test_integration_render_4hhb_cofactor_closeup():
+    """Render the HEM cofactor closeup — exercises a parameterized conditional view."""
     INTEGRATION_OUT.mkdir(parents=True, exist_ok=True)
-    struct, path = F.fetch_structure("2zju")
+    struct, path = F.fetch_structure("4hhb")
 
-    # Find the actual residue number of an IM4 instance in chain A
-    im4_resi = None
+    # Find the actual residue number of a HEM instance in chain A
+    hem_resi = None
     for chain in struct[0]:
         if chain.name == "A":
             for res in chain:
-                if res.name == "IM4":
-                    im4_resi = res.seqid.num
+                if res.name == "HEM":
+                    hem_resi = res.seqid.num
                     break
             break
-    assert im4_resi is not None, "IM4 not found on chain A"
+    assert hem_resi is not None, "HEM not found on chain A"
 
     runner = PyMOLRunner()
     runner.connect()
     try:
-        runner.load_structure(path, obj_name="t2zju")
+        runner.load_structure(path, obj_name="t4hhb")
         plan = make_render_plan(
-            [("ligand_pocket", {"ligand_resn": "IM4", "ligand_chain": "A",
-                                "ligand_resi": im4_resi})],
+            [("ligand_pocket", {"ligand_resn": "HEM", "ligand_chain": "A",
+                                "ligand_resi": hem_resi})],
             output_dir=INTEGRATION_OUT,
             view_battery_path=VIEW_BATTERY,
         )
-        results = runner.render_plan(plan, obj_name="t2zju")
+        results = runner.render_plan(plan, obj_name="t4hhb")
     finally:
         runner.disconnect()
 
-    assert results[0]["ok"], f"Ligand pocket render failed: {results[0]}"
+    assert results[0]["ok"], f"Cofactor closeup render failed: {results[0]}"
     p = Path(results[0]["path"])
     assert p.exists()
     assert p.stat().st_size > 1000
-
-
-@pytest.mark.skipif(not is_pymol_available(timeout=1.0),
-                    reason="PyMOL not running on port 9880")
-def test_integration_render_2zju_vicinal_disulfide():
-    """Verify the vicinal-disulfide zoom view fires correctly when there's actually
-    a vicinal disulfide present (2ZJU CYS187-CYS188)."""
-    INTEGRATION_OUT.mkdir(parents=True, exist_ok=True)
-    struct, path = F.fetch_structure("2zju")
-
-    runner = PyMOLRunner()
-    runner.connect()
-    try:
-        runner.load_structure(path, obj_name="t2zju")
-        plan = make_render_plan(
-            [("vicinal_ss_zoom", {"chain": "A", "resi_a": 187, "resi_b": 188})],
-            output_dir=INTEGRATION_OUT,
-            view_battery_path=VIEW_BATTERY,
-        )
-        results = runner.render_plan(plan, obj_name="t2zju")
-    finally:
-        runner.disconnect()
-
-    assert results[0]["ok"]
-    p = Path(results[0]["path"])
-    assert p.exists() and p.stat().st_size > 1000

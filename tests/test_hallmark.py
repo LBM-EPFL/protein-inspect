@@ -39,11 +39,6 @@ HALLMARK = [
     {"pdb": "1tim", "desc": "Triosephosphate isomerase (TIM barrel dimer)",
      "expect": {"oligomer": "dimer", "homo_or_hetero": "homo"}},
 
-    # Cys-loop / pentameric
-    {"pdb": "2zju", "desc": "Ls-AChBP pentamer + imidacloprid",
-     "expect": {"oligomer": "pentamer", "vicinal_disulfide": True,
-                "aromatic_cage": True, "bio_ligand": ["IM4"]}},
-
     # Hetero-oligomers
     {"pdb": "4hhb", "desc": "Hemoglobin α2β2 heterotetramer (heme)",
      "expect": {"oligomer": "tetramer", "homo_or_hetero": "hetero",

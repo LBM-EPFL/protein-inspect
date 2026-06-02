@@ -54,64 +54,54 @@ def test_minimal_summary_validates():
     Draft202012Validator(schema).validate(_minimal_summary())
 
 
-def test_full_2zju_shaped_summary_validates():
-    """A 2ZJU-shaped summary covering every optional layer."""
+def test_full_shaped_summary_validates():
+    """A complete summary covering every optional layer — modeled on
+    a multi-chain ligand-bearing deposited structure (4HHB-like)."""
     schema = json.loads(SCHEMA_PATH.read_text())
     full = _minimal_summary()
     full.update({
-        "entry": "2zju",
-        "narrative": "Ls-AChBP pentamer with imidacloprid.",
+        "entry": "4hhb",
+        "narrative": "Hemoglobin α2β2 heterotetramer with HEM cofactors.",
         "macromolecule_type": "protein_only",
         "provenance": {
             "source": "rcsb",
-            "resolution": 2.58,
+            "resolution": 1.74,
             "method": "X-RAY DIFFRACTION",
-            "resolution_class": "medium",
-            "space_group": "P 65",
-            "unit_cell": [74.97, 74.97, 351.01, 90.0, 90.0, 120.0],
-            "deposition_date": "2008-04-21",
+            "resolution_class": "high",
+            "space_group": "P 21 21 21",
+            "unit_cell": [63.15, 83.59, 53.80, 90.0, 90.0, 90.0],
+            "deposition_date": "1984-07-07",
         },
         "assembly": {
-            "n_chains": 5,
-            "oligomer": "pentamer",
-            "symmetry": "C5",
-            "homo_or_hetero": "homo",
-            "chains": ["A", "B", "C", "D", "E"],
-            "unique_sequences": 1,
-            "chain_rmsd_max": 0.42,
-            "interface_contacts": [{"pair": ["A", "B"], "n_residues": 6}],
+            "n_chains": 4,
+            "oligomer": "tetramer",
+            "symmetry": "C2",
+            "homo_or_hetero": "hetero",
+            "chains": ["A", "B", "C", "D"],
+            "unique_sequences": 2,
+            "chain_rmsd_max": 0.40,
+            "interface_contacts": [{"pair": ["A", "B"], "n_residues": 12}],
         },
         "fold": {
             "representative_chain": "A",
-            "length": 215,
-            "ss_fractions": {"helix": 0.07, "sheet": 0.42, "loop": 0.51},
-            "bfactor_stats": {"mean": 40.1, "min": 0.0, "max": 90.9},
+            "length": 141,
+            "ss_fractions": {"helix": 0.78, "sheet": 0.0, "loop": 0.22},
+            "bfactor_stats": {"mean": 18.7, "min": 4.5, "max": 65.2},
         },
         "ligands": {
-            "bio_ligand": [{
-                "id": "IM4", "name": "imidacloprid", "n_copies": 5,
-                "placement": "subunit_interface",
-                "binding_residues": {
-                    "principal":     {"chain": "A", "residues": ["TRP143", "TYR185", "CYS187", "CYS188", "TYR192"]},
-                    "complementary": {"chain": "B", "residues": ["TRP53", "TYR113", "TYR164"]},
-                },
-                "aromatic_cage": True,
-            }],
             "buffer": [],
-            "cryoprotectant": [{"id": "GOL", "n_copies": 12}],
+            "cryoprotectant": [],
         },
-        "disulfides": [
-            {"residues": ["CYS123", "CYS136"], "chains": ["A"], "distance_a": 2.04, "type": "standard"},
-            {"residues": ["CYS187", "CYS188"], "chains": ["A"], "distance_a": 2.05, "type": "vicinal", "flexibility": "high"},
+        "cofactors": [
+            {"id": "HEM", "n_copies": 4, "chemistry_class": "redox_heme"},
         ],
-        "active_site_patterns": [
-            {"pattern": "aromatic_cage", "residues": ["TRP143", "TYR185", "TYR192"], "chain": "A", "rule_id": "aromatic_cage_at_ligand_site"},
-        ],
+        "disulfides": [],
+        "active_site_patterns": [],
         "flags": [
-            {"rule_id": "vicinal_disulfide", "priority": "high",
-             "message": "Vicinal disulfide present."},
+            {"rule_id": "cofactors_present", "priority": "medium",
+             "message": "Cofactor(s) bound."},
         ],
-        "coords_ref": {"path": "./2zju.bcif", "format": "bcif"},
+        "coords_ref": {"path": "./4hhb.bcif", "format": "bcif"},
     })
     Draft202012Validator(schema).validate(full)
 

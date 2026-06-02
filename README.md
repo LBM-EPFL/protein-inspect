@@ -24,33 +24,19 @@ The decision tree is hand-curated structural-biology knowledge — the equivalen
 
 ## Install
 
-This is a Claude Code plugin. Once published to a marketplace:
-
-```
-/plugin marketplace add benedikt.singer/protein-inspect
-/plugin install protein-inspect
-```
-
-Or for local development:
-
 ```bash
-git clone https://gitlab.epfl.ch/benedikt.singer/protein-inspect
-cd protein-inspect
-uv sync
+uv tool install git+https://gitlab.epfl.ch/benedikt.singer/protein-inspect
 ```
 
-### Runtime dependencies
+That installs the `protein-inspect` CLI globally. The Claude Code plugin layer in `.claude-plugin/` is picked up automatically when the package is on your path.
 
-The Python side (`uv sync`) handles gemmi, biotite, pillow, jsonschema, pyyaml. Two extra things for `--render-views`:
-
-- **PyMOL** (open-source build is fine) running with the [claudemol](https://github.com/anthropics/claudemol) socket plugin listening on `127.0.0.1:9880`. Without this, the CLI runs feature extraction and writes `summary.yaml` but skips rendering.
-- **Optional**: [Merizo](https://github.com/psipred/Merizo) for ML-based domain segmentation. Install separately; the CLI falls back to a CATH-and-length heuristic if absent.
+Dependencies: [PyMOL](https://github.com/schrodinger/pymol-open-source) (required for `--render-views`), and optionally [Merizo](https://github.com/psipred/Merizo) for ML-based domain segmentation.
 
 ## Quick start
 
 ```bash
 # A deposited crystal structure
-uv run protein-inspect 2zju --render-views --out 2zju/
+uv run protein-inspect 1mbn --render-views --out 1mbn/
 
 # A local file (mmCIF or PDB)
 uv run protein-inspect /path/design.cif --render-views --out design/
@@ -66,7 +52,7 @@ Outputs land under `<out>/`:
 
 ```
 <entry>/
-├── 2zju.cif              # coords (copied / fetched)
+├── 1mbn.cif              # coords (copied / fetched)
 ├── summary.yaml          # the LLM-facing semantic layer
 ├── montage.png           # single labeled grid of all views
 └── views/                # individual view PNGs (1200×900)
@@ -74,7 +60,7 @@ Outputs land under `<out>/`:
     ├── 02_side.png
     ├── 03_bfactor_chain_A.png
     ├── 04_surface_hydrophobic.png
-    ├── 05_pocket_IM4_A.png
+    ├── 05_pocket_HEM_A.png
     └── ...
 ```
 

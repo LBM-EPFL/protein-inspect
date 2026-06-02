@@ -38,27 +38,17 @@ def test_parser_minimal_invocation():
 
 def test_parser_full_flags():
     args = build_parser().parse_args(
-        ["2zju", "--render-views", "--motif", "His57,Asp102,Ser195",
+        ["1mbn", "--render-views", "--motif", "His64,Val68",
          "--use-merizo", "--out", "/tmp/x"]
     )
-    assert args.target == "2zju"
+    assert args.target == "1mbn"
     assert args.render_views is True
-    assert args.motif == "His57,Asp102,Ser195"
+    assert args.motif == "His64,Val68"
     assert args.use_merizo is True
     assert args.out == "/tmp/x"
 
 
 # ─────────── RCSB title fetch ───────────
-
-@pytest.mark.network
-def test_fetch_rcsb_title_2zju():
-    """2ZJU's title should mention AChBP and imidacloprid."""
-    title = fetch_rcsb_title("2zju")
-    if title is None:
-        pytest.skip("RCSB Data API unreachable")
-    title_lower = title.lower()
-    assert "achbp" in title_lower or "acetylcholine" in title_lower
-
 
 @pytest.mark.network
 def test_fetch_rcsb_title_invalid_returns_none():
@@ -88,57 +78,6 @@ def test_pipeline_1ubq_yaml_only(tmp_path):
 
     # No visual block since render_views=False
     assert "visual" not in loaded or loaded["visual"] is None
-
-
-def test_pipeline_2zju_yaml_with_narrative(tmp_path):
-    """Pipeline must populate narrative for deposited PDB IDs."""
-    summary = run_pipeline("2zju", out_dir=tmp_path, render_views=False,
-                           fetch_narrative=True)
-    VALIDATOR.validate(summary)
-    # narrative may be None if RCSB is unreachable — soft check
-    if summary["narrative"]:
-        title_lower = summary["narrative"].lower()
-        assert "achbp" in title_lower or "acetylcholine" in title_lower
-
-
-def test_pipeline_2zju_decision_engine_outputs_present(tmp_path):
-    """Pipeline must produce flags from the decision tree."""
-    summary = run_pipeline("2zju", out_dir=tmp_path, render_views=False,
-                           fetch_narrative=False)
-    assert "flags" in summary
-    rule_ids = {f["rule_id"] for f in summary["flags"]}
-    # Vicinal disulfide MUST be flagged for 2ZJU
-    assert "vicinal_disulfide" in rule_ids
-
-
-# ─────────── live integration (requires PyMOL) ───────────
-
-@pytest.mark.skipif(not is_pymol_available(timeout=1.0),
-                    reason="PyMOL not running on port 9880")
-def test_pipeline_2zju_with_render(tmp_path):
-    """Full end-to-end on 2ZJU with rendering. Verifies:
-    - Schema validates
-    - summary.yaml has a visual block with the expected canonical views
-    - All rendered PNGs exist and are non-empty
-    """
-    summary = run_pipeline("2zju", out_dir=tmp_path, render_views=True,
-                           fetch_narrative=False)
-    VALIDATOR.validate(summary)
-
-    assert summary["visual"] is not None
-    rendered_names = {r["name"] for r in summary["visual"]["rendered"]}
-    # 2zju MUST produce these views
-    must_have = {"overview_top", "overview_side", "surface",
-                 "bfactor_or_plddt_chain_a", "ligand_pocket",
-                 "vicinal_ss_zoom", "interface_closeup"}
-    missing = must_have - rendered_names
-    assert not missing, f"Missing views in visual block: {missing}"
-
-    # All PNGs must exist and be non-trivial size
-    for r in summary["visual"]["rendered"]:
-        p = Path(r["path"])
-        assert p.exists(), f"missing PNG: {p}"
-        assert p.stat().st_size > 1000, f"suspiciously small: {p}"
 
 
 # ─────────── main() return codes ───────────

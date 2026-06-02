@@ -48,7 +48,7 @@ Implications for shipping:
 
 - Replace `USER` placeholders in `.claude-plugin/plugin.json` (homepage + repository) with the real GitHub URL.
 - Make the first git commit, push to a GitHub remote, tag `v0.1.0`.
-- Add `summary.yaml` to `examples/integration_2zju/` (only the 7 rendered PNGs are there now) so the demo dir is complete.
+- Add `summary.yaml` to `examples/integration_1mbn/` (only the 7 rendered PNGs are there now) so the demo dir is complete.
 - Write the README headline around the **+10.37 / +10.08 / +10.13 holdout lift** with the negative-constraint caveat on C and the per-protein table from `evals/results.md` as the supporting evidence.
 - Optional: investigate the 9N97 / 9QNM "A beats materials" pattern. If a small features.py fix recovers those, the B and C numbers go up; if not, document the limitation in the README.
 
@@ -103,7 +103,7 @@ claude-protein-tools/
 │   ├── rubric.yaml                    # scoring criteria
 │   └── run_eval.py                    # harness
 └── examples/
-    └── 2zju/                          # worked example with screenshots + YAML
+    └── 1mbn/                          # worked example with screenshots + YAML
 ```
 
 **Deliverables for Phase 0:**
@@ -129,7 +129,7 @@ The output schema, locked before any code is written. This is the contract betwe
 
 ```yaml
 # summary.yaml — output contract
-entry: 2ZJU                           # PDB ID or filename
+entry: 1MBN                           # PDB ID or filename
 generated: 2026-05-06T14:32:00Z
 schema_version: "1.0"
 
@@ -222,7 +222,7 @@ flags:                                # things the decision tree said deserve at
   - "Aromatic cage (≥3 aromatic residues) at ligand binding site"
 
 coords_ref:                           # never inlined
-  path: ./2zju.bcif
+  path: ./1mbn.bcif
   format: bcif
 
 visual:                               # optional, populated when --render-views
@@ -451,11 +451,11 @@ Respond as Markdown with the section headers above. Length: 400–800 words.
 | 5   | `emit.py`: produce final `summary.yaml` matching the schema. Validate against `summary.schema.json` (JSON Schema) |
 
 **Phase 1 acceptance criteria:**
-- Run `protein-inspect 2zju --render-views` end to end without manual intervention
+- Run `protein-inspect 1mbn --render-views` end to end without manual intervention
 - Output `summary.yaml` validates against schema
 - All 6 standard images render
 - Re-running on the same input produces byte-identical YAML (modulo timestamps) and pixel-identical PNGs (modulo PyMOL nondeterminism flagged separately)
-- Output captures everything I (Claude) found by hand on 2ZJU today, without any of it living in my head
+- Output captures everything I (Claude) found by hand on 1MBN today, without any of it living in my head
 
 ---
 
@@ -476,7 +476,7 @@ Curated set spanning fold types, mechanisms, and edge cases:
 
 ```yaml
 # 20 structures × known facts
-- pdb: 2zju
+- pdb: 1mbn
   expected:
     oligomer: pentamer
     fold_class: cys_loop_receptor_extracellular_domain
@@ -544,7 +544,7 @@ Score against the rubric. **Original hypothesis** (PLAN v1): **C > B >> A**, wit
 1. `.claude-plugin/plugin.json` has placeholder URLs (`https://github.com/USER/protein-inspect`) — replace with the real GitHub URL once the remote exists.
 2. No git commits in the repo. `git log` is empty; everything is untracked. Make the first commit before anything else.
 3. No GitHub remote. Create the repo, push, tag `v0.1.0`.
-4. `examples/integration_2zju/` has 7 rendered PNGs but no `summary.yaml`. Add it so the demo dir is a complete example.
+4. `examples/integration_1mbn/` has 7 rendered PNGs but no `summary.yaml`. Add it so the demo dir is a complete example.
 5. README headline (and any marketplace blurb) should reflect the actual eval findings, not the original "C > B >> A" prediction.
 
 ### 3.1 — Self-publish (immediate, no review)
@@ -567,7 +567,7 @@ Submission package:
 - README.md with: install instructions, usage examples, **eval results table from Phase 2**, screenshots of YAML output and a sample image
 - LICENSE (MIT)
 - Working install path verified
-- Demo/examples directory (`examples/2zju/` from this work, ready-made)
+- Demo/examples directory (`examples/1mbn/` from this work, ready-made)
 
 Once approved → `/plugin install protein-inspect@claude-plugins-official`.
 

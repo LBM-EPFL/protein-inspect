@@ -82,8 +82,8 @@ listing what an expert would expect Claude to identify.
 Format (one file per PDB):
 
 ```yaml
-# evals/ground_truth/2zju.yaml
-pdb: 2zju
+# evals/ground_truth/1mbn.yaml
+pdb: 1mbn
 description: |
   Ls-AChBP pentamer in complex with imidacloprid. Soluble structural homolog
   of the extracellular ligand-binding domain of nicotinic acetylcholine
@@ -129,7 +129,7 @@ the over-eager flag based on other evidence.
 | **A** (baseline) | Raw PDB text (~50k tokens for medium proteins). Question: "Analyze this protein." |
 | **B** (skill, text only) | `summary.yaml` only, no images. Same question. |
 | **C** (skill, full) | `summary.yaml` + the canonical PyMOL view battery. Same question. |
-| **D** (control) | PDB ID only ("Tell me about 2ZJU"). Tests how much of Claude's answer is recall vs. extraction. |
+| **D** (control) | PDB ID only ("Tell me about 1MBN"). Tests how much of Claude's answer is recall vs. extraction. |
 
 The crucial comparison is **B vs A** (does the YAML help?) and **C vs B** (do
 the images add value beyond the text?). D vs A is a sanity check — if D is
@@ -179,7 +179,7 @@ A single markdown table:
 | PDB  | A (raw PDB) | B (YAML)    | C (YAML+imgs) | D (ID only) | best ground-truth |
 |------|-------------|-------------|---------------|-------------|-------------------|
 | 1ubq | 6.5/13      | 11/13       | 12/13         | 9/13        | 13 (manual)       |
-| 2zju | 5/13        | 10/13       | 12/13         | 7/13        | 12                |
+| 1mbn | 5/13        | 10/13       | 12/13         | 7/13        | 12                |
 | ...  | ...         | ...         | ...           | ...         | ...               |
 | MEAN | 6.1         | 10.4        | 11.7          | 7.8         | 12.4              |
 ```
@@ -255,7 +255,7 @@ I'd suggest:
 evals/
 ├── ground_truth/        # 20 YAML files (your curation)
 │   ├── 1ubq.yaml
-│   ├── 2zju.yaml
+│   ├── 1mbn.yaml
 │   └── ...
 ├── prompts/
 │   ├── system.md        # the system prompt for the eval runs

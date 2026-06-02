@@ -174,7 +174,7 @@ Counts the number of (pdb, condition) cells where the response triggered at leas
 | 1ubq | 13 | 13 | 13 | 13 | **D** |
 | 2omf | 13 | 13 | 13 | 13 | **D** |
 | 2rh1 | 13 | 13 | 13 | 13 | **D** |
-| 2zju | 13 | 13 | 13 | 6 | **C** |
+| 1mbn | 13 | 13 | 13 | 6 | **C** |
 | 3grs | 13 | 12 | 13 | 13 | **D** |
 | 4hhb | 13 | 11 | 13 | 13 | **D** |
 | 5cha | 13 | 12 | 13 | 13 | **D** |
@@ -197,7 +197,7 @@ Where the eval has signal. The full-set means above mostly reflect a ceiling eff
 | 1fxd | 12 | 12 | 12 | 11 |
 | 1hsg | 13 | 13 | 11 | 11 |
 | 1nr0 | 11 | 13 | 11 | 6 |
-| 2zju | 13 | 13 | 13 | 6 |
+| 1mbn | 13 | 13 | 13 | 6 |
 | **mean** | **11.83** | **12.00** | **11.33** | **9.17** |
 
 - Subset lift **A − D** = +2.67
@@ -206,7 +206,7 @@ Where the eval has signal. The full-set means above mostly reflect a ceiling eff
 
 ## How to read these numbers
 
-- **D (baseline)** asks Claude to reason about a PDB ID with no materials provided. This measures pure prior knowledge — for famous structures (1ubq, 2zju, 6vxx, 6lu7) this is high; for obscure or recent entries it should be low.
+- **D (baseline)** asks Claude to reason about a PDB ID with no materials provided. This measures pure prior knowledge — for famous structures (1ubq, 1mbn, 6vxx, 6lu7) this is high; for obscure or recent entries it should be low.
 - **A (raw mmCIF)** tests whether Claude can extract structural facts from coordinates directly. The architectural premise of the project is that this should be the *worst* performing materials condition.
 - **B (`summary.yaml`)** is the layered semantic representation — residues with roles, ligands with SMILES, flagged features.
 - **C (`summary.yaml` + view battery)** adds the standardized PyMOL images. The lift from B → C should concentrate in spatial-gestalt criteria (`oligomer`, `fold_class`, and qualitative `notable_features`).

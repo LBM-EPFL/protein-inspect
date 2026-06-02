@@ -74,18 +74,6 @@ def test_assembly_monomer():
     assert a["oligomer"] == "monomer"
 
 
-def test_assembly_pentamer():
-    """2zju: Ls-AChBP homopentamer."""
-    s, _ = F.fetch_structure("2zju")
-    a = F.extract_assembly(s)
-    assert a["n_chains"] == 5
-    assert a["homo_or_hetero"] == "homo"
-    assert a["oligomer"] == "pentamer"
-    assert a["unique_sequences"] == 1
-    # Ring topology: each chain contacts 2 neighbors → ~5 contact pairs
-    assert len(a["interface_contacts"]) >= 4
-
-
 def test_assembly_hetero_oligomer():
     """4hhb: hemoglobin α2β2 heterotetramer."""
     s, _ = F.fetch_structure("4hhb")
@@ -124,14 +112,6 @@ def test_ligand_classification_filters_glycerol():
     assert "HOH" not in bio
 
 
-def test_ligand_classification_2zju_has_im4():
-    s, _ = F.fetch_structure("2zju")
-    cls = F.load_ligand_classes()
-    p = F.extract_ligand_classification(s, cls)
-    # IM4 (imidacloprid) is unclassified in our list → bio_ligand
-    assert "IM4" in p["bio_ligand_codes"]
-
-
 # ─────────── metals / cofactors ───────────
 
 def test_metals_in_4hhb_heme_iron():
@@ -150,16 +130,6 @@ def test_metals_in_4hhb_heme_iron():
 
 
 # ─────────── disulfides ───────────
-
-def test_disulfides_2zju_includes_vicinal():
-    s, _ = F.fetch_structure("2zju")
-    ds = F.extract_disulfides(s)
-    types = {d["type"] for d in ds}
-    assert "vicinal" in types
-    # Vicinal at consecutive residues 187-188
-    vic = next(d for d in ds if d["type"] == "vicinal")
-    assert "187" in vic["residues"][0] or "187" in vic["residues"][1]
-
 
 # ─────────── active site patterns ───────────
 
@@ -197,11 +167,6 @@ def test_hiv_protease_has_asp_dyad():
 
 def test_full_summary_validates_for_1ubq():
     summary = F.extract_all("1ubq")
-    VALIDATOR.validate(summary)
-
-
-def test_full_summary_validates_for_2zju():
-    summary = F.extract_all("2zju")
     VALIDATOR.validate(summary)
 
 

@@ -13,6 +13,9 @@ wheels/
 evals/materials/
 evals/runs/
 
+# Integration-test output (written by tests/test_pymol_runner.py)
+examples/integration_*/
+
 # OS / editor
 .DS_Store
 *.swp

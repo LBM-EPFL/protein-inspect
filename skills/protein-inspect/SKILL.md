@@ -19,10 +19,10 @@ Standardized inspection pipeline for protein structures. Combines deterministic 
 
 ```bash
 # basic — fetch from PDB and emit summary.yaml only
-protein-inspect 2zju
+protein-inspect 1mbn
 
 # with rendered view battery (slower, requires running PyMOL with claudemol plugin)
-protein-inspect 2zju --render-views
+protein-inspect 1mbn --render-views
 
 # local file
 protein-inspect /path/to/design.pdb --render-views
@@ -31,7 +31,7 @@ protein-inspect /path/to/design.pdb --render-views
 protein-inspect 1kxj --motif His153,Asp166,Ser142 --render-views
 
 # output directory
-protein-inspect 2zju --out ./analysis/2zju/
+protein-inspect 1mbn --out ./analysis/1mbn/
 ```
 
 ## Output layout
@@ -39,7 +39,7 @@ protein-inspect 2zju --out ./analysis/2zju/
 ```
 <out_dir>/
 ├── summary.yaml          # the semantic layer Claude reads
-├── 2zju.bcif             # coordinates, externalized
+├── 1mbn.bcif             # coordinates, externalized
 └── views/                # only when --render-views
     ├── 01_top.png
     ├── 02_side.png

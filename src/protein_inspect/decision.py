@@ -311,8 +311,8 @@ class RenderPlanner:
     def _iter_ligand_params(summary: dict, structure: gemmi.Structure) -> list[dict]:
         """For each bio_ligand entry, find every (chain, resi) instance in the
         structure and emit one view per instance. Including resi ensures distinct
-        copies of the same ligand on the same chain (e.g. Chain D of 2ZJU has
-        2 IM4 molecules) get separate filenames and separate close-up views."""
+        copies of the same ligand on the same chain get separate filenames and
+        separate close-up views."""
         bio_ligands = (summary.get("ligands") or {}).get("bio_ligand") or []
         if not bio_ligands:
             return []

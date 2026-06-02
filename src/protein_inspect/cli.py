@@ -6,8 +6,8 @@ from the RCSB Data API so `narrative` is populated for PDB-fetched entries
 (instead of the `no_narrative` rule firing unnecessarily).
 
 Usage:
-    protein-inspect 2zju                                      # YAML only
-    protein-inspect 2zju --render-views                       # + canonical PyMOL views
+    protein-inspect 1mbn                                      # YAML only
+    protein-inspect 1mbn --render-views                       # + canonical PyMOL views
     protein-inspect /path/to/design.pdb --render-views        # local file
     protein-inspect 1kxj --motif His153,Asp166,Ser142 --render-views
     protein-inspect /path/design.pdb --use-merizo             # ML domain segmentation
@@ -180,7 +180,7 @@ def build_parser() -> argparse.ArgumentParser:
                     "representation (summary.yaml + canonical PyMOL views).",
     )
     p.add_argument("target",
-                   help="4-letter PDB ID (e.g. 2zju) OR path to a local "
+                   help="4-letter PDB ID (e.g. 1mbn) OR path to a local "
                         ".pdb/.cif/.bcif structure file")
     p.add_argument("--out", "-o", default=None,
                    help="Output directory (default: ./<entry>/)")

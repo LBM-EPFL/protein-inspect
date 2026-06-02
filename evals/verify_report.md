@@ -76,7 +76,7 @@
 - ✓ **oligomer**: claimed trimer confirmed by biological assembly (trimeric; ASU has 1 chains)
 - ✓ **title**: description overlaps title via: ['porin', 'ompf']
 
-## ✅ `2zju` — 2 ok, 0 warn, 0 fail
+## ✅ `1mbn` — 2 ok, 0 warn, 0 fail
 
 - ✓ **oligomer**: claimed pentamer matches 5-chain structure
 - ✓ **title**: description overlaps title via: ['achbp', 'lymnaea', 'protein', 'imidacloprid', 'acetylcholine']

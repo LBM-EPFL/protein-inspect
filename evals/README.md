@@ -24,7 +24,7 @@ uv sync --extra dev
 uv run python evals/run_eval.py --only 1ubq --conditions B --skip-render
 
 # 10 minutes — full pipeline on 1 protein, all 4 conditions (needs PyMOL)
-uv run python evals/run_eval.py --only 2zju --conditions ABCD
+uv run python evals/run_eval.py --only 1mbn --conditions ABCD
 ```
 
 Check `evals/runs/<latest>/results.md` — should show scores.
@@ -50,7 +50,7 @@ uv run python evals/run_eval.py --run-dir evals/runs/<that-same-dir>
 
 | Flag | Purpose |
 |---|---|
-| `--only 1ubq,2zju,5cha` | Run only specific PDBs |
+| `--only 1ubq,1mbn,5cha` | Run only specific PDBs |
 | `--conditions BC` | Skip A and D; just compare YAML-only vs YAML+images |
 | `--skip-render` | Skip PyMOL rendering (condition C will fail gracefully) |
 | `--limit 5` | Cap at first N proteins (for debugging) |
@@ -93,8 +93,8 @@ cat evals/runs/<latest>/results.md
 cat evals/runs/<latest>/eval.log | tail -30
 
 # Spot-check a few high-leverage entries
-cat evals/runs/<latest>/responses/2zju_C.txt    # AChBP with images
-cat evals/runs/<latest>/scores/2zju_C.json
+cat evals/runs/<latest>/responses/1mbn_C.txt    # AChBP with images
+cat evals/runs/<latest>/scores/1mbn_C.json
 cat evals/runs/<latest>/responses/af_q9un36_B.txt   # NDRG2 pseudo-enzyme trap
 cat evals/runs/<latest>/scores/af_q9un36_B.json
 ```

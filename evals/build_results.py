@@ -295,7 +295,7 @@ def render(run_dir: Path, scores: dict,
     lines.append("## How to read these numbers\n\n")
     lines.append(
         "- **D (baseline)** asks Claude to reason about a PDB ID with no materials provided. "
-        "This measures pure prior knowledge — for famous structures (1ubq, 2zju, 6vxx, 6lu7) "
+        "This measures pure prior knowledge — for famous structures (1ubq, 6vxx, 6lu7) "
         "this is high; for obscure or recent entries it should be low.\n"
         "- **A (raw mmCIF)** tests whether Claude can extract structural facts from coordinates "
         "directly. The architectural premise of the project is that this should be the *worst* "

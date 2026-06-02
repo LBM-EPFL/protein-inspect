@@ -1,14 +1,14 @@
 # Hallmark Report — protein-inspect feature extraction
-Run on 20 structures.
+Run on 19 structures.
 
 | PDB | Description | All checks matched? | Time (s) |
 |-----|-------------|---------------------|----------|
-| 1adc | Alcohol dehydrogenase (NAD analog PAD, Zn) | 2/2 ✓ | 0.07 |
-| 1aon | GroEL chaperonin (large, multi-domain, 14-mer asymmetric unit subset) | 1/1 ✓ | 2.33 |
+| 1adc | Alcohol dehydrogenase (NAD analog PAD, Zn) | 2/2 ✓ | 0.06 |
+| 1aon | GroEL chaperonin (large, multi-domain, 14-mer asymmetric unit subset) | 1/1 ✓ | 2.39 |
 | 1asy | Aspartyl-tRNA synthetase + tRNA | 1/1 ✓ | 0.07 |
 | 1atp | PKA catalytic subunit (kinase, ATP, divalent metal) | 2/2 ✓ | 0.03 |
 | 1bl8 | KcsA potassium channel (TM tetramer) | 2/2 ✓ | 0.03 |
-| 1cdw | TBP-DNA complex | 1/1 ✓ | 0.01 |
+| 1cdw | TBP-DNA complex | 1/1 ✓ | 0.02 |
 | 1fxd | Ferredoxin (4Fe-4S cluster) | 1/1 ✓ | 0.01 |
 | 1hsg | HIV-1 protease (Asp25-Asp25' dimer dyad) | 3/3 ✓ | 0.02 |
 | 1igy | IgG immunoglobulin (multi-chain, glycosylated) | 3/3 ✓ | 0.07 |
@@ -17,14 +17,13 @@ Run on 20 structures.
 | 1ubq | Ubiquitin (small β-grasp monomer) | 2/2 ✓ | 0.01 |
 | 2omf | OmpF porin (β-barrel membrane) | 1/1 ✓ | 0.02 |
 | 2rh1 | β2-adrenergic receptor (GPCR, 7TM) | 1/1 ✓ | 0.02 |
-| 2zju | Ls-AChBP pentamer + imidacloprid | 4/4 ✓ | 0.06 |
 | 4hhb | Hemoglobin α2β2 heterotetramer (heme) | 3/3 ✓ | 0.03 |
 | 5cha | Chymotrypsin (Ser-His-Asp triad, post-cleavage chains) | 1/1 ✓ | 0.02 |
 | 5pep | Pepsin (aspartyl protease, intra-chain Asp dyad) | 0/1 ✗ | 0.02 |
-| 6lu7 | SARS-CoV-2 main protease (Cys-His dyad, dimer + inhibitor) | 1/1 ✓ | 0.17 |
+| 6lu7 | SARS-CoV-2 main protease (Cys-His dyad, dimer + inhibitor) | 1/1 ✓ | 0.18 |
 | 7rsa | Ribonuclease A (small, 4 disulfides) | 2/2 ✓ | 0.01 |
 
-**Overall: 35/36 expectations matched (97%)**
+**Overall: 31/32 expectations matched (97%)**
 
 ## Per-entry detail
 
@@ -93,13 +92,6 @@ Run on 20 structures.
 ### 2rh1 — β2-adrenergic receptor (GPCR, 7TM)
 - ✓ `membrane_likely` expected `True` → got `True`
 - summary excerpt: `{'macromolecule_type': 'protein_only', 'assembly': {'n_chains': 1, 'oligomer': 'monomer', 'homo_or_hetero': 'monomer', 'symmetry': None, 'unique_sequences': 1}, 'fold': {'length': 442, 'ss_fractions': {'helix': 0.8665158371040724, 'sheet': 0.12895927601809956, 'loop': 0.004524886877828055}}, 'n_metals': 0, 'metals': [], 'n_cofactors': 0, 'cofactors': [], 'disulfide_types': ['standard', 'standard'], 'active_site_patterns': [], 'bio_ligands': ['ACM', 'BU1', 'CAU', 'PLM'], 'artifacts': {'cryoprotectant': ['12P'], 'precipitant_salt': ['SO4'], 'unclassified': ['ACM', 'BU1', 'CAU', 'PLM']}, 'membrane_likely': True}`
-
-### 2zju — Ls-AChBP pentamer + imidacloprid
-- ✓ `oligomer` expected `pentamer` → got `pentamer`
-- ✓ `vicinal_disulfide` expected `True` → got `True`
-- ✓ `aromatic_cage` expected `True` → got `True`
-- ✓ `bio_ligand` expected `['IM4']` → got `['IM4']`
-- summary excerpt: `{'macromolecule_type': 'protein_only', 'assembly': {'n_chains': 5, 'oligomer': 'pentamer', 'homo_or_hetero': 'homo', 'symmetry': 'C5', 'unique_sequences': 1}, 'fold': {'length': 208, 'ss_fractions': {'helix': 0.25120772946859904, 'sheet': 0.7246376811594203, 'loop': 0.024154589371980676}}, 'n_metals': 0, 'metals': [], 'n_cofactors': 0, 'cofactors': [], 'disulfide_types': ['standard', 'vicinal', 'standard', 'vicinal', 'standard', 'vicinal', 'standard', 'vicinal', 'standard', 'vicinal'], 'active_site_patterns': ['catalytic_triad', 'catalytic_triad', 'catalytic_triad', 'catalytic_triad', 'asp_dyad', 'aromatic_cage', 'aromatic_cage', 'aromatic_cage', 'aromatic_cage', 'aromatic_cage'], 'bio_ligands': ['IM4'], 'artifacts': {'unclassified': ['IM4']}, 'membrane_likely': False}`
 
 ### 4hhb — Hemoglobin α2β2 heterotetramer (heme)
 - ✓ `oligomer` expected `tetramer` → got `tetramer`
