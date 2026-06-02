@@ -1,0 +1,448 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/USER/protein-inspect/schema/summary.schema.json",
+  "title": "protein-inspect summary",
+  "description": "Layered semantic representation of a protein structure for LLM reasoning. Schema v1.1 adds: ligand triage (bio vs crystallographic artifact), macromolecule_type, model_quality (computed-model handling), metals, cofactors, nucleic_acids, glycans, lipids, domains, active_site_patterns, membrane_features. Coordinates are always externalized via coords_ref.",
+  "type": "object",
+  "required": ["entry", "schema_version", "generated", "macromolecule_type", "model_quality", "provenance", "assembly", "fold"],
+  "additionalProperties": false,
+  "properties": {
+    "entry":          { "type": "string", "minLength": 1 },
+    "schema_version": { "type": "string", "const": "1.1" },
+    "generated":      { "type": "string", "format": "date-time" },
+
+    "narrative": {
+      "type": ["string", "null"],
+      "description": "One-paragraph human-readable description from PDB title/abstract. Null for designed structures or unannotated entries."
+    },
+
+    "macromolecule_type": {
+      "enum": ["protein_only", "dna_only", "rna_only", "protein_dna", "protein_rna", "protein_glycan", "protein_lipid", "mixed"],
+      "description": "Classification of polymer chains in the structure"
+    },
+
+    "model_quality": {
+      "type": "object",
+      "required": ["is_computed"],
+      "additionalProperties": false,
+      "properties": {
+        "is_computed": { "type": "boolean", "description": "True if input is an AlphaFold/RoseTTAFold/RFdiffusion model (resolution null AND B-factor range in [0,100])" },
+        "confidence_metric": { "enum": ["plddt", "bfactor", "none"], "description": "What the B-factor column represents" },
+        "plddt_summary": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "mean": { "type": "number", "minimum": 0, "maximum": 100 },
+            "fraction_high":   { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction with pLDDT > 90" },
+            "fraction_medium": { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction with 70 < pLDDT ≤ 90" },
+            "fraction_low":    { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction with pLDDT ≤ 70" },
+            "low_confidence_regions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["chain", "range", "mean_plddt"],
+                "additionalProperties": false,
+                "properties": {
+                  "chain":      { "type": "string" },
+                  "range":      { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+                  "mean_plddt": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "required": ["source"],
+      "additionalProperties": false,
+      "properties": {
+        "source":           { "enum": ["rcsb", "local_file", "alphafold_db", "predicted"] },
+        "input_path":       { "type": "string" },
+        "resolution":       { "type": ["number", "null"], "minimum": 0 },
+        "method":           { "type": ["string", "null"] },
+        "resolution_class": { "enum": ["high", "medium", "low", "cryo_em", "computed", "unknown"] },
+        "space_group":      { "type": ["string", "null"] },
+        "unit_cell":        { "type": ["array", "null"], "items": { "type": "number" }, "minItems": 6, "maxItems": 6 },
+        "deposition_date":  { "type": ["string", "null"], "format": "date" }
+      }
+    },
+
+    "assembly": {
+      "type": "object",
+      "required": ["n_chains", "chains", "homo_or_hetero"],
+      "additionalProperties": false,
+      "properties": {
+        "n_chains":           { "type": "integer", "minimum": 1 },
+        "oligomer":           { "enum": ["monomer", "dimer", "trimer", "tetramer", "pentamer", "hexamer", "heptamer", "octamer", "higher_order", "unknown"] },
+        "symmetry":           { "type": ["string", "null"] },
+        "homo_or_hetero":     { "enum": ["homo", "hetero", "monomer"] },
+        "chains":             { "type": "array", "items": { "type": "string" } },
+        "unique_sequences":   { "type": "integer", "minimum": 1 },
+        "chain_rmsd_max":     { "type": ["number", "null"] },
+        "interface_contacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["pair", "n_residues"],
+            "additionalProperties": false,
+            "properties": {
+              "pair":       { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 2 },
+              "n_residues": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    },
+
+    "fold": {
+      "type": "object",
+      "required": ["representative_chain", "length", "ss_fractions"],
+      "additionalProperties": false,
+      "properties": {
+        "representative_chain": { "type": "string" },
+        "length":               { "type": "integer", "minimum": 1 },
+        "ss_fractions": {
+          "type": "object",
+          "required": ["helix", "sheet", "loop"],
+          "additionalProperties": false,
+          "properties": {
+            "helix": { "type": "number", "minimum": 0, "maximum": 1 },
+            "sheet": { "type": "number", "minimum": 0, "maximum": 1 },
+            "loop":  { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "ss_string": { "type": ["string", "null"] },
+        "bfactor_stats": {
+          "type": "object",
+          "description": "Crystallographic / cryo-EM displacement (Å²). Higher = more disordered / mobile. Only emitted for deposited structures.",
+          "required": ["mean", "min", "max"],
+          "additionalProperties": false,
+          "properties": {
+            "mean": { "type": "number" },
+            "min":  { "type": "number" },
+            "max":  { "type": "number" },
+            "std":  { "type": "number" }
+          }
+        },
+        "plddt_stats": {
+          "type": "object",
+          "description": "Per-residue pLDDT confidence (0-100, higher = more confident). EMITTED INSTEAD OF bfactor_stats for AlphaFold-DB / computed models, where the B-factor column carries pLDDT not displacement. High mean ≠ flexible.",
+          "required": ["mean", "min", "max"],
+          "additionalProperties": false,
+          "properties": {
+            "mean":               { "type": "number", "minimum": 0, "maximum": 100 },
+            "min":                { "type": "number", "minimum": 0, "maximum": 100 },
+            "max":                { "type": "number", "minimum": 0, "maximum": 100 },
+            "std":                { "type": "number" },
+            "fraction_very_high": { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction of CA atoms with pLDDT ≥ 90 (very high confidence)" },
+            "fraction_confident": { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction with 70 ≤ pLDDT < 90 (confident)" },
+            "fraction_low":       { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction with 50 ≤ pLDDT < 70 (low)" },
+            "fraction_very_low":  { "type": "number", "minimum": 0, "maximum": 1, "description": "fraction with pLDDT < 50 (very low / disordered prediction)" }
+          }
+        }
+      }
+    },
+
+    "domains": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "count":       { "type": "integer", "minimum": 1 },
+        "detected_by": { "enum": ["user", "contact_map_ratio", "cath_api", "merizo", "pae"] },
+        "boundaries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["chain", "range"],
+            "additionalProperties": false,
+            "properties": {
+              "chain": { "type": "string" },
+              "range": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 }
+            }
+          }
+        }
+      }
+    },
+
+    "ligands": {
+      "type": "object",
+      "description": "HETATM partition. Crystallographic artifacts kept here for transparency but should not be treated as functional.",
+      "additionalProperties": false,
+      "properties": {
+        "bio_ligand": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "n_copies"],
+            "additionalProperties": false,
+            "properties": {
+              "id":       { "type": "string", "description": "PDB CCD code" },
+              "name":     { "type": ["string", "null"] },
+              "smiles":   { "type": ["string", "null"] },
+              "n_copies": { "type": "integer", "minimum": 1 },
+              "placement": { "enum": ["subunit_interface", "intra_subunit_pocket", "surface", "central_cavity", "unknown"] },
+              "binding_residues": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "principal":     { "type": "object", "required": ["chain", "residues"], "additionalProperties": false, "properties": { "chain": { "type": "string" }, "residues": { "type": "array", "items": { "type": "string" } } } },
+                  "complementary": { "type": "object", "required": ["chain", "residues"], "additionalProperties": false, "properties": { "chain": { "type": "string" }, "residues": { "type": "array", "items": { "type": "string" } } } }
+                }
+              },
+              "aromatic_cage":     { "type": "boolean" },
+              "occupancy_pattern": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "buffer":             { "type": "array", "items": { "type": "object", "required": ["id", "n_copies"], "properties": { "id": { "type": "string" }, "n_copies": { "type": "integer" } } } },
+        "cryoprotectant":     { "type": "array", "items": { "type": "object", "required": ["id", "n_copies"], "properties": { "id": { "type": "string" }, "n_copies": { "type": "integer" } } } },
+        "precipitant_salt":   { "type": "array", "items": { "type": "object", "required": ["id", "n_copies"], "properties": { "id": { "type": "string" }, "n_copies": { "type": "integer" } } } },
+        "detergent":          { "type": "array", "items": { "type": "object", "required": ["id", "n_copies"], "properties": { "id": { "type": "string" }, "n_copies": { "type": "integer" } } } },
+        "heavy_atom_phasing": { "type": "array", "items": { "type": "object", "required": ["id", "n_copies"], "properties": { "id": { "type": "string" }, "n_copies": { "type": "integer" } } } },
+        "unclassified":       { "type": "array", "items": { "type": "object", "required": ["id", "n_copies"], "properties": { "id": { "type": "string" }, "n_copies": { "type": "integer" } } } }
+      }
+    },
+
+    "metals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "n_copies", "coordinating_residues"],
+        "additionalProperties": false,
+        "properties": {
+          "id":           { "type": "string" },
+          "n_copies":     { "type": "integer", "minimum": 1 },
+          "cluster_type": { "enum": ["mononuclear", "FES", "F3S", "SF4", "CFM", "binuclear_other", "polynuclear_other"] },
+          "coordinating_residues": { "type": "array", "items": { "type": "string" } },
+          "context":      { "enum": ["catalytic_likely", "structural_likely", "unknown"], "description": "Heuristic classification: in pocket near functional moiety vs surface-exposed" }
+        }
+      }
+    },
+
+    "cofactors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "n_copies", "chemistry_class"],
+        "additionalProperties": false,
+        "properties": {
+          "id":              { "type": "string" },
+          "name":            { "type": ["string", "null"] },
+          "n_copies":        { "type": "integer", "minimum": 1 },
+          "chemistry_class": { "enum": ["redox_2e", "redox_1e_or_2e", "redox_heme", "redox_quinone", "schiff_base", "thiamine", "acyl_thioester", "methyl_donor", "carrier", "one_carbon", "cobalamin", "other"] },
+          "binding_residues": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "nucleotides_free": {
+      "type": "array",
+      "description": "Free nucleotides (ATP, GTP, etc.) — distinct from polymer NA chains and from cofactor-bound nucleotides.",
+      "items": {
+        "type": "object",
+        "required": ["id", "n_copies"],
+        "additionalProperties": false,
+        "properties": {
+          "id":                  { "type": "string" },
+          "n_copies":            { "type": "integer", "minimum": 1 },
+          "binding_residues":    { "type": "array", "items": { "type": "string" } },
+          "near_phosphate_loop": { "type": "boolean" }
+        }
+      }
+    },
+
+    "nucleic_acids": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "type":       { "enum": ["DNA", "RNA", "hybrid"] },
+        "chains":     { "type": "array", "items": { "type": "string" } },
+        "n_residues": { "type": "integer", "minimum": 1 },
+        "is_double_stranded": { "type": "boolean" }
+      }
+    },
+
+    "glycans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "n_copies"],
+        "additionalProperties": false,
+        "properties": {
+          "id":                 { "type": "string" },
+          "n_copies":           { "type": "integer", "minimum": 1 },
+          "linked_to_residues": { "type": "array", "items": { "type": "string" }, "description": "ASN residues with N-linked, SER/THR with O-linked" }
+        }
+      }
+    },
+
+    "lipids": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "n_copies"],
+        "additionalProperties": false,
+        "properties": {
+          "id":       { "type": "string" },
+          "n_copies": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+
+    "disulfides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["residues", "distance_a", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "residues":    { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 2 },
+          "chains":      { "type": "array", "items": { "type": "string" }, "minItems": 1, "maxItems": 2 },
+          "distance_a":  { "type": "number" },
+          "type":        { "enum": ["standard", "vicinal", "interchain"] },
+          "annotation":  { "type": "string" },
+          "flexibility": { "enum": ["low", "medium", "high"] }
+        }
+      }
+    },
+
+    "peptide_ligands": {
+      "type": "array",
+      "description": "Bound peptide ligands: short polymer-protein chains (≤30 residues) distinct from the main protein. Examples: macrocyclic peptide inhibitors of KRAS / MDM2, peptidomimetic Mpro inhibitors, neuropeptide-bound GPCRs, cleaved propeptides retained in mature enzymes.",
+      "items": {
+        "type": "object",
+        "required": ["chain", "n_residues"],
+        "additionalProperties": false,
+        "properties": {
+          "chain":       { "type": "string" },
+          "n_residues":  { "type": "integer", "minimum": 1, "maximum": 30 },
+          "sequence":    { "type": "string" }
+        }
+      }
+    },
+
+    "active_site_patterns": {
+      "type": "array",
+      "description": "Geometric patterns suggestive of catalytic activity. Pattern presence does not name a family — the analysis prompt connects pattern + cofactor + fold for that.",
+      "items": {
+        "type": "object",
+        "required": ["pattern", "residues", "rule_id"],
+        "additionalProperties": false,
+        "properties": {
+          "pattern":  { "enum": ["catalytic_triad", "cys_his_dyad", "asp_dyad", "phosphate_binding_loop", "aromatic_cage"] },
+          "residues": { "type": "array", "items": { "type": "string" } },
+          "chain":    { "type": "string" },
+          "geometry": { "type": "object", "additionalProperties": true, "description": "Distances or angles characterizing the pattern" },
+          "rule_id":  { "type": "string" }
+        }
+      }
+    },
+
+    "membrane_features": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "belt_detected":     { "type": "boolean" },
+        "belt_residues":     { "type": "array", "items": { "type": "string" } },
+        "trp_girdle":        { "type": "boolean" },
+        "tyr_girdle":        { "type": "boolean" },
+        "estimated_belt_width_a": { "type": ["number", "null"] }
+      }
+    },
+
+    "chain_disorder": {
+      "type": "array",
+      "description": "Residue gaps in chain (missing density)",
+      "items": {
+        "type": "object",
+        "required": ["chain", "range"],
+        "additionalProperties": false,
+        "properties": {
+          "chain":             { "type": "string" },
+          "range":             { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+          "near_functional":   { "type": "boolean", "description": "True if gap is within 8 Å of a ligand/metal/cofactor" }
+        }
+      }
+    },
+
+    "motif": {
+      "type": ["object", "null"],
+      "description": "User-specified or auto-detected from active_site_patterns",
+      "additionalProperties": true,
+      "properties": {
+        "name":        { "type": "string" },
+        "detected_by": { "enum": ["user", "decision_tree"] },
+        "residues":    { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string" } } },
+        "geometry":    { "type": "object", "additionalProperties": true }
+      }
+    },
+
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["message"],
+        "additionalProperties": false,
+        "properties": {
+          "rule_id":  { "type": "string" },
+          "priority": { "enum": ["low", "medium", "high"] },
+          "evidence_quality": {
+            "enum": ["confirmed", "strong", "geometric_only", "heuristic"],
+            "description": "How load-bearing this flag is. confirmed: deterministic (CCD code present, S-S distance measured). strong: multi-signal convergent. geometric_only: detected by geometric pattern matching alone — must be corroborated by fold/cofactor/ligand context before being treated as a fact. heuristic: weak signal, treat as hypothesis."
+          },
+          "message":  { "type": "string" }
+        }
+      }
+    },
+
+    "coords_ref": {
+      "type": "object",
+      "required": ["path", "format"],
+      "additionalProperties": false,
+      "properties": {
+        "path":   { "type": "string" },
+        "format": { "enum": ["bcif", "cif", "pdb"] }
+      }
+    },
+
+    "visual": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["views_dir", "battery_version", "rendered"],
+      "properties": {
+        "views_dir":       { "type": "string" },
+        "battery_version": { "type": "string" },
+        "rendered": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "path"],
+            "additionalProperties": true,
+            "properties": {
+              "name":    { "type": "string" },
+              "path":    { "type": "string" },
+              "ray":     { "type": "boolean" },
+              "details": { "type": "object", "additionalProperties": true }
+            }
+          }
+        },
+        "montage": {
+          "type": "object",
+          "description": "Composite grid image of all rendered views, with view names burned in as title bars. Workaround for the Claude Code CLI's 3-image @path cap (see evals/experiments/cli_image_dropout_findings.md). One attachment carries the whole battery.",
+          "required": ["path", "n_panels", "grid", "panel_size", "total_size"],
+          "additionalProperties": false,
+          "properties": {
+            "path":       { "type": "string" },
+            "n_panels":   { "type": "integer", "minimum": 1 },
+            "grid":       { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+            "panel_size": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+            "total_size": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 }
+          }
+        }
+      }
+    }
+  }
+}

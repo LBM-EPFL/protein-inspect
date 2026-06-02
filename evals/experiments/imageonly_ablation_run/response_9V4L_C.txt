@@ -1,0 +1,35 @@
+### 1. Identity & function
+
+The materials provide no narrative annotation for PDB entry 9V4L (the `no_narrative` flag is set). What can be stated from the materials: this is a small (~70-residue), almost entirely α-helical protein deposited 2025-05-23, solved by X-ray diffraction at 1.3 Å, with a single bound Zn²⁺ ion coordinated by His7, Asp11, Asp45, and His54. The protein name and biological role are **unknown from the available materials**. Given the very short length, near-100% helical content, recency of deposition, and idealized appearance, I suspect (inference) this is a *de novo* designed mini-protein scaffold — possibly a designed Zn-binding helical bundle — rather than a natural enzyme, but this cannot be confirmed from the supplied data.
+
+### 2. Macromolecular composition
+
+Protein only (`macromolecule_type: protein_only`). One polypeptide chain (A, 70 residues). One Zn²⁺ ion is present as a non-polymer ligand. No DNA, RNA, glycans, or lipids are reported.
+
+### 3. Quaternary structure
+
+The asymmetric unit contains a **single chain** (chain A) and the assembly is annotated as a **monomer**. Space group is P 2₁2₁2₁ with a compact unit cell (34 × 41 × 47 Å), consistent with crystal packing of a small monomeric protein. There is no point-group symmetry to report for a monomer. No discrepancy between ASU and biological assembly is indicated in the materials.
+
+### 4. Fold class
+
+The secondary-structure string is essentially all helix (98.5% H, with a single residue assigned E that is almost certainly a noise/edge call given the surrounding helices). The view battery shows **two long α-helices** packed against each other in an antiparallel arrangement, connected by a short loop. This is a **helical hairpin / two-helix bundle**, the simplest member of the all-α fold class. It is *not* a canonical three- or four-helix bundle by the count of helices visible. Such hairpins are common as designed mini-protein scaffolds and as fragments of larger bundles.
+
+### 5. Active site / catalytic mechanism
+
+A single **mononuclear Zn²⁺ site** is present, coordinated by **His7, Asp11, His54, and Asp45** — a 2-His/2-Asp ligand set. The `protein-inspect` heuristic labels its context as "catalytic_likely," but with only a 70-residue helical hairpin and no substrate, no extended pocket visible in the views, and no narrative, **enzymatic function cannot be assigned** from these materials. The two flagged "aspartate dyad" patterns are almost certainly artifacts of the same Zn coordination geometry: the Asp11/Asp45 pair (closest O–O = 3.06 Å) are the two carboxylate Zn ligands, not an independent acid/base dyad, and the Glu8/Glu20 pair (4.39 Å) is geometric-only and unsupported by any catalytic-fold context. I would treat both `aspartate_dyad_geometry` flags as **coincidental geometric matches secondary to the Zn site**, not evidence of an aspartyl protease, glycosidase, or phosphatase mechanism. Mechanism class: **unknown from the available materials**; the Zn site could equally well be structural.
+
+### 6. Cofactors, metals, ligands
+
+One **Zn²⁺** ion, mononuclear, tetrahedrally (likely) coordinated by the His7/Asp11/Asp45/His54 set described above. A 2-His/2-carboxylate Zn site is chemically versatile — it occurs in catalytic contexts (matrix metalloproteases, carbonic anhydrase variants use different motifs; some hydrolases use 2H/2D) and in purely structural contexts (zinc-stabilized mini-proteins, designed Zn-binding bundles). No organic cofactors, no substrate analogs, no buffer molecules of note are reported.
+
+### 7. Notable structural features
+
+- Very high resolution (1.3 Å) and very low, tight B-factor distribution (mean 9.3 Å², std 2.2 Å²) — the model is exceptionally well ordered throughout, as visible in the uniformly deep-blue chain-A B-factor view.
+- A single compact domain (residues 0–68) by contact-map analysis.
+- No disulfides, no modified residues, no glycans, and no PTMs are reported.
+- No membrane belt, Trp girdle, or Tyr girdle — this is a soluble protein.
+- Family-defining sequence motifs: none can be assigned without sequence/annotation.
+
+### 8. Hypotheses & inferences
+
+*Marked as inference.* The combination of (a) ~70 residues, (b) ≈99% helical content arranged as a two-helix hairpin, (c) a cleanly tetrahedral 2-His/2-Asp Zn site with ligands distributed along both helices, (d) very low, uniform B-factors, (e) a 2025 deposition with no narrative, and (f) lack of any natural-protein hallmarks (disulfides, PTMs, glycans, substrate, cofactor beyond Zn) is most consistent with a **de novo designed Zn-binding mini-protein** rather than a natural enzyme. I infer the Zn is **structural** (organizing the hairpin) rather than catalytic, and that the dyad-geometry flags are **false positives** driven by the Zn ligand carboxylates. None of this is confirmed by the materials — confirmation would require the sequence, the depositor's title/keywords, or a structural-similarity search, none of which are provided here.

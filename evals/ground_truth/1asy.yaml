@@ -1,0 +1,64 @@
+pdb: 1asy
+short_name: "Aspartyl-tRNA synthetase + tRNA-Asp (protein-RNA complex)"
+description: |
+  Yeast aspartyl-tRNA synthetase (AspRS) complexed with its cognate
+  tRNA-Asp and ATP analog. Class II aminoacyl-tRNA synthetase
+  (homodimer, ~557 aa per subunit). Catalyzes attachment of Asp to the
+  3'-OH of tRNA-Asp in a two-step ATP-dependent reaction. Multi-domain:
+  N-terminal anticodon-binding β-barrel + catalytic core (class II fold
+  with antiparallel β-sheet rather than the Rossmann fold of class I
+  synthetases). Specificity for tRNA-Asp comes from anticodon
+  recognition.
+
+identity:
+  must_mention_one_of:
+    - "aspartyl-tRNA synthetase"
+    - "AspRS"
+    - "aminoacyl-tRNA synthetase"
+    - "tRNA synthetase"
+  reference_phrase: "Aspartyl-tRNA synthetase — class II aminoacyl-tRNA synthetase bound to tRNA-Asp"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer", "α2 dimer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "class II aminoacyl-tRNA synthetase fold"
+    - "class II synthetase fold"
+    - "antiparallel β-sheet"
+    - "anticodon-binding β-barrel"
+
+active_site:
+  # Class II aminoacyl-tRNA synthetases share three sequence motifs (1, 2, 3).
+  # Motif 2 contains a conserved arginine that stabilizes the ATP α-phosphate.
+  # Specific residue numbers vary across the family; for 1ASY yeast AspRS the
+  # canonical Arg in motif 2 is Arg325, and Arg531 in motif 3 is also critical
+  # for tRNA acceptor-stem contact. We list these explicitly.
+  type: none
+  catalytic_residues:
+    - {name: ARG325, role: "motif 2 — ATP α-phosphate stabilization"}
+    - {name: ARG531, role: "motif 3 — tRNA acceptor-end contact"}
+  mechanism_class: transferase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "tRNA-Asp + ATP analog (AMPPNP or similar)"
+
+notable_features:
+  must_mention_one_of:
+    - "class II synthetase"
+    - "aminoacylation"
+    - "anticodon recognition"
+    - "tRNA-Asp"
+    - "two-step mechanism"
+
+negative_constraints:
+  - "must not call it a class I synthetase (it is class II)"
+  - "must not claim a Rossmann fold (class I synthetases have Rossmann; class II do not)"
+  - "must not call it a DNA-binding protein"
+
+inference_hygiene:
+  required: false

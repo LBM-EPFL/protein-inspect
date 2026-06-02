@@ -1,0 +1,84 @@
+{
+  "pdb": "1aon",
+  "desc": "GroEL chaperonin (large, multi-domain, 14-mer asymmetric unit subset)",
+  "elapsed_sec": 2.33,
+  "checks": [
+    {
+      "check": "multi_domain",
+      "expected": true,
+      "actual": true,
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 21,
+    "homo_or_hetero": "hetero",
+    "n_bio_ligands": 0,
+    "n_artifacts": 0,
+    "n_metals": 1,
+    "n_cofactors": 0,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 28,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 21,
+      "oligomer": "higher_order",
+      "homo_or_hetero": "hetero",
+      "symmetry": null,
+      "unique_sequences": 2
+    },
+    "fold": {
+      "length": 524,
+      "ss_fractions": {
+        "helix": 0.6641221374045801,
+        "sheet": 0.32633587786259544,
+        "loop": 0.009541984732824428
+      }
+    },
+    "n_metals": 1,
+    "metals": [
+      "MG"
+    ],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [],
+    "active_site_patterns": [
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad"
+    ],
+    "bio_ligands": [],
+    "artifacts": {},
+    "membrane_likely": false
+  }
+}

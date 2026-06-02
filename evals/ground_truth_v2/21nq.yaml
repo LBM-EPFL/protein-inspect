@@ -1,0 +1,67 @@
+pdb: 21NQ
+short_name: "Human SLC37A4 (glucose-6-phosphate exchanger) — apo state"
+description: |
+  Cryo-EM structure (2.8 Å) of human SLC37A4 in the apo (substrate-free)
+  state. SLC37A4 is the endoplasmic reticulum glucose-6-phosphate
+  exchanger that couples cytoplasmic G6P import into the ER lumen with
+  inorganic-phosphate (Pi) export — the rate-limiting step in
+  gluconeogenesis / glycogenolysis. Loss-of-function mutations cause
+  glycogen storage disease type Ib. SLC37A4 is a 10–12 transmembrane-helix
+  Major Facilitator Superfamily (MFS) antiporter, structurally analogous
+  to other sugar-phosphate exchangers (UhpT, GlpT). This apo entry has NO
+  ligand bound — it tests Claude's discipline against fabricating
+  cofactors / substrates when the structure shows none.
+
+identity:
+  must_mention_one_of:
+    - "SLC37A4"
+    - "glucose-6-phosphate"
+    - "G6P"
+    - "MFS"
+    - "ER"
+    - "endoplasmic reticulum"
+  reference_phrase: "SLC37A4 — ER glucose-6-phosphate / Pi exchanger; MFS antiporter; mutated in glycogen storage disease type Ib"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric MFS transporter"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "Major Facilitator Superfamily"
+    - "MFS"
+    - "MFS fold"
+    - "10-TM"
+    - "12-TM"
+    - "α-helical bundle"
+    - "transmembrane"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "none — this is the apo state. A full TM transporter NEEDS its substrate to function but it is intentionally NOT present in this entry."
+
+notable_features:
+  must_mention_one_of:
+    - "MFS"
+    - "transmembrane"
+    - "antiporter"
+    - "apo"
+    - "ER"
+    - "endoplasmic reticulum"
+    - "sugar-phosphate"
+
+negative_constraints:
+  - "must not claim a bound substrate (G6P or Pi) — this entry is apo"
+  - "must not claim a metal cofactor — none is present and MFS transporters generally don't require metals"
+  - "must not describe SLC37A4 as an enzyme — it is a transporter"
+  - "must not call it a kinase or phosphatase"
+
+inference_hygiene:
+  required: true

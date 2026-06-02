@@ -1,0 +1,59 @@
+{
+  "pdb": "1ubq",
+  "desc": "Ubiquitin (small \u03b2-grasp monomer)",
+  "elapsed_sec": 0.01,
+  "checks": [
+    {
+      "check": "oligomer",
+      "expected": "monomer",
+      "actual": "monomer",
+      "matched": true
+    },
+    {
+      "check": "macromolecule",
+      "expected": "protein_only",
+      "actual": "protein_only",
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 1,
+    "homo_or_hetero": "monomer",
+    "n_bio_ligands": 0,
+    "n_artifacts": 0,
+    "n_metals": 0,
+    "n_cofactors": 0,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 0,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 1,
+      "oligomer": "monomer",
+      "homo_or_hetero": "monomer",
+      "symmetry": null,
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 76,
+      "ss_fractions": {
+        "helix": 0.47368421052631576,
+        "sheet": 0.5263157894736842,
+        "loop": 0.0
+      }
+    },
+    "n_metals": 0,
+    "metals": [],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [],
+    "active_site_patterns": [],
+    "bio_ligands": [],
+    "artifacts": {},
+    "membrane_likely": false
+  }
+}

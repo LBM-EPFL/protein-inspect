@@ -1,0 +1,66 @@
+pdb: 4oo8
+short_name: "S. pyogenes Cas9 + sgRNA + target DNA (CRISPR ribonucleoprotein)"
+description: |
+  Streptococcus pyogenes Cas9 in complex with its single-guide RNA
+  (sgRNA) and target DNA — the founding ternary complex structure of
+  CRISPR-Cas9 genome editing (Anders et al., Nature 2014, 4OO8 / Nishimasu
+  et al., Cell 2014, 4OO8). Cas9 is a bilobed protein (REC + NUC lobes,
+  ~1368 residues) with two nuclease domains: HNH (cleaves DNA target
+  strand) and RuvC (cleaves non-target strand). PAM recognition occurs
+  in the C-terminal domain. Tests very-large multi-component RNP
+  complex with substantial structural complexity. Macromolecule type
+  is protein+DNA+RNA.
+
+identity:
+  must_mention_one_of:
+    - "Cas9"
+    - "CRISPR"
+    - "SpCas9"
+    - "CRISPR-Cas9"
+  reference_phrase: "S. pyogenes Cas9 in ternary complex with sgRNA and target DNA"
+
+oligomeric_state:
+  correct: monomer
+  acceptable:
+    - "monomer"
+    - "Cas9 RNP complex (one Cas9 + one sgRNA + DNA target)"
+    - "single protein chain with RNA and DNA"
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "bilobed"
+    - "REC and NUC lobes"
+    - "Cas9 fold"
+    - "two-lobed"
+    - "multi-domain"
+
+active_site:
+  type: none
+  mechanism_note: "Two distinct nuclease active sites: HNH (cleaves target DNA strand) and RuvC (cleaves non-target strand). HNH uses a 'βββα-Me' fold with Mg2+ coordination; RuvC has an 'RNase H-like' fold with two-metal-ion mechanism. Canonical residue numbers (His840 in HNH, Asp10/Asp986 in RuvC) refer to full-length SpCas9; the deposited construct in 4OO8 may renumber. Verify against the entry SEQRES before quoting specific positions."
+  catalytic_residues: []
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []   # may contain Mg2+ in some entries; sgRNA + DNA chains
+  bio_ligand: "sgRNA + double-stranded DNA target"
+
+notable_features:
+  must_mention_one_of:
+    - "HNH"
+    - "RuvC"
+    - "PAM"
+    - "sgRNA"
+    - "protospacer"
+    - "two nuclease domains"
+    - "CRISPR"
+    - "genome editing"
+
+negative_constraints:
+  - "must NOT claim it is a polymerase"
+  - "must NOT call it a single-nuclease enzyme — Cas9 has TWO distinct nuclease active sites"
+  - "must NOT identify it as a restriction enzyme"
+
+inference_hygiene:
+  required: false

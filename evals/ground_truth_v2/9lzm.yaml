@@ -1,0 +1,69 @@
+pdb: 9LZM
+short_name: "SARS-CoV-2 main protease (3CLpro / Mpro) + pomotrelvir"
+description: |
+  SARS-CoV-2 main protease (Mpro, 3C-like protease, nsp5) in complex with
+  the peptidomimetic antiviral pomotrelvir. Mpro is the obligate-homodimer
+  cysteine protease that cleaves the viral polyprotein at 11 sites; both
+  subunits are required for activity but each protomer carries its own
+  active site (Cys145 nucleophile, His41 general base — "Cys-His dyad" of
+  the chymotrypsin-like fold class). Major COVID-19 drug target.
+  Pomotrelvir is a covalent nirmatrelvir-class warhead inhibitor; expect
+  ZQB (CCD) bound at the active site, covalently attached or in close
+  proximity to Cys145.
+
+identity:
+  must_mention_one_of:
+    - "main protease"
+    - "Mpro"
+    - "3CL"
+    - "3CLpro"
+    - "nsp5"
+    - "SARS-CoV-2"
+    - "coronavirus protease"
+  reference_phrase: "SARS-CoV-2 main protease (Mpro / 3CLpro) — chymotrypsin-like cysteine protease, obligate dimer with Cys145-His41 dyad"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer", "obligate dimer", "2-mer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "chymotrypsin fold"
+    - "chymotrypsin-like"
+    - "β-barrel"
+    - "trypsin-like"
+    - "two β-barrel"
+
+active_site:
+  type: dyad
+  catalytic_residues:
+    - {name: CYS145, role: "nucleophile"}
+    - {name: HIS41, role: "general base"}
+  mechanism_class: hydrolase
+  location: intra-subunit
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ZQB, chemistry_class: covalent_inhibitor}
+  bio_ligand: "pomotrelvir — peptidomimetic covalent inhibitor of Mpro"
+
+notable_features:
+  must_mention_one_of:
+    - "Cys-His dyad"
+    - "cysteine protease"
+    - "obligate dimer"
+    - "chymotrypsin-like"
+    - "Cys145"
+    - "His41"
+    - "covalent inhibitor"
+    - "warhead"
+
+negative_constraints:
+  - "must not call it a serine protease"
+  - "must not claim it's a metalloprotease"
+  - "must not invoke a Ser-His-Asp triad"
+  - "must not call the inhibitor non-covalent without evidence"
+
+inference_hygiene:
+  required: false

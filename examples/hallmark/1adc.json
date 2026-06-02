@@ -1,0 +1,102 @@
+{
+  "pdb": "1adc",
+  "desc": "Alcohol dehydrogenase (NAD analog PAD, Zn)",
+  "elapsed_sec": 0.07,
+  "checks": [
+    {
+      "check": "cofactor",
+      "expected": [
+        "NAD",
+        "NAI",
+        "NAJ",
+        "PAD"
+      ],
+      "actual": [
+        "PAD"
+      ],
+      "matched": true
+    },
+    {
+      "check": "metals",
+      "expected": [
+        "ZN"
+      ],
+      "actual": [
+        "ZN"
+      ],
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 2,
+    "homo_or_hetero": "homo",
+    "n_bio_ligands": 1,
+    "n_artifacts": 1,
+    "n_metals": 1,
+    "n_cofactors": 1,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 18,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 2,
+      "oligomer": "dimer",
+      "homo_or_hetero": "homo",
+      "symmetry": "C2",
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 374,
+      "ss_fractions": {
+        "helix": 0.40641711229946526,
+        "sheet": 0.5775401069518716,
+        "loop": 0.016042780748663103
+      }
+    },
+    "n_metals": 1,
+    "metals": [
+      "ZN"
+    ],
+    "n_cofactors": 1,
+    "cofactors": [
+      [
+        "PAD",
+        "redox_2e"
+      ]
+    ],
+    "disulfide_types": [],
+    "active_site_patterns": [
+      "catalytic_triad",
+      "catalytic_triad",
+      "catalytic_triad",
+      "catalytic_triad",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop"
+    ],
+    "bio_ligands": [
+      "EOH"
+    ],
+    "artifacts": {
+      "unclassified": [
+        "EOH"
+      ]
+    },
+    "membrane_likely": false
+  }
+}

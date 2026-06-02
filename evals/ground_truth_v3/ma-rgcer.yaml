@@ -1,0 +1,67 @@
+pdb: ma-rgcer
+short_name: "De novo designed coiled-coil with diversified heptad repeats"
+description: |
+  An 83-residue de novo designed protein — a four-helix-bundle coiled-coil
+  fold in which the heptad repeat pattern is deliberately diversified across
+  helices. The hydrophobic core positions (a and d in the heptad) carry
+  L/V/I/A/F/W; surface positions carry charged residues. Single chain,
+  fully helical (~94% helix). Designed computationally; structure deposited
+  in ModelArchive (DOI 10.5452/ma-rgcer) as an AlphaFold-quality predicted
+  model with pLDDT in the B-factor column. No biological / functional role
+  — pure structural design.
+
+identity:
+  must_mention_one_of:
+    - "coiled coil"
+    - "coiled-coil"
+    - "four-helix bundle"
+    - "helix bundle"
+    - "designed"
+    - "de novo"
+    - "engineered"
+  reference_phrase: "De novo designed four-helix-bundle coiled coil"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric", "single chain"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "coiled coil"
+    - "coiled-coil"
+    - "four-helix bundle"
+    - "helical bundle"
+    - "α-helical"
+    - "all-α"
+    - "heptad repeat"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "none — pure structural scaffold, no bound ligand, cofactor, or metal"
+
+notable_features:
+  must_mention_one_of:
+    - "heptad"
+    - "coiled coil"
+    - "coiled-coil"
+    - "four-helix"
+    - "helix bundle"
+    - "designed"
+    - "de novo"
+    - "α-helical"
+
+negative_constraints:
+  - "must not call it an enzyme — no catalytic activity intended"
+  - "must not claim a bound ligand or cofactor — none is present"
+  - "must not call it a natural protein — it is computationally designed"
+  - "must not invoke a catalytic triad or dyad"
+
+inference_hygiene:
+  required: true

@@ -1,0 +1,64 @@
+pdb: 5k7p
+short_name: "Xylanase solved by MicroED (electron diffraction technique)"
+description: |
+  5K7P is a xylanase enzyme structure determined by MicroED (Microcrystal
+  Electron Diffraction) at 2.3 Å resolution — notable as one of the
+  early demonstrations of MicroED for protein structures from
+  sub-micron-scale crystals. Xylanases are glycoside hydrolases (GH
+  family 10 or 11 typically) that cleave β-1,4-xylan into shorter
+  oligosaccharides; widely used industrially (paper bleaching, animal
+  feed). The (β/α)8 TIM-barrel fold (GH10) or β-jelly-roll (GH11) is
+  characteristic of these enzymes. Tests less-famous enzyme + atypical
+  data-collection method.
+
+identity:
+  must_mention_one_of:
+    - "xylanase"
+    - "glycoside hydrolase"
+    - "xylan"
+    - "MicroED"
+  reference_phrase: "Xylanase glycoside hydrolase determined by MicroED"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric xylanase"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "TIM barrel"
+    - "(β/α)8"
+    - "β-jelly roll"
+    - "glycoside hydrolase fold"
+    - "GH10"
+    - "GH11"
+    - "α/β"
+
+active_site:
+  type: none
+  mechanism_note: "Glycoside hydrolases use a two-glutamate (or Glu+Asp) catalytic pair as proton donor / nucleophile, NOT a Ser-His-Asp triad. Mechanism is retaining or inverting glycosidic bond cleavage."
+  catalytic_residues: []
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "xylan oligosaccharide (substrate or product)"
+
+notable_features:
+  must_mention_one_of:
+    - "MicroED"
+    - "electron diffraction"
+    - "xylanase"
+    - "glycoside hydrolase"
+    - "TIM barrel"
+    - "retaining"
+    - "inverting"
+
+negative_constraints:
+  - "must NOT claim Ser-His-Asp triad chemistry (glycoside hydrolases use Glu/Asp pairs)"
+  - "must NOT call it a protease"
+  - "must NOT confuse MicroED with X-ray crystallography or cryo-EM single-particle"
+
+inference_hygiene:
+  required: false

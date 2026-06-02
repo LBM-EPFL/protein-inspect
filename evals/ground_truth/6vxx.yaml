@@ -1,0 +1,62 @@
+pdb: 6vxx
+short_name: "SARS-CoV-2 spike glycoprotein (closed prefusion, cryo-EM trimer)"
+description: |
+  SARS-CoV-2 spike glycoprotein in the closed prefusion conformation —
+  homotrimeric type-I viral fusion machine (~1273 aa per chain in
+  full-length; the construct is typically stabilized with prefusion
+  mutations and proline residues). Solved by cryo-EM (~2.8 Å). Each
+  protomer comprises S1 (NTD + RBD) and S2 (fusion machinery)
+  subunits. Heavily N-glycosylated (~22 sites per monomer). RBD
+  undergoes "up/down" conformational dynamics in the open vs closed
+  states. ACE2 receptor binding occurs through the up-state RBD.
+
+identity:
+  must_mention_one_of:
+    - "spike"
+    - "SARS-CoV-2 spike"
+    - "S protein"
+    - "viral fusion protein"
+  reference_phrase: "SARS-CoV-2 spike glycoprotein — class I viral fusion homotrimer, closed prefusion state"
+
+oligomeric_state:
+  correct: trimer
+  acceptable: ["trimer", "homotrimer"]
+  symmetry: C3
+
+fold_class:
+  must_mention_one_of:
+    - "class I viral fusion"
+    - "spike fold"
+    - "viral surface glycoprotein"
+    - "homotrimer with NTD + RBD + fusion core"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "RBD"
+    - "receptor-binding domain"
+    - "S1"
+    - "S2"
+    - "NTD"
+    - "ACE2"
+    - "glycosylated"
+    - "cryo-EM"
+    - "prefusion"
+    - "trimer"
+
+negative_constraints:
+  - "must not call it an enzyme"
+  - "must not claim a catalytic mechanism"
+  - "must not call it monomeric or dimeric"
+
+inference_hygiene:
+  required: false

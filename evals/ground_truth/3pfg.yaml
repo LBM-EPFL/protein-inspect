@@ -1,0 +1,64 @@
+pdb: 3pfg
+short_name: "TylM1 N,N-dimethyltransferase from Streptomyces fradiae"
+description: |
+  3PFG is the crystal structure of TylM1, a SAM-dependent
+  N,N-dimethyltransferase from Streptomyces fradiae (involved in
+  tylosin antibiotic biosynthesis), in complex with substrate /
+  product analogs. TylM1 transfers methyl groups from
+  S-adenosyl-L-methionine (SAM) to the amine of a sugar substrate
+  (mycaminose) during the deoxysugar biosynthesis pathway of
+  tylosin — a 16-membered macrolide antibiotic. The fold is the
+  classical Class I methyltransferase Rossmann-like (SAM-binding)
+  α/β fold. Tests less-famous biosynthetic methyltransferase
+  identification.
+
+identity:
+  must_mention_one_of:
+    - "TylM1"
+    - "methyltransferase"
+    - "N,N-dimethyltransferase"
+    - "tylosin"
+    - "Streptomyces fradiae"
+  reference_phrase: "TylM1 — SAM-dependent N,N-dimethyltransferase in tylosin biosynthesis"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer", "monomer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "Class I methyltransferase fold"
+    - "Rossmann-like"
+    - "Rossmann fold"
+    - "SAM-binding fold"
+    - "α/β"
+
+active_site:
+  type: none
+  mechanism_note: "SAM-dependent methyltransferase: transfers a methyl group from SAM to a substrate nucleophile (here, an amine N). The reaction proceeds via SN2-like methyl transfer; no metal cofactor."
+  catalytic_residues: []
+  mechanism_class: transferase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "SAM (or SAH product) + sugar substrate analog"
+
+notable_features:
+  must_mention_one_of:
+    - "SAM"
+    - "S-adenosylmethionine"
+    - "methyltransferase"
+    - "Rossmann"
+    - "tylosin"
+    - "deoxysugar"
+    - "Class I MTase"
+
+negative_constraints:
+  - "must NOT claim it is a kinase (no phosphate chemistry)"
+  - "must NOT claim a metal cofactor"
+  - "must NOT call it a protease or glycosidase"
+
+inference_hygiene:
+  required: false

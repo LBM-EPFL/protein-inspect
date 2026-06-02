@@ -1,0 +1,68 @@
+pdb: 25PV
+short_name: "Anthrax protective antigen (PA63) + neutralizing antibody 22F1 Fab"
+description: |
+  Cryo-EM structure (3.0 Å) of the anthrax protective antigen (PA63)
+  pre-pore form in complex with the neutralizing antibody 22F1 (Fab
+  fragment, VH + VL chains). Anthrax toxin is a tripartite AB-toxin system:
+  protective antigen (PA, the B subunit) binds host receptors (ANTXR1 /
+  ANTXR2), oligomerizes on the membrane into a heptameric or octameric
+  pre-pore after furin cleavage to PA63, then translocates the catalytic
+  A subunits (lethal factor LF or edema factor EF). 22F1 is a neutralizing
+  antibody that blocks one of the key surfaces required for toxin assembly
+  or translocation. The deposited assembly is "trimeric" — one PA63 + Fab
+  heavy chain + Fab light chain (the antibody is two chains in the asym
+  unit), NOT a PA homotrimer.
+
+identity:
+  must_mention_one_of:
+    - "anthrax"
+    - "protective antigen"
+    - "PA63"
+    - "PA"
+    - "toxin"
+    - "Bacillus anthracis"
+  reference_phrase: "Anthrax toxin protective antigen (PA63) — pore-forming B-component of the AB toxin, here bound by a neutralizing Fab"
+
+oligomeric_state:
+  correct: monomer
+  acceptable:
+    - "monomer (one PA63 + one Fab)"
+    - "1:1 PA63:Fab complex"
+    - "PA63 monomer with neutralizing antibody"
+  symmetry: null
+  required_caveat: "The deposited file contains THREE chains (PA63 protein + Fab heavy + Fab light), so RCSB labels the assembly 'trimeric'. Functionally PA63 is one molecule plus one antibody Fab — NOT a PA homotrimer. The biologically functional PA pre-pore would be heptameric or octameric, but is not assembled in this entry."
+
+fold_class:
+  must_mention_one_of:
+    - "β-jellyroll"
+    - "β-sandwich"
+    - "PA toxin fold"
+    - "AB toxin"
+    - "pore-forming toxin"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "antibody Fab fragment (22F1) — protein binder, not a small molecule"
+
+notable_features:
+  must_mention_one_of:
+    - "PA63"
+    - "Fab"
+    - "neutralizing antibody"
+    - "AB toxin"
+    - "pore-forming"
+    - "anthrax"
+
+negative_constraints:
+  - "must not call PA63 an enzyme — it is the toxin's B (binding/translocation) component, not the catalytic A subunit"
+  - "must not claim a PA heptamer / octamer is assembled in this entry"
+  - "must not call the Fab a small-molecule inhibitor"
+
+inference_hygiene:
+  required: false

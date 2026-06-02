@@ -1,0 +1,61 @@
+pdb: AF-Q9UN36-F1
+short_name: "Human NDRG2 (AlphaFold model, less-characterized protein)"
+description: |
+  AlphaFold-predicted model of human N-myc downstream-regulated gene 2
+  (NDRG2, UniProt Q9UN36). ~371 aa cytoplasmic protein implicated in
+  stress responses and tumor suppression. NDRG family proteins share
+  an α/β hydrolase-like fold BUT lack the canonical catalytic
+  Ser-His-Asp triad — they are CATALYTICALLY INACTIVE pseudo-enzymes
+  whose function is regulatory / scaffolding rather than hydrolytic.
+  Chosen as a deliberately less-canonical target than PGK to test
+  whether Claude over-claims function based on fold-class recognition.
+  Model is AlphaFold-predicted (pLDDT in B-factor); no bound cofactors.
+
+identity:
+  must_mention_one_of:
+    - "NDRG2"
+    - "NDRG"
+    - "N-myc downstream-regulated gene"
+    - "pseudo-enzyme"
+    - "tumor suppressor"
+  reference_phrase: "NDRG2 — α/β hydrolase-fold pseudo-enzyme (catalytically inactive), tumor suppressor"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "α/β hydrolase fold"
+    - "alpha/beta hydrolase"
+    - "α/β"
+    - "alpha-beta hydrolase-like"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket   # vestigial pocket present, but non-functional
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "pseudo-enzyme"
+    - "catalytically inactive"
+    - "NDRG family"
+    - "AlphaFold"
+    - "predicted"
+    - "computed model"
+
+negative_constraints:
+  - "must NOT confidently assert that NDRG2 is a functional hydrolase/esterase/lipase based solely on its α/β-hydrolase-like fold; structural data indicate loss of canonical catalytic residues and occluded active site, so any catalytic activity would be uncertain and should be described cautiously"
+  - "must NOT name a Ser-His-Asp triad (NDRG family LACKS the catalytic residues)"
+  - "must NOT call it an experimentally determined structure"
+  - "must report this as a computed model and mention pLDDT confidence at least once"
+
+inference_hygiene:
+  required: true

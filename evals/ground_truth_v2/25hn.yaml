@@ -1,0 +1,78 @@
+pdb: 25HN
+short_name: "Nitrosospira multiformis Form III Rubisco (L8S8 hexadecamer)"
+description: |
+  Cryo-EM structure (2.3 Å) of Rubisco from the ammonia-oxidizing
+  bacterium *Nitrosospira multiformis*. This is the canonical Form I / II
+  / III architecture: a hexadecameric L8S8 assembly of **eight large
+  subunits (L, RbcL — ~470 aa, catalytic) and eight small subunits
+  (S, RbcS — ~120 aa, regulatory/structural)**, arranged as a stack of
+  four L₂ dimers with the small subunits capping the ends. Rubisco
+  (ribulose-1,5-bisphosphate carboxylase/oxygenase) catalyzes carbon
+  fixation in the Calvin cycle by carboxylating RuBP with CO₂; the
+  catalytic mechanism requires carbamylation of an active-site lysine
+  (Lys201 in the canonical numbering) followed by Mg²⁺ binding to
+  activate the enzyme. ZN in the entry is most likely structural / a
+  crystallographic ion rather than catalytic.
+
+identity:
+  must_mention_one_of:
+    - "Rubisco"
+    - "RuBisCO"
+    - "ribulose-1,5-bisphosphate carboxylase"
+    - "RbcL"
+    - "carbon fixation"
+    - "Calvin cycle"
+  reference_phrase: "Rubisco from Nitrosospira multiformis — L8S8 hexadecameric carboxylase/oxygenase that fixes CO₂ in the Calvin cycle"
+
+oligomeric_state:
+  correct: higher_order
+  acceptable:
+    - "hexadecamer"
+    - "L8S8"
+    - "16-mer"
+    - "Form I rubisco"
+    - "L8S8 hexadecamer"
+  symmetry: D4
+
+fold_class:
+  must_mention_one_of:
+    - "Rubisco"
+    - "TIM barrel"
+    - "(α/β)8"
+    - "α/β barrel"
+    - "L-S complex"
+    - "carboxylase fold"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: LYS, role: "carbamylated lysine — coordinates the activating Mg²⁺"}
+    - {name: ASP, role: "Mg²⁺ ligand"}
+    - {name: GLU, role: "Mg²⁺ ligand"}
+    - {name: LYS, role: "second lysine — substrate carboxylation chemistry"}
+  mechanism_class: lyase
+  location: inter-subunit
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ZN, chemistry_class: metal}
+  bio_ligand: "no substrate (RuBP) or activator (3-phosphoglycerate / CO₂) bound in this entry — this is largely the unliganded apo form. ZN is most likely structural / crystallographic."
+
+notable_features:
+  must_mention_one_of:
+    - "TIM barrel"
+    - "carbamylation"
+    - "L8S8"
+    - "carbon fixation"
+    - "Calvin cycle"
+    - "CO2 fixation"
+    - "carboxylase"
+
+negative_constraints:
+  - "must not call Rubisco a kinase / phosphatase"
+  - "must not invoke a Ser-His-Asp triad — Rubisco catalysis is metal-mediated carboxylation, not hydrolysis"
+  - "must not describe the small subunit as catalytic — the active sites are in the large subunit"
+  - "must not name Mg²⁺ as a bound ligand without evidence in THIS entry's deposition"
+
+inference_hygiene:
+  required: true

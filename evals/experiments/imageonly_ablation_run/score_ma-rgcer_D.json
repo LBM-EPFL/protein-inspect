@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 0,
+      "rationale": "No mention of coiled coil, four-helix bundle, designed, de novo, or engineered; response is entirely 'unknown'."
+    },
+    "oligomer": {
+      "pts": 0,
+      "rationale": "claimed_state is 'unstated'; no mention of monomer/single chain."
+    },
+    "fold_class": {
+      "pts": 0,
+      "rationale": "fold_names_mentioned is empty; no fold assignment offered."
+    },
+    "active_site": {
+      "pts": 1,
+      "rationale": "Extracted site_type_claimed='none' matches ground truth, but mechanism_class is 'unstated' (not 'none') and response only says 'cannot state' rather than claiming no enzyme."
+    },
+    "cofactors_metals_ligands": {
+      "pts": 2,
+      "rationale": "Ground truth expected is empty and response does not fabricate any cofactors/metals/ligands."
+    },
+    "notable_features": {
+      "pts": 0,
+      "rationale": "No mention of heptad, coiled-coil, helix bundle, designed, de novo, or \u03b1-helical features."
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "Inferences are explicitly labeled as '(weak)' and clearly marked as inference."
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 4,
+  "penalty_total": 0,
+  "final_score": 4
+}

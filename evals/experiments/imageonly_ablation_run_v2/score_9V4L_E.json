@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 0,
+      "rationale": "extracted.identity.names_or_aliases and function_description are both empty; though the response speculates about 'designed mini-protein' in hypotheses, no identity field captures any required phrase"
+    },
+    "oligomer": {
+      "pts": 1,
+      "rationale": "claimed_state 'monomer' matches ground truth; no required_caveat specified"
+    },
+    "fold_class": {
+      "pts": 2,
+      "rationale": "extracted fold_names include 'all-\u03b1', 'small helical bundle', '4-helix bundle', 'designed mini-protein' \u2014 multiple matches to must_mention_one_of"
+    },
+    "active_site": {
+      "pts": 1,
+      "rationale": "site_type_claimed 'none' fails (gt is metal-coord); no residues named; mechanism_class 'unstated' is functionally compatible with gt 'none' \u2014 partial credit for (c) only"
+    },
+    "cofactors_metals_ligands": {
+      "pts": 0,
+      "rationale": "ccd_codes_or_names is empty; response explicitly declines to assert Zn presence since view 06 was not shown"
+    },
+    "notable_features": {
+      "pts": 1,
+      "rationale": "features_mentioned ('flexible tail', 'uniform B-factor') don't match must_mention list, but response broadly mentions 'all-\u03b1' and 'designed' in fold/hypotheses sections \u2014 partial credit"
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "inferences_marked_as_inference is true and response explicitly labels speculation"
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 6,
+  "penalty_total": 0,
+  "final_score": 6
+}

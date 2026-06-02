@@ -1,0 +1,46 @@
+{
+  "identity": {
+    "names_or_aliases": [
+      "ma-rgcer"
+    ],
+    "function_description": "Function unknown from available materials; possibly a de novo designed helical scaffold/coiled-coil building block."
+  },
+  "oligomer": {
+    "claimed_state": "monomer",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": true
+  },
+  "fold_class": {
+    "fold_names_mentioned": [
+      "extended \u03b1-helical bundle",
+      "coiled-coil",
+      "helical-repeat fragment"
+    ]
+  },
+  "active_site": {
+    "residues_named": [],
+    "mechanism_class": "none",
+    "site_type_claimed": "none"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [],
+    "chemistry_class_mentions": []
+  },
+  "notable_features": {
+    "features_mentioned": [
+      "three helical segments",
+      "hydrophobic stripe",
+      "coiled-coil a/d stripe"
+    ]
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "The asymmetric unit contains **one chain** (`n_chains: 1`, `oligomer: monomer`, `unique_sequences: 1`)",
+    "the ASU/biological-assembly distinction is therefore not meaningful here",
+    "three long \u03b1-helices in tandem",
+    "Not an enzyme based on available evidence",
+    "**None present.**",
+    "*The following is explicitly inference.*",
+    "**I infer** that **ma-rgcer is a de novo designed helical construct**"
+  ]
+}

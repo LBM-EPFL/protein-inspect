@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 2,
+      "rationale": "Function description mentions 'coiled-coil/helical-bundle subunit' and 'designed helical peptide' \u2014 matches multiple required phrases."
+    },
+    "oligomer": {
+      "pts": 1,
+      "rationale": "Claimed state 'monomer' matches correct; addresses ASU vs biological distinction explicitly."
+    },
+    "fold_class": {
+      "pts": 2,
+      "rationale": "Mentions 'coiled-coil', '4-helix bundle', and 'all-\u03b1' \u2014 multiple matches to required phrases."
+    },
+    "active_site": {
+      "pts": 3,
+      "rationale": "Correctly claims no active site, no catalytic residues, mechanism class 'none' \u2014 matches ground truth 'none'."
+    },
+    "cofactors_metals_ligands": {
+      "pts": 2,
+      "rationale": "Ground truth expects no cofactors; response correctly states none visible without fabricating any."
+    },
+    "notable_features": {
+      "pts": 2,
+      "rationale": "Mentions 'amphipathic helical assembly' and discusses helical bundle features matching required phrases."
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "Inferences explicitly marked with '(Inference \u2014 not established from the images alone.)'"
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 13,
+  "penalty_total": 0,
+  "final_score": 13
+}

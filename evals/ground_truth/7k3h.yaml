@@ -1,0 +1,63 @@
+pdb: 7k3h
+short_name: "Deep network hallucinated protein 0217 (Anishchenko et al.)"
+description: |
+  7K3H is a crystal structure of a de novo computationally designed
+  protein produced by "hallucination" — Anishchenko, Pellock et al.
+  (Nature 2021) used activation-maximization on trRosetta to dream up
+  novel protein backbones, then selected, designed sequences, and
+  validated structures. This particular entry ("protein 0217") is a
+  small (~100 aa) α/β fold with no naturally-occurring counterpart;
+  it has no biological function, just demonstrates that the network's
+  hallucinated backbone is foldable. Tests "novel-fold designed
+  protein" recognition.
+
+identity:
+  must_mention_one_of:
+    - "hallucinated"
+    - "deep network"
+    - "de novo"
+    - "designed protein"
+    - "computationally designed"
+    - "trRosetta"
+    - "Anishchenko"
+  reference_phrase: "Deep network hallucinated de novo designed protein"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric designed protein"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "α/β"
+    - "alpha/beta"
+    - "designed fold"
+    - "novel fold"
+    - "small α/β"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "hallucinated"
+    - "de novo"
+    - "designed"
+    - "novel fold"
+    - "trRosetta"
+    - "no natural function"
+
+negative_constraints:
+  - "must NOT claim a natural biological function"
+  - "must NOT assert a catalytic mechanism"
+  - "must NOT identify it as a member of a natural protein family"
+
+inference_hygiene:
+  required: true

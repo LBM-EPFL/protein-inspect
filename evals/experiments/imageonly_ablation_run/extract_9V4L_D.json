@@ -1,0 +1,32 @@
+{
+  "identity": {
+    "names_or_aliases": [],
+    "function_description": ""
+  },
+  "oligomer": {
+    "claimed_state": "unstated",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": true
+  },
+  "fold_class": {
+    "fold_names_mentioned": []
+  },
+  "active_site": {
+    "residues_named": [],
+    "mechanism_class": "unstated",
+    "site_type_claimed": "none"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [],
+    "chemistry_class_mentions": []
+  },
+  "notable_features": {
+    "features_mentioned": []
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "the PDB identifier **9V4L** is not something I can reliably recall from prior knowledge",
+    "the asymmetric-unit chain count is not necessarily the biological assembly",
+    "any hypothesis would be pure speculation untethered to evidence, and I decline to offer one"
+  ]
+}

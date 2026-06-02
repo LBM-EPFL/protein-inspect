@@ -1,0 +1,70 @@
+pdb: 28WL
+short_name: "Human monoamine oxidase B (MAO B) + multitarget inhibitor"
+description: |
+  Crystal structure of human monoamine oxidase B (MAO B) at 1.6 Å in
+  complex with a 7-position-substituted multitarget inhibitor (compound
+  A1JF0) designed to act as a combined BChE / MAO B inhibitor for Alzheimer-
+  associated neuroinflammation. MAO B is a flavin-containing outer-
+  mitochondrial-membrane oxidoreductase that catalyzes the oxidative
+  deamination of biogenic amines (notably dopamine, phenylethylamine). The
+  FAD prosthetic group is COVALENTLY linked to Cys397 via an 8α-thioether
+  bond — a defining structural feature of MAO family enzymes (vs. simply
+  FAD-binding). Functionally a homodimer in the outer mitochondrial
+  membrane.
+
+identity:
+  must_mention_one_of:
+    - "MAO B"
+    - "MAO-B"
+    - "monoamine oxidase"
+    - "amine oxidase"
+    - "flavoprotein"
+  reference_phrase: "Human MAO B — outer-mitochondrial-membrane flavoprotein oxidase that deaminates biogenic amines; covalent 8α-Cys-FAD"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer", "2-mer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "FAD-binding"
+    - "p-hydroxybenzoate-hydroxylase-like"
+    - "PHBH-like"
+    - "Rossmann"
+    - "Rossmann-like"
+    - "GR2 fold"
+    - "α/β"
+
+active_site:
+  type: metal-assisted
+  catalytic_residues:
+    - {name: CYS397, role: "covalent attachment to FAD 8α-methyl via thioether"}
+    - {name: TYR398, role: "aromatic cage (with Tyr435) shaping the substrate channel"}
+    - {name: TYR435, role: "aromatic cage residue at active site"}
+  mechanism_class: oxidoreductase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: FAD, chemistry_class: redox}
+    - {id: A1JF0, chemistry_class: drug}
+  bio_ligand: "FAD (covalent prosthetic group) + dual BChE/MAO B inhibitor (compound A1JF0)"
+
+notable_features:
+  must_mention_one_of:
+    - "FAD"
+    - "flavin"
+    - "covalent FAD"
+    - "8α-thioether"
+    - "Cys397"
+    - "aromatic cage"
+    - "outer mitochondrial membrane"
+
+negative_constraints:
+  - "must not describe the FAD as freely diffusible / non-covalent in this enzyme"
+  - "must not call MAO a metalloenzyme — no transition metals are used catalytically"
+  - "must not invoke a catalytic triad / dyad — MAO uses FAD-mediated single-electron oxidation"
+
+inference_hygiene:
+  required: false

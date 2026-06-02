@@ -1,0 +1,14 @@
+{
+  "name": "protein-inspect-marketplace",
+  "owner": {
+    "name": "Benedikt Singer"
+  },
+  "plugins": [
+    {
+      "name": "protein-inspect",
+      "source": "./",
+      "description": "Protein structure reasoning skill — semantic YAML + canonical PyMOL views",
+      "version": "0.1.0"
+    }
+  ]
+}

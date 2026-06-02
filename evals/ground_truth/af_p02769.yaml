@@ -1,0 +1,63 @@
+pdb: AF-P02769-F1
+short_name: "Bovine serum albumin (AlphaFold model, large multi-domain)"
+description: |
+  AlphaFold-predicted model of bovine serum albumin (BSA,
+  UniProt P02769). ~607 aa transport protein in vertebrate blood,
+  carrying fatty acids, hormones, ions, and many small molecules
+  including drugs. Multi-domain (3 homologous domains, each two
+  sub-domains) all-α architecture stabilized by 17 disulfide bonds.
+  Note: AlphaFold's predicted structure should resolve the three
+  domains plus the disulfide-rich topology but will NOT include any
+  bound ligands. Useful as a test of multi-domain detection and the
+  pLDDT distribution on a large, well-studied target.
+
+identity:
+  must_mention_one_of:
+    - "serum albumin"
+    - "BSA"
+    - "bovine serum albumin"
+    - "albumin"
+  reference_phrase: "Serum albumin — vertebrate blood transport protein, multi-domain all-α with many disulfides"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "albumin fold"
+    - "serum albumin fold"
+    - "three-domain"
+    - "all-α"
+    - "α-helical bundle"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket   # multiple drug-binding sub-pockets
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "multi-domain"
+    - "three domains"
+    - "disulfide-rich"
+    - "many disulfides"
+    - "drug binding"
+    - "fatty acid transport"
+    - "AlphaFold"
+    - "pLDDT"
+
+negative_constraints:
+  - "must NOT call it an enzyme"
+  - "must NOT claim a catalytic mechanism"
+  - "must NOT call it a crystal or cryo-EM structure (it's a predicted model)"
+  - "must NOT assert bound drug or fatty acid coordinates (AF models lack ligands)"
+
+inference_hygiene:
+  required: true

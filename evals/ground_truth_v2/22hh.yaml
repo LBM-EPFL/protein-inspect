@@ -1,0 +1,67 @@
+pdb: 22HH
+short_name: "Chloroflexus β-1,2-glucan-binding protein + linear β-1,2-glucan"
+description: |
+  Crystal structure (1.53 Å) of an ABC transporter solute-binding protein
+  (SBP) from *Chloroflexus aurantiacus* in complex with a linear β-1,2-
+  glucan oligosaccharide. SBP1-family proteins are extracytoplasmic /
+  periplasmic substrate-capture domains that deliver carbohydrates to
+  their cognate ABC transporters. This entry establishes a novel binding
+  mode for β-1,2-glucan — a non-canonical sugar polymer made of
+  β-1,2-linked glucose, distinct from canonical β-1,3-glucan (callose) or
+  β-1,4-glucan (cellulose). The deposited entry contains a glucose
+  (β-D-glucopyranose, BGC) at the binding cleft, plus crystallization
+  additives (glycerol, sulfate). NOT an enzyme — a binding protein only.
+
+identity:
+  must_mention_one_of:
+    - "solute-binding protein"
+    - "β-1,2-glucan"
+    - "carbohydrate-binding"
+    - "ABC transporter"
+    - "SBP"
+    - "sugar binding"
+  reference_phrase: "ABC-transporter solute-binding protein for β-1,2-glucan — bilobed periplasmic carbohydrate-capture domain"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "solute-binding protein"
+    - "SBP"
+    - "periplasmic binding protein"
+    - "bilobed"
+    - "Venus flytrap"
+    - "class B SBP"
+    - "two-domain α/β"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: BGC, chemistry_class: substrate}
+  bio_ligand: "linear β-1,2-glucan oligosaccharide; the modeled CCD residues are individual β-D-glucopyranose (BGC) units forming the polymer. Glycerol (GOL) and sulfate (SO4) are crystallization buffer / additive — NOT functional ligands."
+
+notable_features:
+  must_mention_one_of:
+    - "SBP"
+    - "solute-binding"
+    - "bilobed"
+    - "Venus flytrap"
+    - "carbohydrate"
+    - "sugar binding cleft"
+    - "β-1,2-glucan"
+
+negative_constraints:
+  - "must not call it a glycosidase / glycoside hydrolase — there is no catalytic activity"
+  - "must not claim GOL or SO4 are functional (they are crystallization additives)"
+  - "must not invoke a catalytic Asp / Glu dyad in the binding cleft"
+
+inference_hygiene:
+  required: false

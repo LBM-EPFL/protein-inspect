@@ -1,0 +1,75 @@
+pdb: 2zju
+short_name: "Ls-AChBP + imidacloprid (Cys-loop pentamer)"
+description: |
+  Acetylcholine binding protein (AChBP) from the freshwater snail
+  Lymnaea stagnalis, complexed with the neonicotinoid insecticide
+  imidacloprid (IM4). Soluble homopentamer (C5 symmetry, ~215 aa per
+  subunit) that is the structural homolog of the extracellular
+  ligand-binding domain of nicotinic acetylcholine receptors (nAChRs)
+  and the broader Cys-loop receptor superfamily. Each chain adopts an
+  immunoglobulin-like β-sandwich fold. Five orthosteric binding sites
+  at the subunit interfaces, formed by an aromatic cage (TRP, TYR
+  residues from both adjacent subunits). Each subunit carries the
+  canonical Cys-loop disulfide (CYS123-CYS136) PLUS a vicinal
+  (consecutive) disulfide CYS187-CYS188 on Loop C — a hallmark of
+  Cys-loop receptor α-subunits. The vicinal disulfide is rare and
+  family-defining; Loop C closes over the agonist upon binding.
+
+identity:
+  must_mention_one_of:
+    - "AChBP"
+    - "acetylcholine binding protein"
+    - "nicotinic"
+    - "Cys-loop receptor"
+  reference_phrase: "Acetylcholine binding protein (AChBP) — structural homolog of nAChR extracellular domain"
+
+oligomeric_state:
+  correct: pentamer
+  acceptable: ["pentamer", "homopentamer", "5-mer", "five subunits"]
+  symmetry: C5
+
+fold_class:
+  must_mention_one_of:
+    - "Ig fold"
+    - "immunoglobulin"
+    - "β-sandwich"
+    - "beta-sandwich"
+    - "β-sheet"
+    - "Cys-loop receptor"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: inter-subunit
+  ligand_binding_residues:
+    principal:
+      - {name: TRP143, role: "cation-π anchor, aromatic cage"}
+      - {name: TYR185, role: "aromatic cage"}
+      - {name: TYR192, role: "aromatic cage, Loop C"}
+    complementary:
+      - {name: TRP53,  role: "aromatic cage"}
+      - {name: TYR113, role: "aromatic cage"}
+      - {name: TYR164, role: "aromatic cage"}
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: imidacloprid
+
+notable_features:
+  must_mention_one_of:
+    - "vicinal disulfide"
+    - "Cys-loop"
+    - "Loop C"
+    - "aromatic cage"
+    - "neonicotinoid"
+    - "cation-π"
+
+negative_constraints:
+  - "must not call it a kinase"
+  - "must not call it a protease"
+  - "must not claim it is a transmembrane / membrane-spanning protein"
+  - "must not name a specific enzyme family (serine protease, P450, etc.) based on the catalytic_triad / asp_dyad false positives — these are geometric coincidences in a pentameric β-sheet protein"
+
+inference_hygiene:
+  required: false

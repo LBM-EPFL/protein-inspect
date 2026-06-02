@@ -1,0 +1,412 @@
+entry: 2zju
+schema_version: '1.1'
+generated: '2026-06-02T14:45:44Z'
+narrative: Crystal Structure of Lymnaea stagnalis Acetylcholine Binding Protein (Ls-AChBP) Complexed with Imidacloprid
+macromolecule_type: protein_only
+model_quality:
+  is_computed: false
+  confidence_metric: bfactor
+provenance:
+  source: rcsb
+  input_path: /tmp/protein_inspect_cache/2zju.cif
+  resolution: 2.58
+  method: X-RAY DIFFRACTION
+  resolution_class: medium
+  space_group: P 65
+  unit_cell:
+  - 74.965
+  - 74.965
+  - 351.014
+  - 90.0
+  - 90.0
+  - 120.0
+  deposition_date: '2008-03-10'
+assembly:
+  n_chains: 5
+  chains:
+  - A
+  - B
+  - C
+  - D
+  - E
+  homo_or_hetero: homo
+  oligomer: pentamer
+  symmetry: C5
+  unique_sequences: 1
+  chain_rmsd_max: null
+  interface_contacts:
+  - pair:
+    - A
+    - B
+    n_residues: 24
+  - pair:
+    - A
+    - E
+    n_residues: 21
+  - pair:
+    - B
+    - C
+    n_residues: 22
+  - pair:
+    - C
+    - D
+    n_residues: 20
+  - pair:
+    - D
+    - E
+    n_residues: 23
+fold:
+  representative_chain: A
+  length: 208
+  ss_fractions:
+    helix: 0.25120772946859904
+    sheet: 0.7246376811594203
+    loop: 0.024154589371980676
+  ss_string: EEHHHHHHHHHHHHEEEEEEEEHHHHHEEEEEEEEEEEEEEEHHHHHEEEEEEEEEEEEEHHHHHEEHHHHHEEEEEHHHHHHEEEEEEEEEEEEEEEEEEEEEEEEELEEEEEEEEEEEEEEEEEEELEEEEEEEEEEEEEHHHHHHHHHEEEEEEEEEELLLEEEEEEEEEEEEEEEEEEEEEHHHHHEEEEEEEEEEEEEEEEE
+  bfactor_stats:
+    mean: 40.346249965521004
+    min: 18.579999923706055
+    max: 88.19000244140625
+    std: 15.116178759677249
+ligands:
+  unclassified:
+  - id: IM4
+    n_copies: 5
+  bio_ligand:
+  - id: IM4
+    n_copies: 5
+    placement: unknown
+disulfides:
+- residues:
+  - CYS123
+  - CYS136
+  chains:
+  - A
+  distance_a: 2.036
+  type: standard
+- residues:
+  - CYS187
+  - CYS188
+  chains:
+  - A
+  distance_a: 2.046
+  type: vicinal
+- residues:
+  - CYS123
+  - CYS136
+  chains:
+  - B
+  distance_a: 2.029
+  type: standard
+- residues:
+  - CYS187
+  - CYS188
+  chains:
+  - B
+  distance_a: 2.044
+  type: vicinal
+- residues:
+  - CYS123
+  - CYS136
+  chains:
+  - C
+  distance_a: 2.037
+  type: standard
+- residues:
+  - CYS187
+  - CYS188
+  chains:
+  - C
+  distance_a: 2.043
+  type: vicinal
+- residues:
+  - CYS123
+  - CYS136
+  chains:
+  - D
+  distance_a: 2.039
+  type: standard
+- residues:
+  - CYS187
+  - CYS188
+  chains:
+  - D
+  distance_a: 2.046
+  type: vicinal
+- residues:
+  - CYS123
+  - CYS136
+  chains:
+  - E
+  distance_a: 2.041
+  type: standard
+- residues:
+  - CYS187
+  - CYS188
+  chains:
+  - E
+  distance_a: 2.049
+  type: vicinal
+active_site_patterns:
+- pattern: catalytic_triad
+  residues:
+  - SER75
+  - HIS145
+  - GLU149
+  chain: A+E+E
+  geometry:
+    nucleophile_to_his_ne2_a: 3.54
+    his_nd1_to_acid_a: 2.98
+  rule_id: catalytic_triad_geometry
+- pattern: catalytic_triad
+  residues:
+  - SER75
+  - HIS145
+  - ASP85
+  chain: C+B+B
+  geometry:
+    nucleophile_to_his_ne2_a: 3.23
+    his_nd1_to_acid_a: 2.85
+  rule_id: catalytic_triad_geometry
+- pattern: catalytic_triad
+  residues:
+  - SER75
+  - HIS145
+  - GLU149
+  chain: D+C+C
+  geometry:
+    nucleophile_to_his_ne2_a: 3.5
+    his_nd1_to_acid_a: 2.67
+  rule_id: catalytic_triad_geometry
+- pattern: catalytic_triad
+  residues:
+  - SER75
+  - HIS145
+  - ASP85
+  chain: E+D+D
+  geometry:
+    nucleophile_to_his_ne2_a: 3.27
+    his_nd1_to_acid_a: 3.32
+  rule_id: catalytic_triad_geometry
+- pattern: asp_dyad
+  residues:
+  - GLU47
+  - GLU40
+  chain: C+D
+  geometry:
+    closest_o_o_a: 4.97
+  rule_id: aspartate_dyad_geometry
+- pattern: aromatic_cage
+  residues:
+  - TRP143
+  - TYR185
+  - TYR192
+  - TRP53
+  chain: A
+  geometry:
+    ligand: IM4/A301
+    n_aromatics: 4
+  rule_id: aromatic_cage_at_ligand_site
+- pattern: aromatic_cage
+  residues:
+  - TRP143
+  - TYR185
+  - TYR192
+  - TRP53
+  chain: C
+  geometry:
+    ligand: IM4/C301
+    n_aromatics: 4
+  rule_id: aromatic_cage_at_ligand_site
+- pattern: aromatic_cage
+  residues:
+  - TRP143
+  - TYR185
+  - TYR192
+  - TRP53
+  - TYR113
+  chain: D
+  geometry:
+    ligand: IM4/D301
+    n_aromatics: 5
+  rule_id: aromatic_cage_at_ligand_site
+- pattern: aromatic_cage
+  residues:
+  - TRP143
+  - TYR185
+  - TYR192
+  - TRP53
+  - TYR113
+  chain: D
+  geometry:
+    ligand: IM4/D302
+    n_aromatics: 5
+  rule_id: aromatic_cage_at_ligand_site
+- pattern: aromatic_cage
+  residues:
+  - TRP53
+  - TYR113
+  - TRP143
+  - TYR185
+  - TYR192
+  chain: E
+  geometry:
+    ligand: IM4/E301
+    n_aromatics: 5
+  rule_id: aromatic_cage_at_ligand_site
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 1
+  detected_by: cath_api
+  boundaries:
+  - chain: A
+    range:
+    - 0
+    - 206
+coords_ref:
+  path: examples/integration_2zju/2zju.cif
+  format: cif
+flags:
+- rule_id: unclassified_ligand
+  priority: medium
+  message: One or more HETATM codes were not in the curated ligand_classes.yaml. Treated as bio-ligand by default. Verify
+    and add to the classification list if appropriate.
+  evidence_quality: confirmed
+- rule_id: disulfides_present
+  priority: low
+  message: Disulfide bond(s) detected. Indicates extracellular / secreted / oxidative environment, or structural stabilization.
+  evidence_quality: confirmed
+- rule_id: vicinal_disulfide
+  priority: high
+  message: 'Vicinal disulfide (consecutive cysteines bonded). Rare structural motif. Strong markers: Cys-loop receptor alpha
+    subunits (Loop C), some lectins, redox-switch proteins. Constrains conformation; can modulate ligand binding.'
+  evidence_quality: confirmed
+- rule_id: catalytic_triad_geometry
+  priority: high
+  message: "Catalytic-triad geometry detected (nucleophile-base-acid pattern). Suggestive of a hydrolase or transferase with\
+    \ covalent intermediate chemistry. Pattern alone does NOT name a family \u2014 confirm by combining with fold, ligand\
+    \ chemistry, and active-site pocket location."
+  evidence_quality: geometric_only
+- rule_id: aspartate_dyad_geometry
+  priority: high
+  message: Aspartate dyad / pair detected (two Asp carboxylates close together). Common in aspartyl proteases, glycosidases
+    (acid/base + nucleophile), and some metallophosphatases. Family depends on whether they activate water (protease) or substrate
+    (glycosidase).
+  evidence_quality: geometric_only
+- rule_id: aromatic_cage_at_ligand_site
+  priority: medium
+  message: "Aromatic cage (\u22653 aromatic residues within 5 \xC5 of ligand). Cation-\u03C0 or carbohydrate-stacking interaction\
+    \ characteristic of nicotinic receptors, lectins, neurotransmitter binding proteins, and reader domains."
+  evidence_quality: strong
+visual:
+  views_dir: examples/integration_2zju/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: examples/integration_2zju/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: examples/integration_2zju/views/02_side.png
+    ray: true
+  - name: surface
+    path: examples/integration_2zju/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: examples/integration_2zju/views/03_bfactor_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: bfactor
+  - name: interface_closeup
+    path: examples/integration_2zju/views/08_interface_A-B.png
+    ray: true
+    details:
+      chain_a: A
+      chain_b: B
+  - name: ligand_pocket
+    path: examples/integration_2zju/views/05_pocket_IM4_A301.png
+    ray: true
+    details:
+      ligand_resn: IM4
+      ligand_chain: A
+      ligand_resi: 301
+  - name: ligand_pocket
+    path: examples/integration_2zju/views/05_pocket_IM4_C301.png
+    ray: true
+    details:
+      ligand_resn: IM4
+      ligand_chain: C
+      ligand_resi: 301
+  - name: ligand_pocket
+    path: examples/integration_2zju/views/05_pocket_IM4_D301.png
+    ray: true
+    details:
+      ligand_resn: IM4
+      ligand_chain: D
+      ligand_resi: 301
+  - name: ligand_pocket
+    path: examples/integration_2zju/views/05_pocket_IM4_D302.png
+    ray: true
+    details:
+      ligand_resn: IM4
+      ligand_chain: D
+      ligand_resi: 302
+  - name: ligand_pocket
+    path: examples/integration_2zju/views/05_pocket_IM4_E301.png
+    ray: true
+    details:
+      ligand_resn: IM4
+      ligand_chain: E
+      ligand_resi: 301
+  - name: vicinal_ss_zoom
+    path: examples/integration_2zju/views/10_vicinal_ss_A_187-188.png
+    ray: true
+    details:
+      chain: A
+      resi_a: 187
+      resi_b: 188
+  - name: vicinal_ss_zoom
+    path: examples/integration_2zju/views/10_vicinal_ss_B_187-188.png
+    ray: true
+    details:
+      chain: B
+      resi_a: 187
+      resi_b: 188
+  - name: vicinal_ss_zoom
+    path: examples/integration_2zju/views/10_vicinal_ss_C_187-188.png
+    ray: true
+    details:
+      chain: C
+      resi_a: 187
+      resi_b: 188
+  - name: vicinal_ss_zoom
+    path: examples/integration_2zju/views/10_vicinal_ss_D_187-188.png
+    ray: true
+    details:
+      chain: D
+      resi_a: 187
+      resi_b: 188
+  - name: vicinal_ss_zoom
+    path: examples/integration_2zju/views/10_vicinal_ss_E_187-188.png
+    ray: true
+    details:
+      chain: E
+      resi_a: 187
+      resi_b: 188
+  montage:
+    path: examples/integration_2zju/montage.png
+    n_panels: 15
+    grid:
+    - 4
+    - 4
+    panel_size:
+    - 1200
+    - 900
+    total_size:
+    - 4800
+    - 3856

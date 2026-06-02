@@ -1,0 +1,64 @@
+pdb: 4qrc
+short_name: "FGFR4 tyrosine kinase domain + ponatinib"
+description: |
+  4QRC is the crystal structure of the FGFR4 (Fibroblast Growth Factor
+  Receptor 4) tyrosine kinase domain in complex with ponatinib — a
+  third-generation tyrosine-kinase inhibitor. FGFR4 is a receptor
+  tyrosine kinase (RTK) implicated in liver cancer (HCC) and other
+  malignancies; ponatinib was originally developed for BCR-ABL
+  resistance mutations in CML but has activity across many tyrosine
+  kinases. The kinase domain has the canonical bilobal protein-kinase
+  fold (N-lobe β-sheet + C-lobe α-helical) with ponatinib occupying
+  the ATP-binding cleft. Tests "real tyrosine kinase + clinical
+  inhibitor" recognition.
+
+identity:
+  must_mention_one_of:
+    - "FGFR4"
+    - "FGFR"
+    - "fibroblast growth factor receptor"
+    - "tyrosine kinase"
+  reference_phrase: "FGFR4 tyrosine kinase domain in complex with ponatinib"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric kinase domain"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "kinase fold"
+    - "protein kinase fold"
+    - "tyrosine kinase fold"
+    - "bilobal"
+    - "two-lobed"
+
+active_site:
+  type: metal-assisted
+  mechanism_note: "Receptor tyrosine kinase: catalyzes phosphoryl transfer from ATP to substrate tyrosine residues. Active site uses Lys (β3), Glu (αC helix), Asp (HRD motif catalytic loop), Asp (DFG motif Mg coordination)."
+  catalytic_residues: []
+  mechanism_class: transferase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "ponatinib (Type II tyrosine kinase inhibitor)"
+
+notable_features:
+  must_mention_one_of:
+    - "ponatinib"
+    - "kinase inhibitor"
+    - "DFG"
+    - "ATP-binding cleft"
+    - "activation loop"
+    - "P-loop"
+    - "RTK"
+    - "tyrosine kinase"
+
+negative_constraints:
+  - "must NOT call it a serine/threonine kinase (it phosphorylates tyrosine residues)"
+  - "must NOT call it a pseudokinase (FGFR4 is catalytically active)"
+  - "must NOT identify ponatinib as ATP (they share the binding pocket but are distinct molecules)"
+
+inference_hygiene:
+  required: false

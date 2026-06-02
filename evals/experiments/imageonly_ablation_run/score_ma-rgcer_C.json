@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 2,
+      "rationale": "Function description mentions 'de novo designed helical scaffold/coiled-coil building block' \u2014 matches multiple required phrases."
+    },
+    "oligomer": {
+      "pts": 1,
+      "rationale": "Claimed state 'monomer' matches correct answer; no required caveat in ground truth."
+    },
+    "fold_class": {
+      "pts": 2,
+      "rationale": "Mentions 'coiled-coil', 'extended \u03b1-helical bundle' \u2014 matches multiple required phrases."
+    },
+    "active_site": {
+      "pts": 3,
+      "rationale": "Ground truth type is 'none'; response correctly claims no enzyme/no catalytic residues."
+    },
+    "cofactors_metals_ligands": {
+      "pts": 2,
+      "rationale": "Ground truth expected is empty; response does not fabricate any cofactors."
+    },
+    "notable_features": {
+      "pts": 2,
+      "rationale": "Mentions 'coiled-coil a/d stripe' and 'hydrophobic stripe' \u2014 matches required phrases."
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "Inferences explicitly marked as such ('The following is explicitly inference')."
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 13,
+  "penalty_total": 0,
+  "final_score": 13
+}

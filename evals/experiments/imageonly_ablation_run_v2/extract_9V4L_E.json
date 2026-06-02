@@ -1,0 +1,47 @@
+{
+  "identity": {
+    "names_or_aliases": [],
+    "function_description": ""
+  },
+  "oligomer": {
+    "claimed_state": "monomer",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": true
+  },
+  "fold_class": {
+    "fold_names_mentioned": [
+      "all-\u03b1",
+      "small helical bundle",
+      "helix-loop-helix",
+      "4-helix bundle",
+      "designed mini-protein",
+      "helical peptide"
+    ]
+  },
+  "active_site": {
+    "residues_named": [],
+    "mechanism_class": "unstated",
+    "site_type_claimed": "none"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [],
+    "chemistry_class_mentions": []
+  },
+  "notable_features": {
+    "features_mentioned": [
+      "flexible N- or C-terminal tail",
+      "uniform B-factor/pLDDT coloring"
+    ]
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "Unknown from images alone.",
+    "the asymmetric unit content visible here is a monomer",
+    "true biological state is unknown from these images",
+    "All-\u03b1, small helical assembly",
+    "No active-site features visible in these views",
+    "None visible in the images I was actually shown",
+    "Marked as inference.",
+    "consistent with a designed mini-protein or a small helical peptide/motif, but this is speculative"
+  ]
+}

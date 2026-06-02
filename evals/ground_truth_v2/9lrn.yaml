@@ -1,0 +1,69 @@
+pdb: 9LRN
+short_name: "Human PDE2A catalytic domain + inhibitor 13t (Zn/Mg)"
+description: |
+  Crystal structure of human cGMP-dependent 3',5'-cyclic phosphodiesterase
+  2A (PDE2A) catalytic domain in complex with the inhibitor 13t (CCD
+  A1EK7). PDE2A is a dual-specificity (hydrolyzes both cAMP and cGMP)
+  phosphodiesterase of the broader 11-member PDE family; key drug target
+  for cognition / Alzheimer disease (CNS penetrant PDE2 inhibitors enhance
+  cGMP signaling in hippocampal neurons). The active site contains a
+  binuclear Zn²⁺/Mg²⁺ centre that activates the catalytic water; the
+  cyclic-nucleotide-binding subpocket is hydrophobic and aromatic with the
+  characteristic "Q-switch" (Gln) selectivity glutamine that hydrogen-bonds
+  the purine.
+
+identity:
+  must_mention_one_of:
+    - "PDE2"
+    - "PDE2A"
+    - "phosphodiesterase"
+    - "cyclic nucleotide"
+    - "cGMP"
+  reference_phrase: "Phosphodiesterase 2A — binuclear-metal cyclic-nucleotide hydrolase, CNS drug target"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric catalytic domain"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "PDE catalytic domain"
+    - "all-α"
+    - "α-helical"
+    - "phosphodiesterase fold"
+    - "α-α barrel"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: HIS, role: "Zn-coordinating histidine (HD-motif)"}
+    - {name: ASP, role: "Zn/Mg-coordinating aspartate"}
+    - {name: GLN, role: "Q-switch — substrate-selectivity glutamine"}
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ZN, chemistry_class: metal}
+    - {id: MG, chemistry_class: metal}
+    - {id: A1EK7, chemistry_class: drug}
+  bio_ligand: "Binuclear Zn²⁺ + Mg²⁺ catalytic metal centre; PDE2 inhibitor 13t (compound A1EK7)"
+
+notable_features:
+  must_mention_one_of:
+    - "binuclear metal"
+    - "Zn"
+    - "Mg"
+    - "HD-motif"
+    - "Q-switch"
+    - "cGMP"
+    - "selectivity glutamine"
+
+negative_constraints:
+  - "must not call it a kinase (PDE hydrolyzes the cyclic phosphate, doesn't add one)"
+  - "must not call it a serine / cysteine protease"
+  - "must not deny the metal involvement — both Zn and Mg are catalytic"
+
+inference_hygiene:
+  required: false

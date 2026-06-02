@@ -1,0 +1,73 @@
+{
+  "pdb": "1hsg",
+  "desc": "HIV-1 protease (Asp25-Asp25' dimer dyad)",
+  "elapsed_sec": 0.02,
+  "checks": [
+    {
+      "check": "active_site_pattern",
+      "expected": "asp_dyad",
+      "actual": true,
+      "matched": true
+    },
+    {
+      "check": "homo_or_hetero",
+      "expected": "homo",
+      "actual": "homo",
+      "matched": true
+    },
+    {
+      "check": "oligomer",
+      "expected": "dimer",
+      "actual": "dimer",
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 2,
+    "homo_or_hetero": "homo",
+    "n_bio_ligands": 1,
+    "n_artifacts": 1,
+    "n_metals": 0,
+    "n_cofactors": 0,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 1,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 2,
+      "oligomer": "dimer",
+      "homo_or_hetero": "homo",
+      "symmetry": "C2",
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 99,
+      "ss_fractions": {
+        "helix": 0.31313131313131315,
+        "sheet": 0.6868686868686869,
+        "loop": 0.0
+      }
+    },
+    "n_metals": 0,
+    "metals": [],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [],
+    "active_site_patterns": [
+      "asp_dyad"
+    ],
+    "bio_ligands": [
+      "MK1"
+    ],
+    "artifacts": {
+      "unclassified": [
+        "MK1"
+      ]
+    },
+    "membrane_likely": false
+  }
+}

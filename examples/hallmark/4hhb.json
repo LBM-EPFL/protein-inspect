@@ -1,0 +1,79 @@
+{
+  "pdb": "4hhb",
+  "desc": "Hemoglobin \u03b12\u03b22 heterotetramer (heme)",
+  "elapsed_sec": 0.03,
+  "checks": [
+    {
+      "check": "oligomer",
+      "expected": "tetramer",
+      "actual": "tetramer",
+      "matched": true
+    },
+    {
+      "check": "homo_or_hetero",
+      "expected": "hetero",
+      "actual": "hetero",
+      "matched": true
+    },
+    {
+      "check": "cofactor_class",
+      "expected": "redox_heme",
+      "actual": "{'redox_heme'}",
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 4,
+    "homo_or_hetero": "hetero",
+    "n_bio_ligands": 0,
+    "n_artifacts": 1,
+    "n_metals": 0,
+    "n_cofactors": 1,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 4,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 4,
+      "oligomer": "tetramer",
+      "homo_or_hetero": "hetero",
+      "symmetry": null,
+      "unique_sequences": 2
+    },
+    "fold": {
+      "length": 141,
+      "ss_fractions": {
+        "helix": 0.8439716312056738,
+        "sheet": 0.12056737588652482,
+        "loop": 0.03546099290780142
+      }
+    },
+    "n_metals": 0,
+    "metals": [],
+    "n_cofactors": 1,
+    "cofactors": [
+      [
+        "HEM",
+        "redox_heme"
+      ]
+    ],
+    "disulfide_types": [],
+    "active_site_patterns": [
+      "cys_his_dyad",
+      "cys_his_dyad",
+      "asp_dyad",
+      "asp_dyad"
+    ],
+    "bio_ligands": [],
+    "artifacts": {
+      "precipitant_salt": [
+        "PO4"
+      ]
+    },
+    "membrane_likely": false
+  }
+}

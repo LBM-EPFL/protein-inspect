@@ -1,0 +1,63 @@
+pdb: 1qys
+short_name: "Top7 — de novo designed protein, novel fold"
+description: |
+  Top7 — the first de novo computational protein design with a novel
+  (not naturally observed) fold (Kuhlman et al., Science 2003).
+  93-residue α/β protein with a 5-stranded β-sheet and 2 α-helices in
+  a sandwich topology. Designed using Rosetta to be thermodynamically
+  stable but without any pre-existing function. Used as the canonical
+  proof-of-concept that protein folds can be designed computationally.
+
+identity:
+  must_mention_one_of:
+    - "Top7"
+    - "de novo"
+    - "designed protein"
+    - "designed fold"
+    - "computationally designed"
+  reference_phrase: "Top7 — first de novo computationally designed protein with a novel fold"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "α/β"
+    - "alpha/beta"
+    - "β-sheet plus α-helix"
+    - "novel fold"
+    - "Top7 fold"
+
+active_site:
+  # Top7 was designed without a function. No catalytic site exists.
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "de novo"
+    - "designed"
+    - "computationally designed"
+    - "novel fold"
+    - "Rosetta"
+    - "Kuhlman"
+    - "Baker"
+
+negative_constraints:
+  - "must NOT claim a natural biological function"
+  - "must NOT identify it as a member of a natural enzyme family"
+  - "must NOT assert a catalytic mechanism (it has none — function is structural stability only)"
+  - "must NOT invent a binding partner from the fold alone"
+
+inference_hygiene:
+  # Top7 has narrative-free function (designed) — the response MUST mark
+  # any functional speculation as inference.
+  required: true

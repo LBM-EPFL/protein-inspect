@@ -1,0 +1,32 @@
+{
+  "identity": {
+    "names_or_aliases": [],
+    "function_description": ""
+  },
+  "oligomer": {
+    "claimed_state": "unstated",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": false
+  },
+  "fold_class": {
+    "fold_names_mentioned": []
+  },
+  "active_site": {
+    "residues_named": [],
+    "mechanism_class": "unstated",
+    "site_type_claimed": "none"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [],
+    "chemistry_class_mentions": []
+  },
+  "notable_features": {
+    "features_mentioned": []
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "unknown \u2014 no prior knowledge of this identifier.",
+    "The \"ma-\" prefix is suggestive of a **ModelArchive** computed-structure entry",
+    "**Inference (weak):** The \"ma-\" prefix is consistent with a ModelArchive deposition"
+  ]
+}

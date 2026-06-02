@@ -1,0 +1,70 @@
+{
+  "pdb": "7rsa",
+  "desc": "Ribonuclease A (small, 4 disulfides)",
+  "elapsed_sec": 0.01,
+  "checks": [
+    {
+      "check": "oligomer",
+      "expected": "monomer",
+      "actual": "monomer",
+      "matched": true
+    },
+    {
+      "check": "disulfide_count_min",
+      "expected": 3,
+      "actual": 4,
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 1,
+    "homo_or_hetero": "monomer",
+    "n_bio_ligands": 1,
+    "n_artifacts": 1,
+    "n_metals": 0,
+    "n_cofactors": 0,
+    "n_disulfides": 4,
+    "n_active_site_patterns": 0,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 1,
+      "oligomer": "monomer",
+      "homo_or_hetero": "monomer",
+      "symmetry": null,
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 124,
+      "ss_fractions": {
+        "helix": 0.3064516129032258,
+        "sheet": 0.6693548387096774,
+        "loop": 0.024193548387096774
+      }
+    },
+    "n_metals": 0,
+    "metals": [],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [
+      "standard",
+      "standard",
+      "standard",
+      "standard"
+    ],
+    "active_site_patterns": [],
+    "bio_ligands": [
+      "TBU"
+    ],
+    "artifacts": {
+      "unclassified": [
+        "TBU"
+      ]
+    },
+    "membrane_likely": false
+  }
+}

@@ -1,0 +1,69 @@
+pdb: 9N97
+short_name: "Cysteine-free anti-UTag intrabody (scFv) for live-cell mRNA translation tracking"
+description: |
+  Crystal structure (1.43 Å) of an engineered **cysteine-free, thermostable
+  single-chain variable fragment (scFv) intrabody** that recognizes the
+  UTag peptide tag — a recently developed system for tracking single mRNA
+  translation events in living cells. The intrabody is built on a
+  conventional VH-linker-VL scFv scaffold but with all native cysteines
+  removed (replaced with non-disulfide-compatible side chains), allowing
+  it to fold and function in the reducing cytoplasm rather than only the
+  oxidizing periplasm/ER. **No biologically relevant ligand** is present —
+  SO4 is a crystallographic additive. This entry tests the
+  designed-protein / engineered-scaffold analysis path.
+
+identity:
+  must_mention_one_of:
+    - "intrabody"
+    - "scFv"
+    - "single-chain variable fragment"
+    - "antibody fragment"
+    - "engineered"
+    - "cysteine-free"
+    - "UTag"
+  reference_phrase: "Cysteine-free anti-UTag scFv intrabody — engineered antibody fragment for cytoplasmic mRNA translation tracking"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric scFv"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "immunoglobulin"
+    - "Ig fold"
+    - "Ig domain"
+    - "β-sandwich"
+    - "scFv"
+    - "antibody variable domain"
+    - "VH-VL"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "no functional ligand in this apo entry — the UTag peptide partner is NOT bound. SO4 is a crystallographic additive."
+
+notable_features:
+  must_mention_one_of:
+    - "scFv"
+    - "intrabody"
+    - "cysteine-free"
+    - "engineered"
+    - "antibody"
+    - "Ig fold"
+    - "VH-VL"
+    - "CDR"
+
+negative_constraints:
+  - "must not call it an enzyme"
+  - "must not claim a native disulfide bond — this construct is intentionally cysteine-free"
+  - "must not claim the UTag peptide is bound in this entry — it is the apo scFv"
+  - "must not describe it as a naturally occurring antibody — it is an engineered, cytoplasm-compatible variant"
+
+inference_hygiene:
+  required: false

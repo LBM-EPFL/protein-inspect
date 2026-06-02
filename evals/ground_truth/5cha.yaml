@@ -1,0 +1,70 @@
+pdb: 5cha
+short_name: "Bovine chymotrypsin (serine protease, Ser-His-Asp triad)"
+description: |
+  Bovine α-chymotrypsin — the archetypal serine protease. Synthesized as
+  a single-chain zymogen (chymotrypsinogen) that is activated by
+  proteolytic cleavage into chains A (1-13), B (16-146), and C (149-245)
+  held together by disulfide bonds. The catalytic triad is geometrically
+  preserved across the cleaved chains: Ser195 (chain C), His57 (chain B),
+  Asp102 (chain B). The fold is the canonical "double β-barrel" or
+  trypsin-like fold — two β-barrels packed together. Substrate binds
+  in an extended conformation in the S1 pocket; substrate specificity
+  for bulky aromatic side chains (Phe, Trp, Tyr) determined by the S1
+  pocket geometry. The oxyanion hole is formed by backbone NH groups
+  of Gly193 and Ser195 stabilizing the tetrahedral intermediate.
+
+identity:
+  must_mention_one_of:
+    - "chymotrypsin"
+    - "α-chymotrypsin"
+    - "alpha-chymotrypsin"
+  reference_phrase: "α-Chymotrypsin — archetypal serine protease with Ser-His-Asp triad"
+
+oligomeric_state:
+  correct: monomer
+  acceptable:
+    - "monomer"
+    - "post-translationally cleaved single protein"
+    - "three-chain (cleaved zymogen)"
+  symmetry: null
+  required_caveat: "Must distinguish that the 5CHA asymmetric unit contains multiple polymer chains because each active chymotrypsin molecule is post-translationally cleaved into chains A+B+C (or B+C in mature form) — and the AU usually contains TWO such cleaved chymotrypsin molecules. The 4-chain count reflects fragmentation, not a tetramer."
+
+fold_class:
+  must_mention_one_of:
+    - "trypsin fold"
+    - "trypsin-like"
+    - "chymotrypsin fold"
+    - "double β-barrel"
+    - "β-barrel"
+
+active_site:
+  type: triad
+  catalytic_residues:
+    - {name: SER195, role: nucleophile}
+    - {name: HIS57,  role: general base}
+    - {name: ASP102, role: acid (orients histidine)}
+  mechanism_class: hydrolase
+  location: intra-protein-but-cross-chain
+  oxyanion_hole:
+    - {name: GLY193, role: "backbone NH"}
+    - {name: SER195, role: "backbone NH"}
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null    # the structure may include an inhibitor depending on form
+
+notable_features:
+  must_mention_one_of:
+    - "catalytic triad"
+    - "Ser-His-Asp"
+    - "oxyanion hole"
+    - "zymogen"
+    - "S1 pocket"
+
+negative_constraints:
+  - "must not call it a metalloprotease"
+  - "must not claim NAD / FAD / heme as cofactors"
+  - "must not call it a membrane protein"
+
+inference_hygiene:
+  required: false

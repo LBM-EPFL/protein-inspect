@@ -1,0 +1,77 @@
+pdb: 9OII
+short_name: "Type III ABri amyloid filaments (familial British dementia, ex vivo)"
+description: |
+  Cryo-EM structure (3.2 Å) of Type III ABri amyloid filaments extracted
+  ex vivo from a human brain donor with familial British dementia (FBD).
+  ABri is a 34-residue C-terminally-extended peptide produced by a point
+  mutation in ITM2B (BRI2) that destroys the stop codon and adds a
+  10-residue extension to the cleavage product. The extended peptide
+  aggregates into amyloid filaments in the brain (cerebrovascular
+  amyloidosis and parenchymal plaques), causing the autosomal dominant
+  FBD. The structure shows a stacked cross-β protofilament — the
+  defining amyloid architecture in which β-strands run perpendicular to
+  the filament axis with ~4.8 Å inter-strand spacing. The biological
+  assembly is reported as a 15-mer (15 stacked peptide layers in the
+  modeled segment). NOT an enzyme.
+
+identity:
+  must_mention_one_of:
+    - "ABri"
+    - "amyloid"
+    - "familial British dementia"
+    - "FBD"
+    - "ITM2B"
+    - "BRI2"
+    - "amyloid filament"
+  reference_phrase: "ABri amyloid filaments from familial British dementia brain — cross-β fibril of an ITM2B C-terminal mutant peptide"
+
+oligomeric_state:
+  correct: higher_order
+  acceptable:
+    - "higher-order assembly"
+    - "amyloid filament"
+    - "polymer of stacked peptide layers"
+    - "cross-β filament"
+  symmetry: helical
+  required_caveat: "Amyloid filaments are linear polymers — the deposited 15-meric assembly represents a finite slice of an infinitely-long helical filament, not a closed oligomer."
+
+fold_class:
+  must_mention_one_of:
+    - "cross-β"
+    - "amyloid"
+    - "amyloid fold"
+    - "β-strand stack"
+    - "filament"
+    - "fibril"
+    - "protofilament"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "none — this is an ex vivo disease filament; no bound cofactor, drug, or ion"
+
+notable_features:
+  must_mention_one_of:
+    - "cross-β"
+    - "amyloid"
+    - "filament"
+    - "fibril"
+    - "ex vivo"
+    - "neurodegeneration"
+    - "ABri"
+    - "British dementia"
+    - "ITM2B"
+    - "BRI2"
+
+negative_constraints:
+  - "must not call it a functional / catalytic protein — it is a pathological aggregate"
+  - "must not invoke a globular fold class (TIM barrel, Rossmann, etc.) — amyloid is intrinsically extended cross-β"
+  - "must not confuse with Aβ (Alzheimer amyloid-β) or tau — this is the ABri peptide from FBD specifically"
+
+inference_hygiene:
+  required: false

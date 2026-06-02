@@ -1,0 +1,40 @@
+### 1. Identity & function
+
+The entry **ma-rgcer** carries no narrative annotation (`narrative: null`) and the `provenance` block indicates this is a **computed model** sourced from a local CIF file under `/tmp/ma_designs/` — the path and the `ma-` prefix strongly suggest this is a *de novo designed* or *machine-generated* construct rather than a natural protein deposited in the PDB. No biological role can be assigned from the available materials. The structure consists of three roughly co-linear α-helical segments connected by short kinks, giving an extended, gently curved rod ~80 residues long. Function: **unknown from the available materials**.
+
+### 2. Macromolecular composition
+
+`macromolecule_type: protein_only`. A single 83-residue polypeptide chain (chain A). No nucleic acids, glycans, lipids, cofactors, metals, or non-standard residues are present — and because this is an AlphaFold-style computed model, such ligands would not be modeled even if biologically relevant.
+
+### 3. Quaternary structure
+
+The asymmetric unit contains **one chain** (`n_chains: 1`, `oligomer: monomer`, `unique_sequences: 1`). The model is presented as a monomer. No point-group symmetry applies to a single chain. Because this is a computed model rather than a crystallographic deposition, there is no separate biological-assembly record; the ASU/biological-assembly distinction is therefore not meaningful here. Whether the designed sequence would oligomerize in solution (e.g., as a coiled-coil bundle) is unknown from the available materials.
+
+### 4. Fold class
+
+The secondary-structure string is **overwhelmingly α-helical (94%)** with only two tiny "EE"/"EEE" stretches that are most likely 3₁₀-like turns or assignment artifacts at helix junctions, not real β-strands. The fold is essentially **three long α-helices in tandem**, connected by short kinks, lying in a near-coplanar bow/arc shape (visible in both top and side views). This is not a classical globular fold (no TIM barrel, Rossmann, Ig, jelly-roll, etc.). It is most consistent with an **extended α-helical bundle / coiled-coil-like fragment** or a single-chain helical-repeat fragment. Without a partner chain in the model, a coiled coil cannot be confirmed — a single helix on its own cannot form a coiled coil.
+
+### 5. Active site / catalytic mechanism
+
+**Not an enzyme based on available evidence.** There is no globular pocket, no bound cofactor or substrate, no catalytic-triad/dyad geometric flag, and the all-α extended geometry offers no cleft capable of substrate binding. Active site: **none identified**.
+
+### 6. Cofactors, metals, ligands
+
+**None present.** This is an AF-style computed model and such groups would not be represented even if functionally required. No assertions about redox/Schiff-base/methyl-donor chemistry are supported.
+
+### 7. Notable structural features
+
+- **Three helical segments** linked by short turns (the "EE" markers in the SS string fall at these kinks).
+- **Hydrophobic surface (view 04)** shows substantial red (hydrophobic) patches running along one face of the rod — consistent with a designed interaction surface, e.g., a coiled-coil "a/d" stripe or a protein–protein interface, though this is suggestive rather than definitive.
+- **No disulfides, no modified residues, no membrane belt** (`belt_detected: false`, no Trp/Tyr girdle), no PTMs.
+- **pLDDT (view 03 and stats)**: mean **0.78** (78), max 0.93, min 0.56. The flags report `fraction_low: 1.0` for the only "low-confidence region" listed — but this is a quirk of how the summary is binned (the region spans the entire chain 1–83 with mean pLDDT 0.83, which is actually in the "confident" band). The rendered pLDDT view shows the helix cores red (high confidence) and the inter-helix kinks pale/blue (lower confidence) — typical for AF models of elongated helical assemblies where the relative orientation of segments is the uncertain part.
+
+### 8. Hypotheses & inferences
+
+*The following is explicitly inference.*
+
+- **The materials tell me**: it is a single-chain, 83-residue, ~94% α-helical computed model in an extended arc shape, no ligands, no oligomerization, mean pLDDT ~78.
+- **I infer** that **ma-rgcer is a de novo designed helical construct** — the `ma-` prefix, the `/tmp/ma_designs/` source path, and the lack of any narrative are all consistent with a machine-generated design (potentially from an RFdiffusion/Hallucination/ProteinMPNN-style pipeline).
+- **I infer** the design intent is most likely a **helical-bundle building block or coiled-coil monomer** that would assemble with copies of itself (or a partner) into a multi-helix bundle in the biological state; the conspicuous hydrophobic stripe along one face supports a designed interaction surface.
+- **I infer** the low-pLDDT kinks between helices represent genuine modeling uncertainty about inter-helix geometry, not flexibility — pLDDT is a confidence metric, not a B-factor.
+- Functional assignment beyond "structural / scaffold / putative oligomerization module" is **unknown from the available materials**.

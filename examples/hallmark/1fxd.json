@@ -1,0 +1,63 @@
+{
+  "pdb": "1fxd",
+  "desc": "Ferredoxin (4Fe-4S cluster)",
+  "elapsed_sec": 0.01,
+  "checks": [
+    {
+      "check": "iron_sulfur",
+      "expected": true,
+      "actual": true,
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 1,
+    "homo_or_hetero": "monomer",
+    "n_bio_ligands": 1,
+    "n_artifacts": 1,
+    "n_metals": 1,
+    "n_cofactors": 0,
+    "n_disulfides": 1,
+    "n_active_site_patterns": 0,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 1,
+      "oligomer": "monomer",
+      "homo_or_hetero": "monomer",
+      "symmetry": null,
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 57,
+      "ss_fractions": {
+        "helix": 0.543859649122807,
+        "sheet": 0.43859649122807015,
+        "loop": 0.017543859649122806
+      }
+    },
+    "n_metals": 1,
+    "metals": [
+      "F3S"
+    ],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [
+      "standard"
+    ],
+    "active_site_patterns": [],
+    "bio_ligands": [
+      "SCH"
+    ],
+    "artifacts": {
+      "unclassified": [
+        "SCH"
+      ]
+    },
+    "membrane_likely": false
+  }
+}

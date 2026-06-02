@@ -1,0 +1,60 @@
+pdb: 5l33
+short_name: "De novo designed protein with a curved β-sheet"
+description: |
+  5L33 is the crystal structure of a de novo computationally designed
+  protein featuring a non-trivial CURVED β-sheet — a structural element
+  notoriously hard to design because β-sheet curvature requires
+  precise control of pleating, strand-twist, and hydrogen-bonding
+  geometry. The work demonstrates that Rosetta-based design can produce
+  proteins with this twisted topology that doesn't naturally occur in
+  isolation. No biological function — it's a fold-design proof of
+  concept. Tests "designed fold with unusual geometry" recognition.
+
+identity:
+  must_mention_one_of:
+    - "de novo"
+    - "designed"
+    - "curved β-sheet"
+    - "computationally designed"
+    - "Rosetta"
+  reference_phrase: "De novo designed protein with curved β-sheet topology"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric designed protein"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "designed fold"
+    - "curved β-sheet"
+    - "twisted β-sheet"
+    - "all-β"
+    - "designed β-sheet topology"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "de novo"
+    - "designed"
+    - "curved β-sheet"
+    - "twisted β-sheet"
+    - "no natural function"
+    - "Rosetta"
+
+negative_constraints:
+  - "must NOT claim a natural biological function"
+  - "must NOT identify it as a member of a natural protein family"
+  - "must NOT assert any catalytic activity"
+
+inference_hygiene:
+  required: true

@@ -1,0 +1,47 @@
+{
+  "identity": {
+    "names_or_aliases": [],
+    "function_description": "Likely a structural/scaffolding peptide, coiled-coil/helical-bundle subunit, or designed helical peptide rather than a globular enzyme"
+  },
+  "oligomer": {
+    "claimed_state": "monomer",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": true
+  },
+  "fold_class": {
+    "fold_names_mentioned": [
+      "extended kinked helical hairpin",
+      "open helical bundle",
+      "coiled-coil",
+      "4-helix bundle",
+      "all-\u03b1"
+    ]
+  },
+  "active_site": {
+    "residues_named": [],
+    "mechanism_class": "none",
+    "site_type_claimed": "none"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [],
+    "chemistry_class_mentions": []
+  },
+  "notable_features": {
+    "features_mentioned": [
+      "amphipathic helical assembly",
+      "hydrophobic seam",
+      "pLDDT/B-factor coloring",
+      "kinked helices"
+    ]
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "extended, all-\u03b1-helical chain with no visible globular core",
+    "As shown, monomeric (one chain rendered). I cannot rule out that the biological assembly is oligomeric",
+    "extended, kinked helical hairpin / open helical bundle",
+    "No active-site features visible in these views",
+    "None visible. No spheres (metals), no stick ligands",
+    "classic signature of an amphipathic helical assembly",
+    "(Inference \u2014 not established from the images alone.)"
+  ]
+}

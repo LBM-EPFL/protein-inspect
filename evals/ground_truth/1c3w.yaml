@@ -1,0 +1,72 @@
+pdb: 1c3w
+short_name: "Bacteriorhodopsin (7TM proton pump, retinal cofactor)"
+description: |
+  Halobacterium bacteriorhodopsin (bR) — 7-TM α-helical proton pump in
+  the purple membrane. Distinct from rhodopsin: NOT a GPCR; uses
+  light-driven all-trans → 13-cis retinal isomerization to translocate
+  protons across the membrane. Retinal is covalently linked to Lys216
+  via a protonated Schiff base. Asp85 is the primary proton acceptor;
+  Asp96 is a key proton donor. The archetypal "Type I" microbial
+  rhodopsin (vs. Type II animal opsins / GPCRs).
+
+identity:
+  must_mention_one_of:
+    - "bacteriorhodopsin"
+    - "bR"
+    - "Halobacterium"
+    - "proton pump"
+    - "microbial rhodopsin"
+  reference_phrase: "Bacteriorhodopsin — 7TM light-driven proton pump (microbial rhodopsin)"
+
+oligomeric_state:
+  # bR is biologically a trimer in the purple membrane, but 1C3W's
+  # asymmetric unit contains a single monomer. Both descriptions are
+  # acceptable provided the response distinguishes the two (see
+  # required_caveat below).
+  correct: monomer
+  acceptable:
+    - "monomer"
+    - "monomeric"
+    - "trimer in the native membrane"
+    - "functional trimer in vivo"
+    - "forms trimers in the purple membrane"
+  symmetry: null
+  required_caveat: "Must distinguish that 1C3W contains a single bacteriorhodopsin monomer in the asymmetric unit, even though bacteriorhodopsin functions as a trimer in the native purple membrane."
+
+fold_class:
+  must_mention_one_of:
+    - "7TM"
+    - "seven-transmembrane"
+    - "α-helical bundle"
+    - "microbial rhodopsin fold"
+    - "Type I rhodopsin"
+
+active_site:
+  type: none
+  catalytic_residues:
+    - {name: LYS216, role: "retinal Schiff base"}
+    - {name: ASP85,  role: "primary proton acceptor"}
+    - {name: ASP96,  role: "proton donor"}
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []     # retinal is a covalent cofactor, present as RET
+  bio_ligand: "retinal (covalently linked via Schiff base)"
+
+notable_features:
+  must_mention_one_of:
+    - "retinal"
+    - "Schiff base"
+    - "proton pump"
+    - "purple membrane"
+    - "photoisomerization"
+    - "Lys216"
+
+negative_constraints:
+  - "must NOT call it a GPCR (it is a Type I microbial rhodopsin, not animal Type II opsin)"
+  - "must not call it an enzyme"
+  - "must not claim it transports ions other than H+"
+
+inference_hygiene:
+  required: false

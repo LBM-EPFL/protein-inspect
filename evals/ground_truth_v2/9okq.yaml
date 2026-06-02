@@ -1,0 +1,77 @@
+pdb: 9OKQ
+short_name: "E. coli ZnuBC zinc ABC transporter (wild-type)"
+description: |
+  Cryo-EM structure (2.9 Å) of the E. coli high-affinity zinc ABC
+  transporter ZnuBC. ZnuBC is the membrane-embedded permease (ZnuB) +
+  cytoplasmic ATP-binding cassette (ZnuC) component of the ZnuABC system,
+  responsible for zinc import under zinc-limiting conditions encountered
+  inside the host (nutritional immunity context). The assembly is the
+  canonical ABC-transporter heterotetramer: TWO ZnuB transmembrane
+  permease chains + TWO ZnuC ATPase chains (B₂C₂ stoichiometry). ATP
+  binding and hydrolysis at the two ZnuC nucleotide-binding domains
+  drives alternating-access transport of Zn²⁺ across the inner membrane.
+  The substrate-recognition step happens upstream via the periplasmic
+  ZnuA solute-binding protein (NOT in this entry).
+
+identity:
+  must_mention_one_of:
+    - "ZnuBC"
+    - "ZnuB"
+    - "ZnuC"
+    - "zinc ABC transporter"
+    - "zinc importer"
+    - "ABC transporter"
+  reference_phrase: "E. coli ZnuBC — ABC-transporter zinc importer (B₂C₂ heterotetramer of permease + ATPase)"
+
+oligomeric_state:
+  correct: tetramer
+  acceptable:
+    - "heterotetramer"
+    - "B2C2 heterotetramer"
+    - "(ZnuB)2(ZnuC)2"
+    - "tetramer (2 permease + 2 ATPase)"
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "ABC transporter"
+    - "Type I ABC"
+    - "ABC fold"
+    - "nucleotide-binding domain"
+    - "NBD"
+    - "transmembrane domain"
+    - "TMD"
+    - "α-helical bundle"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: LYS, role: "Walker A / P-loop lysine in ZnuC NBD — ATP β-phosphate binding"}
+    - {name: ASP, role: "Walker B aspartate — Mg²⁺ coordination + ATP hydrolysis"}
+    - {name: GLU, role: "Walker B glutamate — general base for water activation"}
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ZN, chemistry_class: metal}
+  bio_ligand: "Zn²⁺ (the transport substrate); ATP is NOT bound in this WT entry"
+
+notable_features:
+  must_mention_one_of:
+    - "ABC transporter"
+    - "Walker A"
+    - "Walker B"
+    - "P-loop"
+    - "nucleotide binding"
+    - "heterotetramer"
+    - "permease"
+    - "transmembrane"
+
+negative_constraints:
+  - "must not describe ZnuABC as a passive channel — it is an ATP-driven active transporter"
+  - "must not invoke a metal-coordinating proteolytic active site (the Zn here is a transport substrate, not a structural / catalytic metal)"
+  - "must not claim the periplasmic ZnuA solute-binding protein is present — it is NOT in this entry"
+
+inference_hygiene:
+  required: false

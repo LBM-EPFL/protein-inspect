@@ -1,0 +1,66 @@
+{
+  "pdb": "1bl8",
+  "desc": "KcsA potassium channel (TM tetramer)",
+  "elapsed_sec": 0.03,
+  "checks": [
+    {
+      "check": "oligomer",
+      "expected": "tetramer",
+      "actual": "tetramer",
+      "matched": true
+    },
+    {
+      "check": "membrane_likely",
+      "expected": true,
+      "actual": true,
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 4,
+    "homo_or_hetero": "homo",
+    "n_bio_ligands": 0,
+    "n_artifacts": 0,
+    "n_metals": 1,
+    "n_cofactors": 0,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 4,
+    "membrane_likely": true,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 4,
+      "oligomer": "tetramer",
+      "homo_or_hetero": "homo",
+      "symmetry": "C4",
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 97,
+      "ss_fractions": {
+        "helix": 0.7938144329896907,
+        "sheet": 0.13402061855670103,
+        "loop": 0.07216494845360824
+      }
+    },
+    "n_metals": 1,
+    "metals": [
+      "K"
+    ],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [],
+    "active_site_patterns": [
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "asp_dyad"
+    ],
+    "bio_ligands": [],
+    "artifacts": {},
+    "membrane_likely": true
+  }
+}

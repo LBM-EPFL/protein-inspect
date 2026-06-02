@@ -1,0 +1,43 @@
+{
+  "identity": {
+    "names_or_aliases": [],
+    "function_description": ""
+  },
+  "oligomer": {
+    "claimed_state": "monomer",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": true
+  },
+  "fold_class": {
+    "fold_names_mentioned": [
+      "all-\u03b1",
+      "helix\u2013loop\u2013helix",
+      "helical hairpin"
+    ]
+  },
+  "active_site": {
+    "residues_named": [],
+    "mechanism_class": "unstated",
+    "site_type_claimed": "none"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [],
+    "chemistry_class_mentions": []
+  },
+  "notable_features": {
+    "features_mentioned": [
+      "helical hairpin",
+      "B-factor / pLDDT coloring"
+    ]
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "The visible cartoons show only a small, almost entirely \u03b1-helical fragment",
+    "Monomeric in the views provided. Only one chain is rendered",
+    "I cannot rule out that the biological assembly is oligomeric",
+    "This is most simply described as a helix\u2013loop\u2013helix / helical hairpin",
+    "No active-site features visible in these views",
+    "None visible in the views I can inspect",
+    "The following is inference, not observation."
+  ]
+}

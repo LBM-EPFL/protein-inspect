@@ -1,0 +1,49 @@
+# Protein structure analysis — image-only inspection
+
+You are shown a small set of standardized PyMOL views of a protein structure.
+You have NO identifier, no title, no annotation, no sequence. Reason ONLY
+from what the images show you.
+
+**CANONICAL VIEW BATTERY (PyMOL-rendered) — no other context provided:**
+
+@/tmp/designs_out/9V4L/views/01_top.png @/tmp/designs_out/9V4L/views/02_side.png @/tmp/designs_out/9V4L/views/03_bfactor_chain_A.png @/tmp/designs_out/9V4L/views/04_surface_hydrophobic.png @/tmp/designs_out/9V4L/views/06_metal_ZN_A101.png
+
+Provide a structured analysis in **400–800 words**, with these section
+headers in this order:
+
+### 1. Identity & function
+Identify the protein only if the images give unambiguous visual cues (very
+unusual; usually not possible from images alone). Otherwise write "unknown
+from images alone" and explain what fold-class hints the images carry.
+
+### 2. Macromolecular composition
+What polymer types are present (protein chains, nucleic acid, glycans)?
+Count chains and estimate sizes from the cartoons.
+
+### 3. Quaternary structure
+Oligomeric state (monomer, dimer, trimer, etc.), symmetry if any.
+
+### 4. Fold class
+Name the fold(s) — be specific (β-grasp, TIM barrel, Rossmann, Ig fold,
+4-helix bundle, coiled coil, 7TM bundle, etc.). Cite specific image features
+that support each claim.
+
+### 5. Active site / catalytic mechanism
+If you see a clear binding pocket / metal / ligand in the images, describe
+it. If not, write "no active-site features visible in these views".
+
+### 6. Cofactors, metals, ligands
+List what is visibly bound (metals as colored spheres, small molecules as
+sticks). Do NOT invent ligands that are not shown.
+
+### 7. Notable structural features
+Disulfides (visible as connected yellow sticks), aromatic clusters,
+hydrophobic surface patches (visible in the surface view), confidence
+gradients (visible in the B-factor / pLDDT view).
+
+### 8. Hypotheses & inferences
+Mark this section explicitly as inference. Be conservative — images give
+you fold class and topology, but rarely identity or mechanism.
+
+If you don't know something, write "unknown from the available images"
+rather than fabricating.

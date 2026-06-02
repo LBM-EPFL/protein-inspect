@@ -1,0 +1,81 @@
+{
+  "pdb": "1atp",
+  "desc": "PKA catalytic subunit (kinase, ATP, divalent metal)",
+  "elapsed_sec": 0.03,
+  "checks": [
+    {
+      "check": "free_nucleotide",
+      "expected": true,
+      "actual": true,
+      "matched": true
+    },
+    {
+      "check": "metals",
+      "expected": [
+        "MG",
+        "MN"
+      ],
+      "actual": [
+        "MN"
+      ],
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 2,
+    "homo_or_hetero": "hetero",
+    "n_bio_ligands": 2,
+    "n_artifacts": 2,
+    "n_metals": 1,
+    "n_cofactors": 0,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 6,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 2,
+      "oligomer": "dimer",
+      "homo_or_hetero": "hetero",
+      "symmetry": null,
+      "unique_sequences": 2
+    },
+    "fold": {
+      "length": 334,
+      "ss_fractions": {
+        "helix": 0.5658682634730539,
+        "sheet": 0.41317365269461076,
+        "loop": 0.020958083832335328
+      }
+    },
+    "n_metals": 1,
+    "metals": [
+      "MN"
+    ],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [],
+    "active_site_patterns": [
+      "cys_his_dyad",
+      "asp_dyad",
+      "asp_dyad",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop",
+      "phosphate_binding_loop"
+    ],
+    "bio_ligands": [
+      "SEP",
+      "TPO"
+    ],
+    "artifacts": {
+      "unclassified": [
+        "SEP",
+        "TPO"
+      ]
+    },
+    "membrane_likely": false
+  }
+}

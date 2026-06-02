@@ -1,0 +1,65 @@
+pdb: 1adc
+short_name: "Horse liver alcohol dehydrogenase (NAD+Zn, Rossmann fold)"
+description: |
+  Horse liver alcohol dehydrogenase (LADH) — NAD(H)-dependent
+  oxidoreductase catalyzing reversible oxidation of alcohols to
+  aldehydes/ketones. Homodimer (~374 aa per chain). Each subunit has
+  TWO Zn ions: a catalytic Zn (coordinated by Cys46, His67, Cys174)
+  that polarizes the substrate hydroxyl, and a structural Zn
+  (coordinated by four cysteines). NAD(H) binds via the classical
+  Rossmann fold (the dinucleotide-binding domain). Two-domain
+  architecture: catalytic domain + Rossmann (cofactor-binding) domain.
+
+identity:
+  must_mention_one_of:
+    - "ADH"
+    - "alcohol dehydrogenase"
+    - "LADH"
+    - "liver ADH"
+  reference_phrase: "Horse liver alcohol dehydrogenase — NAD-dependent zinc oxidoreductase"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "Rossmann fold"
+    - "Rossmann"
+    - "NAD-binding fold"
+    - "α/β"
+    - "dinucleotide-binding"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: CYS46,  role: "catalytic Zn coordination"}
+    - {name: HIS67,  role: "catalytic Zn coordination"}
+    - {name: CYS174, role: "catalytic Zn coordination"}
+  mechanism_class: oxidoreductase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ZN, chemistry_class: other}
+    - {id: PAD, chemistry_class: redox_2e}    # NAD analog in this entry
+  bio_ligand: "NAD analog and substrate"
+
+notable_features:
+  must_mention_one_of:
+    - "NAD"
+    - "Rossmann"
+    - "two zinc ions"
+    - "catalytic zinc"
+    - "structural zinc"
+    - "alcohol → aldehyde"
+
+negative_constraints:
+  - "must not call it a kinase"
+  - "must not claim heme or iron-sulfur cofactors"
+  - "must not call it a protease"
+  - "must not treat 'the zinc' as a single site — clearly distinguish the catalytic Zn in the active site (substrate-activating) from the separate structural Zn site (tetrahedrally bound, non-catalytic)"
+
+inference_hygiene:
+  required: false

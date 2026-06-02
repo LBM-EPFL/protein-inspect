@@ -1,0 +1,76 @@
+pdb: 1a9n
+short_name: "U2B''/U2A' heterodimer + U2 snRNA stem-loop IV"
+description: |
+  Spliceosomal U2 snRNP RBP module: the RRM domain of human U2B''
+  (residues 4–99, RU2B_HUMAN P08579) bound to U2 snRNA stem-loop IV,
+  with the leucine-rich-repeat partner U2A' (N-terminal domain,
+  residues 1–176, RU2A_HUMAN P09661) wrapped around the RRM and also
+  contacting the RNA. U2B'' alone has only weak affinity for the
+  loop; U2A' converts the RRM into a high-affinity, sequence-specific
+  RNA binder — a paradigm of how an LRR scaffold can co-opt an RRM.
+  Each asymmetric unit contains two copies of this U2B''/U2A'/RNA
+  heterotrimer (chains A+B+Q and C+D+R). This is NOT the homologous
+  U1A–U1 snRNA complex (that is PDB 1URN); the cif itself notes the
+  correspondence to U1A in 1URN.
+
+identity:
+  must_mention_one_of:
+    - "U2B''"
+    - "U2B"
+    - "U2A'"
+    - "U2 snRNA"
+    - "U2 snRNP"
+    - "stem-loop IV"
+  reference_phrase: "U2B''/U2A' heterodimer bound to U2 snRNA stem-loop IV — RRM + LRR cooperative RNA recognition"
+
+oligomeric_state:
+  correct: heterotetramer
+  acceptable:
+    - "heterodimer"
+    - "heterotrimer"
+    - "U2B''/U2A' heterodimer"
+    - "U2B''/U2A'/RNA heterotrimer"
+    - "protein-RNA complex"
+  symmetry: null
+  required_caveat: "1A9N is a hetero-oligomer of two distinct proteins (U2B'' RRM + U2A' LRR) plus U2 snRNA. The asymmetric unit holds two copies of the U2B''/U2A'/RNA complex — calling it a 'monomer' is wrong both at the protein level (two distinct gene products) and at the assembly level."
+
+fold_class:
+  must_mention_one_of:
+    - "RRM"
+    - "RNA recognition motif"
+    - "βαββαβ"
+    - "four-stranded antiparallel β-sheet"
+    - "leucine-rich repeat"
+    - "LRR"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "U2 snRNA stem-loop IV (24-nt hairpin)"
+
+notable_features:
+  must_mention_one_of:
+    - "RRM"
+    - "RNP1"
+    - "RNP2"
+    - "leucine-rich repeat"
+    - "LRR"
+    - "aromatic stacking"
+    - "stem-loop"
+    - "spliceosome"
+    - "U2 snRNP"
+
+negative_constraints:
+  - "must not call it an enzyme"
+  - "must not claim a catalytic mechanism"
+  - "must not call it a DNA-binding protein"
+  - "must not identify it as U1A or as the U1 snRNA complex (that is PDB 1URN, a paralogous structure)"
+  - "must not describe it as a monomer of a single protein"
+
+inference_hygiene:
+  required: false

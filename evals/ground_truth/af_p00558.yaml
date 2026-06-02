@@ -1,0 +1,62 @@
+pdb: AF-P00558-F1
+short_name: "Human phosphoglycerate kinase (AlphaFold model)"
+description: |
+  AlphaFold-predicted model of human phosphoglycerate kinase (PGK,
+  UniProt P00558). PGK is a glycolytic enzyme catalyzing the transfer
+  of a phosphate from 1,3-bisphosphoglycerate to ADP yielding
+  3-phosphoglycerate + ATP. Two-domain bilobed architecture with
+  active site in the cleft. Note: AlphaFold models do NOT contain
+  bound nucleotides, metals, or substrates — the prediction is of the
+  unliganded apo polypeptide. The B-factor column carries pLDDT
+  confidence (0–100), not crystallographic B-factors. Model expected
+  to be high-confidence overall (well-studied protein with many
+  homologs).
+
+identity:
+  must_mention_one_of:
+    - "phosphoglycerate kinase"
+    - "PGK"
+    - "glycolytic kinase"
+  reference_phrase: "Phosphoglycerate kinase — AlphaFold-predicted apo model, glycolytic phosphotransferase"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "PGK fold"
+    - "bilobed"
+    - "two-domain"
+    - "α/β"
+    - "Rossmann-like"
+
+active_site:
+  # Active site is between the two domains; AlphaFold model has no bound substrate.
+  type: none
+  catalytic_residues: []
+  mechanism_class: transferase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []   # AF models lack cofactors/metals
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "computed model"
+    - "AlphaFold"
+    - "predicted"
+    - "pLDDT"
+    - "bilobed"
+    - "glycolysis"
+
+negative_constraints:
+  - "must NOT assert that bound ATP/ADP/Mg coordinates are present (AF does not predict cofactors)"
+  - "must NOT call it a crystal structure (it's a predicted model)"
+  - "must NOT claim experimentally observed resolution"
+  - "must report this as a computed model (is_computed = true) or call out the pLDDT confidence"
+
+inference_hygiene:
+  required: true

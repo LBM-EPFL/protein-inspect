@@ -1,0 +1,171 @@
+# Protein structure analysis — 9V4L
+
+Analyze the protein with PDB identifier **9V4L**.
+
+**STRUCTURED SUMMARY (machine-extracted features from `protein-inspect`):**
+
+```yaml
+entry: 9V4L
+schema_version: '1.1'
+generated: '2026-05-29T13:14:01Z'
+narrative: null
+macromolecule_type: protein_only
+model_quality:
+  is_computed: false
+  confidence_metric: bfactor
+provenance:
+  source: local_file
+  input_path: /tmp/designs/9V4L.cif
+  resolution: 1.3
+  method: X-RAY DIFFRACTION
+  resolution_class: high
+  space_group: P 21 21 21
+  unit_cell:
+  - 34.245
+  - 41.057
+  - 47.235
+  - 90.0
+  - 90.0
+  - 90.0
+  deposition_date: '2025-05-23'
+assembly:
+  n_chains: 1
+  chains:
+  - A
+  homo_or_hetero: monomer
+  oligomer: monomer
+  unique_sequences: 1
+fold:
+  representative_chain: A
+  length: 70
+  ss_fractions:
+    helix: 0.9852941176470589
+    sheet: 0.014705882352941176
+    loop: 0.0
+  ss_string: HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHH
+  bfactor_stats:
+    mean: 9.286000074659075
+    min: 5.650000095367432
+    max: 16.729999542236328
+    std: 2.1590668551603747
+metals:
+- id: ZN
+  n_copies: 1
+  cluster_type: mononuclear
+  coordinating_residues:
+  - ASP11
+  - ASP45
+  - HIS54
+  - HIS7
+  context: catalytic_likely
+active_site_patterns:
+- pattern: asp_dyad
+  residues:
+  - GLU8
+  - GLU20
+  chain: A
+  geometry:
+    closest_o_o_a: 4.39
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - ASP11
+  - ASP45
+  chain: A
+  geometry:
+    closest_o_o_a: 3.06
+  rule_id: aspartate_dyad_geometry
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 1
+  detected_by: contact_map_ratio
+  boundaries:
+  - chain: A
+    range:
+    - 0
+    - 68
+coords_ref:
+  path: /tmp/designs_out/9V4L/9V4L.cif
+  format: cif
+flags:
+- rule_id: metals_present
+  priority: medium
+  message: "Metal ion(s) coordinating protein. Catalytic vs structural role depends on coordination geometry and pocket context\
+    \ \u2014 see metals[].context heuristic."
+  evidence_quality: confirmed
+- rule_id: aspartate_dyad_geometry
+  priority: high
+  message: Aspartate dyad / pair detected (two Asp carboxylates close together). Common in aspartyl proteases, glycosidases
+    (acid/base + nucleophile), and some metallophosphatases. Family depends on whether they activate water (protease) or substrate
+    (glycosidase).
+  evidence_quality: geometric_only
+- rule_id: no_narrative
+  priority: low
+  message: No narrative description available (designed structure or unannotated entry). Functional-class statements must
+    be flagged as inference and grounded in structural features only.
+  evidence_quality: confirmed
+visual:
+  views_dir: /tmp/designs_out/9V4L/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: /tmp/designs_out/9V4L/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: /tmp/designs_out/9V4L/views/02_side.png
+    ray: true
+  - name: surface
+    path: /tmp/designs_out/9V4L/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: /tmp/designs_out/9V4L/views/03_bfactor_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: bfactor
+  - name: metal_closeup
+    path: /tmp/designs_out/9V4L/views/06_metal_ZN_A101.png
+    ray: true
+    details:
+      metal_resn: ZN
+      metal_chain: A
+      metal_resi: 101
+
+```
+
+**CANONICAL VIEW BATTERY (PyMOL-rendered):**
+
+@/tmp/designs_out/9V4L/views/01_top.png @/tmp/designs_out/9V4L/views/02_side.png @/tmp/designs_out/9V4L/views/03_bfactor_chain_A.png @/tmp/designs_out/9V4L/views/04_surface_hydrophobic.png @/tmp/designs_out/9V4L/views/06_metal_ZN_A101.png
+
+Provide a structured analysis in **400–800 words**, with these section headers in this order:
+
+### 1. Identity & function
+Name the protein. State its biological role.
+
+### 2. Macromolecular composition
+What polymer types are present (protein, DNA, RNA, glycans, lipids)?
+
+### 3. Quaternary structure
+Oligomeric state (monomer, dimer, trimer, etc.), point-group symmetry if any, and explicitly note any difference between the asymmetric-unit chain count and the biological assembly.
+
+### 4. Fold class
+Name the fold(s) — be specific (β-grasp, TIM barrel, Rossmann, Ig fold, jelly-roll, 7TM bundle, etc.).
+
+### 5. Active site / catalytic mechanism
+If this is an enzyme, name the catalytic residues, the mechanism class (hydrolase / transferase / oxidoreductase / isomerase / lyase / ligase), and where the site is (intra-subunit, inter-subunit, pocket). If not an enzyme, say so.
+
+### 6. Cofactors, metals, ligands
+What's bound, and what chemistry does it support (redox / Schiff-base / methyl-donor / acyl-transfer / electron-transfer / etc.).
+
+### 7. Notable structural features
+Family-defining motifs, disulfides (including vicinal), modifications, post-translational features.
+
+### 8. Hypotheses & inferences
+Mark this section explicitly as inference. Distinguish "the materials tell me X" from "I infer Y."
+
+If you don't know something, write "unknown from the available materials" rather than fabricating.

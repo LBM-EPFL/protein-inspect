@@ -1,0 +1,73 @@
+pdb: 24HR
+short_name: "Human KRAS G12D (GDP-bound) + macrocyclic peptide inhibitor AP6252"
+description: |
+  Crystal structure of the oncogenic KRAS-G12D mutant (~189 residues,
+  Switch-I/Switch-II GTPase) trapped in the GDP-bound state and in complex
+  with the synthetic macrocyclic peptide inhibitor AP6252. KRAS is the
+  founding member of the RAS small-GTPase family; the G12D activating
+  mutation impairs intrinsic and GAP-stimulated GTP hydrolysis and is one
+  of the most common oncogenic drivers (esp. pancreatic, colorectal, lung).
+  AP6252 is a Switch-II-pocket-binder, the same drug class as sotorasib /
+  adagrasib but targeting the G12D state. Tests the P-loop / GTPase fold +
+  macrocyclic peptide pharmacology.
+
+identity:
+  must_mention_one_of:
+    - "KRAS"
+    - "K-Ras"
+    - "RAS"
+    - "G12D"
+    - "GTPase"
+    - "oncogene"
+  reference_phrase: "Oncogenic KRAS-G12D, GDP-bound, with macrocyclic peptide inhibitor"
+
+oligomeric_state:
+  correct: monomer
+  acceptable:
+    - "monomer"
+    - "monomeric KRAS bound to one peptide inhibitor"
+    - "1:1 KRAS:peptide complex"
+  symmetry: null
+  required_caveat: "The deposited assembly is labeled 'dimeric' because it contains one KRAS chain plus one synthetic macrocyclic peptide chain (a 1:1 complex of two different polymer entities), NOT a KRAS-KRAS homodimer. KRAS itself is functionally monomeric. Treat as a monomer + small peptide drug."
+
+fold_class:
+  must_mention_one_of:
+    - "P-loop NTPase"
+    - "small GTPase"
+    - "Ras fold"
+    - "Ras superfamily"
+    - "G-domain"
+    - "α/β"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: ASP12, role: "P-loop residue 12 — mutated G12D in this entry; substitution sterically and electrostatically impairs GAP-stimulated GTP hydrolysis, driving oncogenic activation"}
+    - {name: GLN61, role: "Switch-II glutamine — water positioning for GTP hydrolysis"}
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: GDP, chemistry_class: nucleotide}
+    - {id: MG, chemistry_class: metal}
+  bio_ligand: "GDP + Mg²⁺ in the nucleotide pocket; macrocyclic peptide AP6252 in the Switch-II pocket"
+
+notable_features:
+  must_mention_one_of:
+    - "P-loop"
+    - "Switch I"
+    - "Switch II"
+    - "G12D"
+    - "macrocyclic peptide"
+    - "nucleotide binding"
+    - "GDP"
+
+negative_constraints:
+  - "must not claim KRAS is an enzyme that processes peptide bonds"
+  - "must not call AP6252 a covalent inhibitor without evidence"
+  - "must not describe the assembly as a KRAS homodimer"
+  - "must not call it a kinase"
+
+inference_hygiene:
+  required: false

@@ -1,0 +1,11 @@
+{
+  "name": "protein-inspect",
+  "description": "Turn any PDB ID or structure file into a layered semantic representation (YAML + canonical PyMOL views) that Claude can reason over fluently. Codifies structural-biology inspection logic in a versionable decision tree.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Benedikt Singer"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/LBM-EPFL/protein-inspect",
+  "repository": "https://github.com/LBM-EPFL/protein-inspect"
+}

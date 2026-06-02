@@ -1,0 +1,87 @@
+pdb: 9NI8
+short_name: "PI3Kα (p110α / p85α) – KRas complex on POPC/POPS nanodisc"
+description: |
+  Cryo-EM structure (3.2 Å) of the **class IA phosphoinositide 3-kinase
+  (PI3Kα)** in complex with active GTP-bound **KRas**, reconstituted on a
+  POPC/POPS lipid-bilayer nanodisc. PI3Kα is a heterodimer of the
+  **catalytic p110α subunit (PIK3CA)** and the **regulatory p85α subunit
+  (PIK3R1)**. GTP-loaded Ras binds the Ras-binding domain (RBD) of p110α
+  and triggers allosteric activation; the kinase then phosphorylates the
+  3-OH of phosphatidylinositol-4,5-bisphosphate (PIP₂) in the membrane,
+  producing PIP₃ — the master upstream signal for AKT/mTOR signaling.
+  PIK3CA gain-of-function mutations are among the most frequent oncogenic
+  drivers in solid tumors. The lipid nanodisc captures the
+  membrane-engaged active conformation. GNP (GMP-PNP, non-hydrolyzable GTP
+  analog) on Ras keeps it in the active state. A1AZD is a small-molecule
+  ligand of the PI3K complex (likely an inhibitor or chemical probe).
+
+identity:
+  must_mention_one_of:
+    - "PI3K"
+    - "PI3K alpha"
+    - "PI3Kα"
+    - "p110"
+    - "p85"
+    - "PIK3CA"
+    - "lipid kinase"
+    - "KRas"
+    - "Ras"
+  reference_phrase: "PI3Kα (p110α/p85α) – KRas signaling complex on a lipid bilayer — class IA lipid kinase activated by GTP-loaded Ras"
+
+oligomeric_state:
+  correct: trimer
+  acceptable:
+    - "heterotrimer (p110α + p85α + KRas)"
+    - "1:1:1 complex"
+    - "PI3K-Ras heterotrimer"
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "PI3K kinase domain"
+    - "PIK family"
+    - "PIKK"
+    - "bilobed kinase"
+    - "lipid kinase"
+    - "Ras-binding domain"
+    - "RBD"
+    - "P-loop GTPase"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: LYS, role: "ATP-binding lysine (p110α catalytic lobe)"}
+    - {name: ASP, role: "catalytic aspartate — Mg²⁺ coordination, phosphoryl transfer"}
+    - {name: ASP, role: "DFG-motif aspartate"}
+  mechanism_class: transferase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: GNP, chemistry_class: nucleotide}
+    - {id: MG, chemistry_class: metal}
+    - {id: A1AZD, chemistry_class: drug}
+  bio_ligand: "GMP-PNP on KRas (locked active state) + Mg²⁺ + ligand A1AZD on PI3Kα; the membrane (POPC/POPS) supplies the lipid substrate context"
+
+notable_features:
+  must_mention_one_of:
+    - "lipid kinase"
+    - "PI3K-Ras"
+    - "RBD"
+    - "Ras-binding domain"
+    - "nanodisc"
+    - "lipid bilayer"
+    - "membrane"
+    - "GTP-loaded"
+    - "active state"
+    - "PIP2"
+    - "PIP3"
+
+negative_constraints:
+  - "must not call PI3Kα a Ser/Thr protein kinase as its primary function (it is a lipid kinase, even though it has some protein-kinase activity)"
+  - "must not claim Ras is GDP-loaded — GNP is a GTP analog, this is the active state"
+  - "must not omit the membrane context — the nanodisc is functionally important"
+  - "must not invoke a catalytic triad / dyad"
+
+inference_hygiene:
+  required: false

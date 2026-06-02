@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 0,
+      "rationale": "No identity claims made; response declined to characterize the protein."
+    },
+    "oligomer": {
+      "pts": 0,
+      "rationale": "Claimed state is 'unstated'; no match to monomer/monomeric."
+    },
+    "fold_class": {
+      "pts": 0,
+      "rationale": "No fold names mentioned; declined to assign fold class."
+    },
+    "active_site": {
+      "pts": 1,
+      "rationale": "site_type_claimed 'none' aligns with no enzyme claim, but no residues or mechanism context provided; partial credit for not fabricating."
+    },
+    "cofactors_metals_ligands": {
+      "pts": 0,
+      "rationale": "No mention of Zn/zinc; declined to identify any cofactors."
+    },
+    "notable_features": {
+      "pts": 0,
+      "rationale": "No notable features mentioned from the required list."
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "Response explicitly marks lack of knowledge and declines speculation."
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 2,
+  "penalty_total": 0,
+  "final_score": 2
+}

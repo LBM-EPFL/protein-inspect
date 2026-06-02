@@ -1,0 +1,72 @@
+pdb: 9HZ3
+short_name: "Human PCSK9 + small-molecule inhibitor AZD0780"
+description: |
+  Atomic-resolution (1.43 Å) crystal structure of human proprotein
+  convertase subtilisin/kexin type 9 (PCSK9) in complex with the small-
+  molecule inhibitor AZD0780 (laroprovstat) — the first oral small-molecule
+  PCSK9 inhibitor for hypercholesterolemia. PCSK9 is a serine protease of
+  the subtilisin family that auto-cleaves between its prodomain and the
+  catalytic domain; after autoprocessing, the prodomain remains
+  non-covalently bound and blocks substrate access — so PCSK9 in vivo is a
+  prodomain-bound, catalytically-INACTIVE chaperone, not an active enzyme.
+  PCSK9 binds the LDL receptor and targets it for lysosomal degradation;
+  inhibitors that disrupt the PCSK9-LDLR interface lower LDL cholesterol.
+  Deposited with two protomers (mature PCSK9 + cleaved prodomain) labeled
+  as a heteromeric dimer in the biological assembly.
+
+identity:
+  must_mention_one_of:
+    - "PCSK9"
+    - "proprotein convertase"
+    - "subtilisin/kexin"
+    - "cholesterol"
+  reference_phrase: "PCSK9 — secreted subtilisin-family chaperone for the LDL receptor; targeted by anti-hypercholesterolemia therapy"
+
+oligomeric_state:
+  correct: monomer
+  acceptable:
+    - "monomer"
+    - "monomeric PCSK9 (catalytic domain + non-covalently bound prodomain)"
+    - "prodomain-bound mature PCSK9"
+  symmetry: null
+  required_caveat: "PCSK9 in the deposited file appears as TWO polymer chains because the prodomain remains non-covalently associated with the catalytic domain after autoprocessing — these are TWO PIECES OF THE SAME GENE PRODUCT, not a hetero-oligomer. Functionally PCSK9 is a single, mature, secreted enzyme."
+
+fold_class:
+  must_mention_one_of:
+    - "subtilisin fold"
+    - "α/β"
+    - "serine protease"
+    - "subtilase"
+
+active_site:
+  type: triad
+  catalytic_residues:
+    - {name: SER386, role: "nucleophile (mature numbering)"}
+    - {name: HIS226, role: "general base"}
+    - {name: ASP186, role: "acid"}
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: A1IYR, chemistry_class: drug}
+  bio_ligand: "AZD0780 (laroprovstat) — oral small-molecule PCSK9 inhibitor"
+
+notable_features:
+  must_mention_one_of:
+    - "subtilisin"
+    - "prodomain"
+    - "auto-cleavage"
+    - "autoprocessing"
+    - "LDL receptor"
+    - "LDLR"
+    - "catalytically inactive"
+    - "non-covalently bound"
+
+negative_constraints:
+  - "must not describe PCSK9 as currently catalytically active in this state — it is auto-inhibited by its bound prodomain"
+  - "must not call it a kinase or a phosphatase"
+  - "must not invoke a Cys-His dyad"
+
+inference_hygiene:
+  required: false

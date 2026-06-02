@@ -1,0 +1,70 @@
+pdb: 9V4L
+short_name: "De novo designed Zn-binding protein ZK2"
+description: |
+  A 70-residue de novo designed Zn-binding protein (ZK2) — a small, almost
+  entirely α-helical (≈98% helix) scaffold engineered to coordinate a single
+  Zn²⁺ ion via four side-chain ligands. The metal site uses a 2-His / 2-Asp
+  coordination geometry (HIS7, HIS54, ASP11, ASP45). ASP11 and ASP45 also
+  form a tight aspartate dyad (O-O ≈ 3.06 Å). Designed by computational
+  methods; X-ray structure at 1.3 Å.
+
+identity:
+  must_mention_one_of:
+    - "Zn-binding"
+    - "zinc-binding"
+    - "Zn binding"
+    - "metal-binding"
+    - "designed"
+    - "de novo"
+    - "engineered"
+  reference_phrase: "De novo designed Zn-binding helical mini-protein"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "helical"
+    - "α-helical"
+    - "all-α"
+    - "helix bundle"
+    - "four-helix bundle"
+    - "designed"
+    - "miniprotein"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: HIS7,  role: "Zn-coordinating histidine"}
+    - {name: ASP11, role: "Zn-coordinating aspartate"}
+    - {name: ASP45, role: "Zn-coordinating aspartate"}
+    - {name: HIS54, role: "Zn-coordinating histidine"}
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ZN, chemistry_class: metal}
+  bio_ligand: "Zn²⁺ — coordinated by 2 His + 2 Asp"
+
+notable_features:
+  must_mention_one_of:
+    - "Zn"
+    - "zinc"
+    - "metal coordination"
+    - "His"
+    - "Asp"
+    - "tetrahedral"
+    - "designed"
+    - "de novo"
+    - "α-helical"
+
+negative_constraints:
+  - "must not call it a natural / evolved enzyme — it is a de novo design"
+  - "must not invoke a Ser-His-Asp triad or Cys-His dyad (these are not present)"
+  - "must not claim a substrate / inhibitor is bound — only Zn²⁺ is present"
+
+inference_hygiene:
+  required: true

@@ -1,0 +1,73 @@
+pdb: 9LFC
+short_name: "Human bradykinin receptor B1R + antagonist R715 + nanobody chaperone"
+description: |
+  Cryo-EM structure (3.6 Å) of human bradykinin B1 receptor (B1R, gene
+  BDKRB1) bound to the peptide antagonist R715 and stabilized by an
+  anti-receptor nanobody. B1R is a class A (rhodopsin-like) G-protein-
+  coupled receptor (GPCR) — a 7-transmembrane (7TM) α-helical bundle —
+  that is activated by des-Arg-bradykinin, a kinin peptide produced during
+  tissue injury and inflammation. B1R is upregulated in inflammatory
+  conditions and is a therapeutic target for chronic pain. **This entry
+  uses a kappa-type opioid receptor (KOR) fusion at the N-terminus as a
+  crystallization/cryo-EM scaffold** — Claude should not describe KOR as
+  a native part of B1R. The nanobody (Lama glama V_H_H) is a
+  crystallization chaperone, NOT the natural binding partner.
+
+identity:
+  must_mention_one_of:
+    - "B1R"
+    - "B1 bradykinin"
+    - "bradykinin receptor"
+    - "BDKRB1"
+    - "GPCR"
+    - "kinin"
+  reference_phrase: "Bradykinin B1 receptor — class A GPCR, inflammation-induced kinin receptor; here in antagonist-bound state"
+
+oligomeric_state:
+  correct: monomer
+  acceptable:
+    - "monomer (B1R)"
+    - "1:1 B1R:antagonist complex"
+    - "monomeric GPCR"
+  symmetry: null
+  required_caveat: "RCSB labels the assembly 'dimeric' because the deposited file contains the B1R (with KOR fusion) chain + a nanobody crystallization chaperone + the R715 peptide. The receptor itself is functionally monomeric; B1R does not form constitutive homodimers."
+
+fold_class:
+  must_mention_one_of:
+    - "GPCR"
+    - "7TM"
+    - "seven-transmembrane"
+    - "class A GPCR"
+    - "rhodopsin-like"
+    - "7-helix bundle"
+    - "α-helical bundle"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "R715 — peptide antagonist of B1R, bound in the orthosteric pocket between the TM helices"
+
+notable_features:
+  must_mention_one_of:
+    - "GPCR"
+    - "7TM"
+    - "bradykinin"
+    - "antagonist"
+    - "nanobody"
+    - "kinin"
+    - "kappa opioid"
+    - "fusion"
+
+negative_constraints:
+  - "must not call B1R an enzyme — it is a receptor"
+  - "must not describe the kappa-opioid-receptor fusion as a native B1R domain"
+  - "must not call the nanobody a natural agonist or natural binding partner"
+  - "must not invoke a catalytic triad / dyad"
+
+inference_hygiene:
+  required: false

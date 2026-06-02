@@ -1,0 +1,70 @@
+pdb: 1aon
+short_name: "GroEL/GroES chaperonin complex (14+7 heteromer, ATP-dependent)"
+description: |
+  E. coli GroEL/GroES — the prototypical bacterial chaperonin
+  responsible for ATP-dependent protein folding. GroEL is a homo-14-mer
+  (two stacked heptameric rings of ~547 aa subunits) with an internal
+  cavity that encloses substrate. GroES is a homo-heptamer that caps
+  one end of GroEL to form a closed folding chamber. Each GroEL
+  subunit has three domains: equatorial (ATP binding, ring contacts),
+  intermediate (hinge), apical (substrate binding, GroES contact).
+  ATP-driven conformational cycling pulls substrate into and releases
+  it from the cavity. This structure includes ADP bound (post-hydrolysis
+  state).
+
+identity:
+  must_mention_one_of:
+    - "GroEL"
+    - "GroES"
+    - "chaperonin"
+    - "Hsp60"
+    - "chaperone"
+  reference_phrase: "GroEL/GroES chaperonin — ATP-dependent protein folding machine"
+
+oligomeric_state:
+  correct: higher_order
+  acceptable:
+    - "14-mer plus 7-mer"
+    - "21 subunits"
+    - "two-ring chaperonin"
+    - "tetradecamer plus heptamer"
+    - "hetero-21-mer"
+    - "(GroEL)14(GroES)7"
+  symmetry: C7
+
+fold_class:
+  must_mention_one_of:
+    - "chaperonin fold"
+    - "Hsp60 fold"
+    - "three-domain"
+    - "α/β"
+
+active_site:
+  type: metal-assisted
+  mechanism_note: "ATP-driven chaperonin: each GroEL subunit hydrolyzes ATP (bound with Mg²⁺ in the equatorial domain) through cycles of binding and hydrolysis that drive conformational changes propagating through the apical domains to assist substrate-protein folding. ATP hydrolysis is regulatory/energetic (powers the cycle) rather than substrate-modifying."
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: MG, chemistry_class: other}
+  bio_ligand: "ADP / ATP (depending on state)"
+
+notable_features:
+  must_mention_one_of:
+    - "two heptameric rings"
+    - "double ring"
+    - "Anfinsen cage"
+    - "ATP-driven"
+    - "apical domain"
+    - "equatorial domain"
+    - "GroES cap"
+
+negative_constraints:
+  - "must not call it a single ring oligomer"
+  - "must not claim it's a protease"
+  - "must not call it a membrane protein"
+
+inference_hygiene:
+  required: false

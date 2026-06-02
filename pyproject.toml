@@ -1,0 +1,47 @@
+[project]
+name = "protein-inspect"
+version = "0.1.0"
+description = "Claude Code skill for protein structure reasoning — turns PDB IDs into layered semantic representations (YAML + canonical PyMOL views)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Benedikt Singer" }]
+dependencies = [
+    "claudemol>=0.4.0",
+    "gemmi>=0.6.0",
+    "biotite>=1.4.0",
+    "pyyaml>=6.0",
+    "jsonschema>=4.20.0",
+    "pillow>=12.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+]
+# NOTE: Merizo is NOT a pip-installable Python package — it's a CLI tool from
+# https://github.com/psipred/Merizo. We support it as a runtime-detected
+# optional backend (see `_domains_via_merizo` in features.py): if the user has
+# installed Merizo manually and `merizo` is importable, we use it; otherwise
+# we fall back to CATH + length heuristic.
+#
+# Manual install for power users (heavy: PyTorch + weights, ~500 MB):
+#   git clone https://github.com/psipred/Merizo.git ~/Merizo
+#   cd ~/Merizo && pip install -r requirements.txt
+#   export PYTHONPATH=~/Merizo:$PYTHONPATH
+# Then in protein-inspect: pass `--use-merizo` (CLI) or use_merizo=True (API).
+
+[project.scripts]
+protein-inspect = "protein_inspect.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/protein_inspect"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"

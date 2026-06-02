@@ -1,0 +1,67 @@
+pdb: 9QNM
+short_name: "Polyester Hydrolase Leipzig 7 (PHL7), engineered variant R2M2 (S131A)"
+description: |
+  Atomic-resolution (1.12 Å) crystal structure of an engineered variant of
+  Polyester Hydrolase Leipzig 7 (PHL7), a thermostable carboxyesterase
+  isolated from a leaf-compost metagenome and one of the most active known
+  PET (polyethylene terephthalate)-degrading enzymes. PHL7 belongs to the
+  α/β-hydrolase fold superfamily and uses a canonical **Ser-His-Asp**
+  catalytic triad. **This particular entry is the catalysis-deficient
+  S131A mutant** (active-site serine → alanine), so the catalytic
+  nucleophile is absent — Claude should describe the triad architecture
+  but note this specific entry cannot turn over substrate. CIT (citric
+  acid) is a crystallization additive.
+
+identity:
+  must_mention_one_of:
+    - "PHL7"
+    - "polyester hydrolase"
+    - "PET hydrolase"
+    - "cutinase"
+    - "α/β hydrolase"
+  reference_phrase: "Polyester Hydrolase Leipzig 7 — thermostable α/β-hydrolase that degrades PET plastic; here the catalysis-deficient S131A active-site mutant"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric α/β hydrolase"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "α/β hydrolase"
+    - "α/β-hydrolase"
+    - "α/β hydrolase fold"
+    - "cutinase-like"
+    - "esterase fold"
+    - "carboxyesterase"
+
+active_site:
+  type: triad
+  catalytic_residues:
+    - {name: SER131, role: "nucleophile (MUTATED to Ala in this entry — inactive)"}
+    - {name: HIS, role: "general base"}
+    - {name: ASP, role: "acid"}
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "no functional ligand; CIT (citrate) is a crystallization buffer additive"
+
+notable_features:
+  must_mention_one_of:
+    - "Ser-His-Asp triad"
+    - "α/β hydrolase"
+    - "PET degradation"
+    - "S131A"
+    - "active-site mutant"
+    - "thermostable"
+
+negative_constraints:
+  - "must not call CIT (citrate) a substrate or functional ligand — it is a crystallization additive"
+  - "must not invoke a metal cofactor — PHL7 is metal-free"
+  - "must not claim S131A is catalytically active — the nucleophile has been removed"
+  - "must not call it a cysteine protease — it is a serine hydrolase"
+
+inference_hygiene:
+  required: false

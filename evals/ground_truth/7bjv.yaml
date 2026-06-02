@@ -1,0 +1,65 @@
+pdb: 7bjv
+short_name: "Ecdysone receptor (EcR) + ultraspiracle (USP) ligand-binding domains + agonist"
+description: |
+  7BJV is the crystal structure of the heterodimer of the ligand-binding
+  domains (LBDs) of the ecdysone receptor (EcR) and ultraspiracle (USP)
+  bound to a synthetic agonist. EcR and USP are nuclear receptors;
+  their heterodimer mediates the action of the steroid hormone ecdysone
+  during insect molting and metamorphosis. The nuclear-receptor LBD
+  adopts the canonical "three-layer α-helical sandwich" fold (~12
+  α-helices arranged around the ligand-binding pocket). The synthetic
+  agonist class includes diacylhydrazide insecticides. Tests
+  nuclear-receptor LBD recognition + drug/agonist binding pocket
+  analysis.
+
+identity:
+  must_mention_one_of:
+    - "EcR"
+    - "ecdysone receptor"
+    - "USP"
+    - "ultraspiracle"
+    - "nuclear receptor"
+    - "ligand-binding domain"
+  reference_phrase: "Ecdysone receptor + ultraspiracle LBD heterodimer with synthetic agonist"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "heterodimer", "EcR-USP heterodimer"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "nuclear receptor LBD"
+    - "three-layer α-helical sandwich"
+    - "α-helical sandwich"
+    - "nuclear receptor fold"
+    - "all-α"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket   # ligand-binding pocket, not catalytic
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "synthetic ecdysone-agonist (e.g. diacylhydrazide insecticide)"
+
+notable_features:
+  must_mention_one_of:
+    - "nuclear receptor"
+    - "ligand-binding domain"
+    - "LBD"
+    - "ecdysone"
+    - "agonist"
+    - "AF-2"
+    - "heterodimer"
+    - "molting"
+
+negative_constraints:
+  - "must NOT call it an enzyme"
+  - "must NOT claim a catalytic mechanism (NRs are ligand-regulated transcription factors)"
+  - "must NOT identify it as a steroid synthesis enzyme"
+
+inference_hygiene:
+  required: false

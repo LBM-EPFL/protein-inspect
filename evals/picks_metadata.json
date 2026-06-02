@@ -1,0 +1,1443 @@
+{
+  "9LRN": {
+    "pdb": "9LRN",
+    "title": "The crystal structure of PDE2A with 13t",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.5,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Discovery of A phosphodiesterase 2 Inhibitor Containing 6-fluoroquinoline-8-carboxamide Moiety for the Treatment of Alzheimer's disease",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "HYDROLASE",
+    "kw_text": "PDE2 complexed with inhibitor, HYDROLASE",
+    "assembly": {
+      "oligomeric_count": 1,
+      "oligomeric_details": "monomeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "cGMP-dependent 3',5'-cyclic phosphodiesterase",
+        "gene_name": "PDE2A",
+        "organism": "Homo sapiens",
+        "uniprot": "O00408",
+        "chain_ids": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "n_residues": 941,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.1",
+            "name": "Acting on ester bonds"
+          },
+          {
+            "depth": 3,
+            "id": "3.1.4",
+            "name": "Phosphoric-diester hydrolases"
+          },
+          {
+            "depth": 4,
+            "id": "3.1.4.17",
+            "name": "3',5'-cyclic-nucleotide phosphodiesterase"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ZN",
+        "name": "ZINC ION",
+        "formula_weight": 0.065
+      },
+      {
+        "ccd": "MG",
+        "name": "MAGNESIUM ION",
+        "formula_weight": 0.024
+      },
+      {
+        "ccd": "A1EK7",
+        "name": "6-fluoranyl-~{N}-[(1~{S})-2-oxidanyl-1-[4-(trifluoromethyloxy)phenyl]ethyl]quinoline-8-carboxamide",
+        "formula_weight": 0.394
+      }
+    ]
+  },
+  "9QNM": {
+    "pdb": "9QNM",
+    "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R2M2",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.12,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Computational engineering of the polyester hydrolase PHL7 for efficient poly(ethylene terephthalate) degradation in biocatalytic recycling processes.",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "HYDROLASE",
+    "kw_text": "PET hydrolase, enzymatic plastic degradation, enzyme engineering, Polyester Hydrolase Leipzig 7, HYDROLASE",
+    "assembly": {
+      "oligomeric_count": 1,
+      "oligomeric_details": "monomeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Polyester Hydrolase Leipzig 7 (PHL-7), catalysis-deficient S131A mutant",
+        "gene_name": null,
+        "organism": "compost metagenome",
+        "uniprot": "A0AA82WPD4",
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "n_residues": 267,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "CIT",
+        "name": "CITRIC ACID",
+        "formula_weight": 0.192
+      }
+    ]
+  },
+  "9KKN": {
+    "pdb": "9KKN",
+    "title": "Cryo-EM structure of human VAChT in complex with ACh",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.72,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Cryo-EM structure of human VAChT in complex with ACh",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "TRANSPORT PROTEIN",
+    "kw_text": "transporter, VAChT, TRANSPORT PROTEIN",
+    "assembly": {
+      "oligomeric_count": 1,
+      "oligomeric_details": "monomeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Soluble cytochrome b562,Vesicular acetylcholine transporter",
+        "gene_name": "cybC",
+        "organism": "Escherichia coli",
+        "uniprot": "P0ABE7",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 637,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ACH",
+        "name": "ACETYLCHOLINE",
+        "formula_weight": 0.146
+      }
+    ]
+  },
+  "21NQ": {
+    "pdb": "21NQ",
+    "title": "Structure of human SLC37A4-apo",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.8,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Structure of human SLC37A4-apo",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "MEMBRANE PROTEIN",
+    "kw_text": "transporter, MEMBRANE PROTEIN",
+    "assembly": {
+      "oligomeric_count": 1,
+      "oligomeric_details": "monomeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Glucose-6-phosphate exchanger SLC37A4",
+        "gene_name": "SLC37A4",
+        "organism": "Homo sapiens",
+        "uniprot": "O43826",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 429,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": []
+  },
+  "22HH": {
+    "pdb": "22HH",
+    "title": "Beta-1,2-glucan-binding protein complex with linear beta-1,2-glucan",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.53,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Structural and thermodynamic analyses of a novel beta-1,2-glucan binding mode in the ABC transporter solute-binding protein Chy400_4166 from Chloroflexus aurantiacus.",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "SUGAR BINDING PROTEIN",
+    "kw_text": "carbohydrate-binding protein, SUGAR BINDING PROTEIN",
+    "assembly": {
+      "oligomeric_count": 1,
+      "oligomeric_details": "monomeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Extracellular solute-binding protein family 1",
+        "gene_name": "Caur_3857",
+        "organism": "Chloroflexus aurantiacus Y-400-fl",
+        "uniprot": "A9WCS2",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 474,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "BGC",
+        "name": "beta-D-glucopyranose",
+        "formula_weight": 0.18
+      },
+      {
+        "ccd": "GOL",
+        "name": "GLYCEROL",
+        "formula_weight": 0.092
+      },
+      {
+        "ccd": "SO4",
+        "name": "SULFATE ION",
+        "formula_weight": 0.096
+      }
+    ]
+  },
+  "9LZM": {
+    "pdb": "9LZM",
+    "title": "Crystal structure of SARS-Cov-2 main protease in complex with Pomotrelvir",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.94,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Crystal structure of SARS-Cov-2 main protease in complex with Pomotrelvir",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "VIRAL PROTEIN",
+    "kw_text": "VIRAL PROTEIN-INHIBITOR COMPLEX, VIRAL PROTEIN",
+    "assembly": {
+      "oligomeric_count": 2,
+      "oligomeric_details": "dimeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "3C-like proteinase nsp5",
+        "gene_name": "rep",
+        "organism": "Severe acute respiratory syndrome coronavirus 2",
+        "uniprot": "P0DTD1",
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "n_residues": 302,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.4",
+            "name": "Acting on peptide bonds (peptidases)"
+          },
+          {
+            "depth": 3,
+            "id": "3.4.22",
+            "name": "Cysteine endopeptidases"
+          },
+          {
+            "depth": 4,
+            "id": "3.4.22.69",
+            "name": "SARS coronavirus main proteinase"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ZQB",
+        "name": "Pomotrelvir bound form",
+        "formula_weight": 0.458
+      }
+    ]
+  },
+  "28WL": {
+    "pdb": "28WL",
+    "title": "Crystal structure of human Monoamine Oxidase B (MAO B) in complex with 7-[(4-{[(3,4-dimethoxybenzyl(methyl)amino]methyl}benzyl)oxy]-4-(hydroxymethyl)-2H-chromen-2-one) (LP1488)",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.6,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Leveraging multitargeting BChE-MAO B inhibitors against microglia-related neuroinflammation: in vitro biological evaluation, structure-activity relationships, drug-like properties, and X-ray crystal complexes",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "FLAVOPROTEIN",
+    "kw_text": "monoamine oxidase, inhibitor, drug design, Alzheimer, multitarget, FLAVOPROTEIN",
+    "assembly": {
+      "oligomeric_count": 2,
+      "oligomeric_details": "dimeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Amine oxidase [flavin-containing] B",
+        "gene_name": "MAOB",
+        "organism": "Homo sapiens",
+        "uniprot": "P27338",
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "n_residues": 520,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "1",
+            "name": "Oxidoreductases"
+          },
+          {
+            "depth": 2,
+            "id": "1.4",
+            "name": "Acting on the CH-NH2 group of donors"
+          },
+          {
+            "depth": 3,
+            "id": "1.4.3",
+            "name": "With oxygen as acceptor"
+          },
+          {
+            "depth": 4,
+            "id": "1.4.3.4",
+            "name": "monoamine oxidase"
+          },
+          {
+            "depth": 1,
+            "id": "1",
+            "name": "Oxidoreductases"
+          },
+          {
+            "depth": 2,
+            "id": "1.4",
+            "name": "Acting on the CH-NH2 group of donors"
+          },
+          {
+            "depth": 3,
+            "id": "1.4.3",
+            "name": "With oxygen as acceptor"
+          },
+          {
+            "depth": 4,
+            "id": "1.4.3.21",
+            "name": "primary-amine oxidase"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "FAD",
+        "name": "FLAVIN-ADENINE DINUCLEOTIDE",
+        "formula_weight": 0.786
+      },
+      {
+        "ccd": "A1JF0",
+        "name": "7-[[4-[[(3,4-dimethoxyphenyl)methyl-methyl-amino]methyl]phenyl]methoxy]-4-(hydroxymethyl)chromen-2-one",
+        "formula_weight": 0.476
+      },
+      {
+        "ccd": "C15",
+        "name": "N-DODECYL-N,N-DIMETHYL-3-AMMONIO-1-PROPANESULFONATE",
+        "formula_weight": 0.337
+      },
+      {
+        "ccd": "GOL",
+        "name": "GLYCEROL",
+        "formula_weight": 0.092
+      }
+    ]
+  },
+  "9HZ3": {
+    "pdb": "9HZ3",
+    "title": "PCSK9 AZD0780 complex",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.432,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Laroprovstat, the First Oral Small-Molecule PCSK9 Inhibitor for the Treatment of Hypercholesterolemia: Results From a Randomized, Single-Blind, Placebo-Controlled Phase 1 Trial in Treatment-Naive Patients.",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "PROTEIN BINDING",
+    "kw_text": "PCSK9 AZD0780, PROTEIN BINDING",
+    "assembly": {
+      "oligomeric_count": 2,
+      "oligomeric_details": "dimeric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Proprotein convertase subtilisin/kexin type 9",
+        "gene_name": "PCSK9",
+        "organism": "Homo sapiens",
+        "uniprot": "Q8NBP7",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 152,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.4",
+            "name": "Acting on peptide bonds (peptidases)"
+          },
+          {
+            "depth": 3,
+            "id": "3.4.21",
+            "name": "Serine endopeptidases"
+          }
+        ]
+      },
+      {
+        "name": "Proprotein convertase subtilisin/kexin type 9",
+        "gene_name": "PCSK9",
+        "organism": "Homo sapiens",
+        "uniprot": "Q8NBP7",
+        "chain_ids": [
+          "B"
+        ],
+        "n_residues": 553,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.4",
+            "name": "Acting on peptide bonds (peptidases)"
+          },
+          {
+            "depth": 3,
+            "id": "3.4.21",
+            "name": "Serine endopeptidases"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "A1IYR",
+        "name": "1-[6-[[(1~{S},3~{S})-3-[[5-[bis(fluoranyl)methoxy]pyrimidin-2-yl]amino]cyclopentyl]amino]pyridin-3-yl]pyridin-2-one",
+        "formula_weight": 0.414
+      }
+    ]
+  },
+  "24HR": {
+    "pdb": "24HR",
+    "title": "Human KRAS G12D (GDP-bound) in complex with macrocyclic peptide inhibitor AP6252",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.07,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Structure-Activity Relationship Analysis of Macrocyclic Peptide RAS Inhibitors: Spotlight on the Solvent-Exposed Region",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "SIGNALING PROTEIN",
+    "kw_text": "KRAS, MACROCYCLIC PEPTIDE, ONCOLOGY, SIGNALING PROTEIN, SIGNALING PROTEIN-INHIBITOR COMPLEX",
+    "assembly": {
+      "oligomeric_count": 2,
+      "oligomeric_details": "dimeric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Isoform 2B of GTPase KRas",
+        "gene_name": null,
+        "organism": "Homo sapiens",
+        "uniprot": "P01116",
+        "chain_ids": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "n_residues": 179,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.6",
+            "name": "Acting on acid anhydrides"
+          },
+          {
+            "depth": 3,
+            "id": "3.6.5",
+            "name": "Acting on GTP to facilitate cellular and subcellular movement"
+          },
+          {
+            "depth": 4,
+            "id": "3.6.5.2",
+            "name": "small monomeric GTPase"
+          }
+        ]
+      },
+      {
+        "name": "AP6252",
+        "gene_name": null,
+        "organism": "synthetic construct",
+        "uniprot": null,
+        "chain_ids": [
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "n_residues": 12,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "GDP",
+        "name": "GUANOSINE-5'-DIPHOSPHATE",
+        "formula_weight": 0.443
+      },
+      {
+        "ccd": "EDO",
+        "name": "1,2-ETHANEDIOL",
+        "formula_weight": 0.062
+      },
+      {
+        "ccd": "FMT",
+        "name": "FORMIC ACID",
+        "formula_weight": 0.046
+      },
+      {
+        "ccd": "MG",
+        "name": "MAGNESIUM ION",
+        "formula_weight": 0.024
+      }
+    ]
+  },
+  "9LFC": {
+    "pdb": "9LFC",
+    "title": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist R715",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.6,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist R715",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "MEMBRANE PROTEIN/IMMUNE SYSTEM",
+    "kw_text": "GPCR, bradykinin receptor, MEMBRANE PROTEIN/IMMUNE SYSTEM, MEMBRANE PROTEIN-IMMUNE SYSTEM complex",
+    "assembly": {
+      "oligomeric_count": 2,
+      "oligomeric_details": "dimeric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "B1 bradykinin receptor,Kappa-type opioid receptor",
+        "gene_name": "BDKRB1",
+        "organism": "Homo sapiens",
+        "uniprot": "P46663",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 340,
+        "ec": []
+      },
+      {
+        "name": "Nanobody 6",
+        "gene_name": null,
+        "organism": "Lama glama",
+        "uniprot": null,
+        "chain_ids": [
+          "B"
+        ],
+        "n_residues": 171,
+        "ec": []
+      },
+      {
+        "name": "R715",
+        "gene_name": null,
+        "organism": "synthetic construct",
+        "uniprot": null,
+        "chain_ids": [
+          "C"
+        ],
+        "n_residues": 10,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": []
+  },
+  "9LVI": {
+    "pdb": "9LVI",
+    "title": "Cryo-EM structure of SARS-CoV-2 spike protein",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.86,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Cryo-EM structure of the SARS-CoV-2 spike protein(one RBD up state)",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "VIRAL PROTEIN",
+    "kw_text": "SARS-CoV-2 spike ectodomain structure, one RBD up, VIRAL PROTEIN",
+    "assembly": {
+      "oligomeric_count": 3,
+      "oligomeric_details": "trimeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Spike glycoprotein",
+        "gene_name": "S",
+        "organism": "Severe acute respiratory syndrome coronavirus 2",
+        "uniprot": "P0DTC2",
+        "chain_ids": [
+          "A",
+          "B",
+          "C"
+        ],
+        "n_residues": 1275,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "NAG",
+        "name": "2-acetamido-2-deoxy-beta-D-glucopyranose",
+        "formula_weight": 0.221
+      }
+    ]
+  },
+  "9OVL": {
+    "pdb": "9OVL",
+    "title": "Cryo-EM structure of HCoV-OC43-Lab Spike glycoprotein in complex with 9O-acetyl GD3 sialoglycan",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 1.68,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "OC43 clinical isolate spike proteins have distinct carbohydrate-binding properties.",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "VIRAL PROTEIN",
+    "kw_text": "spike glycoprotein ectodomain, proline stablized, VIRAL PROTEIN",
+    "assembly": {
+      "oligomeric_count": 3,
+      "oligomeric_details": "trimeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Spike glycoprotein",
+        "gene_name": null,
+        "organism": "Human coronavirus OC43",
+        "uniprot": "Q696P8",
+        "chain_ids": [
+          "A",
+          "B",
+          "C"
+        ],
+        "n_residues": 1344,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "NAG",
+        "name": "2-acetamido-2-deoxy-beta-D-glucopyranose",
+        "formula_weight": 0.221
+      },
+      {
+        "ccd": "A1AR1",
+        "name": "5-acetamido-8-O-(5-acetamido-9-O-acetyl-3,5-dideoxy-D-glycero-alpha-D-galacto-non-2-ulopyranonosyl)-3,5-dideoxy-D-glycero-alpha-D-galacto-non-2-ulopyranosonic acid",
+        "formula_weight": 0.643
+      }
+    ]
+  },
+  "25PV": {
+    "pdb": "25PV",
+    "title": "Structure of the anthrax protective antigen in complex with a potent neutralizing antibody",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.03,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Structure of the anthrax protective antigen in complex with a potent neutralizing antibody",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "ANTITOXIN",
+    "kw_text": "toxin, antibody, complex, neutralization, ANTITOXIN",
+    "assembly": {
+      "oligomeric_count": 3,
+      "oligomeric_details": "trimeric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Protective antigen PA-63",
+        "gene_name": "pagA",
+        "organism": "Bacillus anthracis",
+        "uniprot": "P13423",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 427,
+        "ec": []
+      },
+      {
+        "name": "22F1 VH",
+        "gene_name": null,
+        "organism": "Homo sapiens",
+        "uniprot": null,
+        "chain_ids": [
+          "B"
+        ],
+        "n_residues": 220,
+        "ec": []
+      },
+      {
+        "name": "22F1 VL",
+        "gene_name": null,
+        "organism": "Homo sapiens",
+        "uniprot": null,
+        "chain_ids": [
+          "C"
+        ],
+        "n_residues": 214,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": []
+  },
+  "9OKQ": {
+    "pdb": "9OKQ",
+    "title": "CryoEM structure of the E. coli zinc ABC transporter ZnuB-ZnuC",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.9,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Structural mechanism of transport and regulation in zinc ABC transporters",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "METAL TRANSPORT",
+    "kw_text": "ATP-binding cassette, zinc transporter, zinc binding, METAL TRANSPORT",
+    "assembly": {
+      "oligomeric_count": 4,
+      "oligomeric_details": "tetrameric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "High-affinity zinc uptake system membrane protein ZnuB",
+        "gene_name": "znuB",
+        "organism": "Escherichia coli",
+        "uniprot": "A0A037YFR8",
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "n_residues": 260,
+        "ec": []
+      },
+      {
+        "name": "High-affinity zinc transporter ATPase",
+        "gene_name": "znuC",
+        "organism": "Escherichia coli",
+        "uniprot": "C3T5S7",
+        "chain_ids": [
+          "C",
+          "D"
+        ],
+        "n_residues": 251,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.6",
+            "name": "Acting on acid anhydrides"
+          },
+          {
+            "depth": 3,
+            "id": "3.6.3",
+            "name": "Acting on acid anhydrides to catalyse transmembrane movement of substances"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ZN",
+        "name": "ZINC ION",
+        "formula_weight": 0.065
+      }
+    ]
+  },
+  "9OHN": {
+    "pdb": "9OHN",
+    "title": "Cryo-EM structure of human p97/VCP bound to inhibitor GND-135",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.46,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Cryo-EM-guided subtractive optimization of a novel VCP/p97 inhibitor",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "HYDROLASE/HYDROLASE INHIBITOR",
+    "kw_text": "p97, VCP, TERA, Inhibitor, GND-135, HYDROLASE, HYDROLASE-HYDROLASE INHIBITOR complex",
+    "assembly": {
+      "oligomeric_count": 12,
+      "oligomeric_details": "12-meric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Transitional endoplasmic reticulum ATPase",
+        "gene_name": "VCP",
+        "organism": "Homo sapiens",
+        "uniprot": "P55072",
+        "chain_ids": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L"
+        ],
+        "n_residues": 821,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.6",
+            "name": "Acting on acid anhydrides"
+          },
+          {
+            "depth": 3,
+            "id": "3.6.4",
+            "name": "Acting on acid anhydrides to facilitate cellular and subcellular movement"
+          },
+          {
+            "depth": 4,
+            "id": "3.6.4.6",
+            "name": "vesicle-fusing ATPase"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ADP",
+        "name": "ADENOSINE-5'-DIPHOSPHATE",
+        "formula_weight": 0.427
+      },
+      {
+        "ccd": "A1CBF",
+        "name": "(1P)-1-{4-(benzylamino)-2-methyl-1-[2-(morpholin-4-yl)-2-oxoethyl]-1H-pyrrolo[2,3-b]pyridin-6-yl}-2-methyl-1H-indole-4-carboxamide",
+        "formula_weight": 0.537
+      }
+    ]
+  },
+  "9OII": {
+    "pdb": "9OII",
+    "title": "Structure of Type III ABri amyloid filaments extracted from human brain of Familial British Dementia patient",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.2,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Cryo-EM structures of ADan and ABri filaments from FDD and FBD",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "PROTEIN FIBRIL",
+    "kw_text": "amyloid, filament, neurodegeneration, brain, ex vivo, PROTEIN FIBRIL",
+    "assembly": {
+      "oligomeric_count": 15,
+      "oligomeric_details": "15-meric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "ABri (ITM2B mutant)",
+        "gene_name": null,
+        "organism": "Homo sapiens",
+        "uniprot": null,
+        "chain_ids": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O"
+        ],
+        "n_residues": 33,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": []
+  },
+  "25HN": {
+    "pdb": "25HN",
+    "title": "Cryo-EM structure of native Rubisco from Nitrosospira multiformis",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.26,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Cryo-EM structure of RubisCO from Nitrosospira multiformis.",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "LYASE",
+    "kw_text": "rubisco, carbon fixation, nitrifying bacterium, autotrophy, cryo-EM, LYASE",
+    "assembly": {
+      "oligomeric_count": 16,
+      "oligomeric_details": "hexadecameric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Ribulose bisphosphate carboxylase large chain",
+        "gene_name": null,
+        "organism": "Nitrosospira multiformis ATCC 25196",
+        "uniprot": "Q2YB78",
+        "chain_ids": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "n_residues": 489,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "4",
+            "name": "Lyases"
+          },
+          {
+            "depth": 2,
+            "id": "4.1",
+            "name": "Carbon-carbon lyases"
+          },
+          {
+            "depth": 3,
+            "id": "4.1.1",
+            "name": "Carboxy-lyases"
+          },
+          {
+            "depth": 4,
+            "id": "4.1.1.39",
+            "name": "ribulose-bisphosphate carboxylase"
+          }
+        ]
+      },
+      {
+        "name": "Ribulose bisphosphate carboxylase small subunit",
+        "gene_name": null,
+        "organism": "Nitrosospira multiformis ATCC 25196",
+        "uniprot": "Q2YB79",
+        "chain_ids": [
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P"
+        ],
+        "n_residues": 144,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ZN",
+        "name": "ZINC ION",
+        "formula_weight": 0.065
+      }
+    ]
+  },
+  "9QEB": {
+    "pdb": "9QEB",
+    "title": "CryoEM structure of transcribing RNA polymerase II elongation complex",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.26,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "CryoEM structure of transcribing RNA polymerase II",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "TRANSCRIPTION",
+    "kw_text": "CryoEM, RNA, Polymerase II, Transcription",
+    "assembly": {
+      "oligomeric_count": 15,
+      "oligomeric_details": "15-meric",
+      "polymer_composition": "protein/NA"
+    },
+    "polymer_entities": [
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB1",
+        "gene_name": "RPO21",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P04050",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 1733,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "2",
+            "name": "Transferases"
+          },
+          {
+            "depth": 2,
+            "id": "2.7",
+            "name": "Transferring phosphorus-containing groups"
+          },
+          {
+            "depth": 3,
+            "id": "2.7.7",
+            "name": "Nucleotidyltransferases"
+          },
+          {
+            "depth": 4,
+            "id": "2.7.7.6",
+            "name": "DNA-directed RNA polymerase"
+          }
+        ]
+      },
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB2",
+        "gene_name": "RPB2",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P08518",
+        "chain_ids": [
+          "B"
+        ],
+        "n_residues": 1224,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "2",
+            "name": "Transferases"
+          },
+          {
+            "depth": 2,
+            "id": "2.7",
+            "name": "Transferring phosphorus-containing groups"
+          },
+          {
+            "depth": 3,
+            "id": "2.7.7",
+            "name": "Nucleotidyltransferases"
+          },
+          {
+            "depth": 4,
+            "id": "2.7.7.6",
+            "name": "DNA-directed RNA polymerase"
+          }
+        ]
+      },
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB3",
+        "gene_name": "RPB3",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P16370",
+        "chain_ids": [
+          "C"
+        ],
+        "n_residues": 318,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB4",
+        "gene_name": "RPB4",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P20433",
+        "chain_ids": [
+          "D"
+        ],
+        "n_residues": 221,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerases I, II, and III subunit RPABC1",
+        "gene_name": "RPB5",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P20434",
+        "chain_ids": [
+          "E"
+        ],
+        "n_residues": 215,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerases I, II, and III subunit RPABC2",
+        "gene_name": "RPO26",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P20435",
+        "chain_ids": [
+          "F"
+        ],
+        "n_residues": 155,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB7",
+        "gene_name": "RPB7",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P34087",
+        "chain_ids": [
+          "G"
+        ],
+        "n_residues": 171,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerases I, II, and III subunit RPABC3",
+        "gene_name": "RPB8",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P20436",
+        "chain_ids": [
+          "H"
+        ],
+        "n_residues": 146,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB9",
+        "gene_name": "RPB9",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P27999",
+        "chain_ids": [
+          "I"
+        ],
+        "n_residues": 122,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerases I, II, and III subunit RPABC5",
+        "gene_name": "RPB10",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P22139",
+        "chain_ids": [
+          "J"
+        ],
+        "n_residues": 70,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerase II subunit RPB11",
+        "gene_name": "RPB11",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P38902",
+        "chain_ids": [
+          "K"
+        ],
+        "n_residues": 120,
+        "ec": []
+      },
+      {
+        "name": "DNA-directed RNA polymerases I, II, and III subunit RPABC4",
+        "gene_name": "RPC10",
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": "P40422",
+        "chain_ids": [
+          "L"
+        ],
+        "n_residues": 70,
+        "ec": []
+      },
+      {
+        "name": "DNA (44-MER)",
+        "gene_name": null,
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": null,
+        "chain_ids": [
+          "M"
+        ],
+        "n_residues": 44,
+        "ec": []
+      },
+      {
+        "name": "RNA (5'-R(P*AP*UP*CP*GP*AP*GP*AP*GP*G)-3')",
+        "gene_name": null,
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": null,
+        "chain_ids": [
+          "N"
+        ],
+        "n_residues": 9,
+        "ec": []
+      },
+      {
+        "name": "DNA (44-MER)",
+        "gene_name": null,
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": null,
+        "chain_ids": [
+          "O"
+        ],
+        "n_residues": 44,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "ATP",
+        "name": "ADENOSINE-5'-TRIPHOSPHATE",
+        "formula_weight": 0.507
+      },
+      {
+        "ccd": "MG",
+        "name": "MAGNESIUM ION",
+        "formula_weight": 0.024
+      },
+      {
+        "ccd": "K",
+        "name": "POTASSIUM ION",
+        "formula_weight": 0.039
+      },
+      {
+        "ccd": "ZN",
+        "name": "ZINC ION",
+        "formula_weight": 0.065
+      }
+    ]
+  },
+  "9NI8": {
+    "pdb": "9NI8",
+    "title": "Cryo-EM structure of the Class 2 PI3K alpha/KRas complex on POPC/POPS nanodiscs",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.23,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "Structures of the PI3K alpha /KRas complex on lipid bilayers reveal the molecular mechanism of PI3K alpha activation.",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "Transferase/Hydrolase",
+    "kw_text": "lipid kinase, GTPase, ONCOPROTEIN, Transferase-Hydrolase complex",
+    "assembly": {
+      "oligomeric_count": 3,
+      "oligomeric_details": "trimeric",
+      "polymer_composition": "heteromeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",
+        "gene_name": "PIK3CA",
+        "organism": "Homo sapiens",
+        "uniprot": "P42336",
+        "chain_ids": [
+          "A"
+        ],
+        "n_residues": 1096,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "2",
+            "name": "Transferases"
+          },
+          {
+            "depth": 2,
+            "id": "2.7",
+            "name": "Transferring phosphorus-containing groups"
+          },
+          {
+            "depth": 3,
+            "id": "2.7.1",
+            "name": "Phosphotransferases with an alcohol group as acceptor"
+          },
+          {
+            "depth": 4,
+            "id": "2.7.1.153",
+            "name": "phosphatidylinositol-4,5-bisphosphate 3-kinase"
+          },
+          {
+            "depth": 1,
+            "id": "2",
+            "name": "Transferases"
+          },
+          {
+            "depth": 2,
+            "id": "2.7",
+            "name": "Transferring phosphorus-containing groups"
+          },
+          {
+            "depth": 3,
+            "id": "2.7.11",
+            "name": "Protein-serine/threonine kinases"
+          },
+          {
+            "depth": 4,
+            "id": "2.7.11.1",
+            "name": "non-specific serine/threonine protein kinase"
+          },
+          {
+            "depth": 1,
+            "id": "2",
+            "name": "Transferases"
+          },
+          {
+            "depth": 2,
+            "id": "2.7",
+            "name": "Transferring phosphorus-containing groups"
+          },
+          {
+            "depth": 3,
+            "id": "2.7.1",
+            "name": "Phosphotransferases with an alcohol group as acceptor"
+          },
+          {
+            "depth": 4,
+            "id": "2.7.1.137",
+            "name": "phosphatidylinositol 3-kinase"
+          }
+        ]
+      },
+      {
+        "name": "Phosphatidylinositol 3-kinase regulatory subunit alpha",
+        "gene_name": "PIK3R1",
+        "organism": "Homo sapiens",
+        "uniprot": "P27986",
+        "chain_ids": [
+          "B"
+        ],
+        "n_residues": 724,
+        "ec": []
+      },
+      {
+        "name": "Isoform 2B of GTPase KRas",
+        "gene_name": "KRAS",
+        "organism": "Homo sapiens",
+        "uniprot": "P01116",
+        "chain_ids": [
+          "C"
+        ],
+        "n_residues": 189,
+        "ec": [
+          {
+            "depth": 1,
+            "id": "3",
+            "name": "Hydrolases"
+          },
+          {
+            "depth": 2,
+            "id": "3.6",
+            "name": "Acting on acid anhydrides"
+          },
+          {
+            "depth": 3,
+            "id": "3.6.5",
+            "name": "Acting on GTP to facilitate cellular and subcellular movement"
+          },
+          {
+            "depth": 4,
+            "id": "3.6.5.2",
+            "name": "small monomeric GTPase"
+          }
+        ]
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "A1AZD",
+        "name": "tert-butyl [2-(2-{[(2P)-2-{4-[4-(2-amino-2-oxoethyl)-2-fluoroanilino]thieno[2,3-d]pyridazin-7-yl}phenyl]oxy}ethoxy)ethyl]carbamate",
+        "formula_weight": 0.582
+      },
+      {
+        "ccd": "MG",
+        "name": "MAGNESIUM ION",
+        "formula_weight": 0.024
+      },
+      {
+        "ccd": "GNP",
+        "name": "PHOSPHOAMINOPHOSPHONIC ACID-GUANYLATE ESTER",
+        "formula_weight": 0.522
+      }
+    ]
+  },
+  "9N97": {
+    "pdb": "9N97",
+    "title": "Crystal structure of the cysteine-free anti-UTag intrabody",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.45,
+    "release_date": "2026-05-27T00:00:00.000+00:00",
+    "abstract_citation": "UTag, a cysteine-free thermostable tagging system for tracking single mRNA translation live",
+    "pubmed_id": null,
+    "doi": null,
+    "keywords": "PEPTIDE BINDING PROTEIN",
+    "kw_text": "antibody, scFv, peptide binding protein",
+    "assembly": {
+      "oligomeric_count": 1,
+      "oligomeric_details": "monomeric",
+      "polymer_composition": "homomeric protein"
+    },
+    "polymer_entities": [
+      {
+        "name": "cystine-free anti-HIV scFv chain A",
+        "gene_name": null,
+        "organism": "Mus musculus",
+        "uniprot": null,
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "n_residues": 277,
+        "ec": []
+      }
+    ],
+    "nonpolymer_ligands": [
+      {
+        "ccd": "SO4",
+        "name": "SULFATE ION",
+        "formula_weight": 0.096
+      }
+    ]
+  }
+}

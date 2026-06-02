@@ -1,0 +1,59 @@
+{
+  "pdb": "1tim",
+  "desc": "Triosephosphate isomerase (TIM barrel dimer)",
+  "elapsed_sec": 0.02,
+  "checks": [
+    {
+      "check": "oligomer",
+      "expected": "dimer",
+      "actual": "dimer",
+      "matched": true
+    },
+    {
+      "check": "homo_or_hetero",
+      "expected": "homo",
+      "actual": "homo",
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 2,
+    "homo_or_hetero": "homo",
+    "n_bio_ligands": 0,
+    "n_artifacts": 0,
+    "n_metals": 0,
+    "n_cofactors": 0,
+    "n_disulfides": 0,
+    "n_active_site_patterns": 0,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 2,
+      "oligomer": "dimer",
+      "homo_or_hetero": "homo",
+      "symmetry": "C2",
+      "unique_sequences": 1
+    },
+    "fold": {
+      "length": 247,
+      "ss_fractions": {
+        "helix": 0.6072874493927125,
+        "sheet": 0.3805668016194332,
+        "loop": 0.012145748987854251
+      }
+    },
+    "n_metals": 0,
+    "metals": [],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [],
+    "active_site_patterns": [],
+    "bio_ligands": [],
+    "artifacts": {},
+    "membrane_likely": false
+  }
+}

@@ -1,0 +1,148 @@
+# Protein structure analysis — ma-rgcer
+
+Analyze the protein with PDB identifier **ma-rgcer**.
+
+**STRUCTURED SUMMARY (machine-extracted features from `protein-inspect`):**
+
+```yaml
+entry: ma-rgcer
+schema_version: '1.1'
+generated: '2026-05-29T13:13:36Z'
+narrative: null
+macromolecule_type: protein_only
+model_quality:
+  is_computed: true
+  confidence_metric: plddt
+  plddt_summary:
+    mean: 0.7782032414283246
+    fraction_high: 0.0
+    fraction_medium: 0.0
+    fraction_low: 1.0
+    low_confidence_regions:
+    - chain: A
+      range:
+      - 1
+      - 83
+      mean_plddt: 0.8349397634885397
+provenance:
+  source: local_file
+  input_path: /tmp/ma_designs/ma-rgcer.cif
+  resolution: null
+  method: null
+  resolution_class: computed
+  space_group: null
+  unit_cell: null
+  deposition_date: '2022-10-18'
+assembly:
+  n_chains: 1
+  chains:
+  - A
+  homo_or_hetero: monomer
+  oligomer: monomer
+  unique_sequences: 1
+fold:
+  representative_chain: A
+  length: 83
+  ss_fractions:
+    helix: 0.9397590361445783
+    sheet: 0.060240963855421686
+    loop: 0.0
+  ss_string: HHHHHHHHHHHHHHHHHHHHHEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEEEHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+  plddt_stats:
+    mean: 0.8349397634885397
+    min: 0.5600000023841858
+    max: 0.9300000071525574
+    std: 0.10239744794694222
+    fraction_very_high: 0.0
+    fraction_confident: 0.0
+    fraction_low: 0.0
+    fraction_very_low: 1.0
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 1
+  detected_by: contact_map_ratio
+  boundaries:
+  - chain: A
+    range:
+    - 0
+    - 83
+coords_ref:
+  path: /tmp/ma_designs_out/ma-rgcer/ma-rgcer.cif
+  format: cif
+flags:
+- rule_id: low_plddt_regions
+  priority: medium
+  message: "Computed model \u2014 confidence varies across the structure. Treat low-pLDDT regions (<70) as unreliable for\
+    \ residue-level claims; treat high-pLDDT regions (>90) as reliable. Cofactors, metals, and modified residues are typically\
+    \ NOT modeled in AF predictions."
+  evidence_quality: confirmed
+- rule_id: plddt_not_bfactor
+  priority: high
+  message: "AF/computed model: the B-factor column stores **pLDDT** (predicted confidence, 0\u2013100), NOT crystallographic\
+    \ displacement. Read `fold.plddt_stats` (not `bfactor_stats` \u2014 it is intentionally absent for AF models). Bands:\
+    \ \u226590 very_high, 70\u201390 confident, 50\u201370 low, <50 very_low. High mean pLDDT means a *well-predicted* model,\
+    \ NOT a flexible one \u2014 do NOT call high-pLDDT regions 'mobile' or 'flexible'. Disorder predictions live in `model_quality.plddt_summary.low_confidence_regions`."
+  evidence_quality: confirmed
+- rule_id: no_narrative
+  priority: low
+  message: No narrative description available (designed structure or unannotated entry). Functional-class statements must
+    be flagged as inference and grounded in structural features only.
+  evidence_quality: confirmed
+visual:
+  views_dir: /tmp/ma_designs_out/ma-rgcer/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: /tmp/ma_designs_out/ma-rgcer/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: /tmp/ma_designs_out/ma-rgcer/views/02_side.png
+    ray: true
+  - name: surface
+    path: /tmp/ma_designs_out/ma-rgcer/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: /tmp/ma_designs_out/ma-rgcer/views/03_plddt_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: plddt
+
+```
+
+**CANONICAL VIEW BATTERY (PyMOL-rendered):**
+
+@/tmp/ma_designs_out/ma-rgcer/views/01_top.png @/tmp/ma_designs_out/ma-rgcer/views/02_side.png @/tmp/ma_designs_out/ma-rgcer/views/03_plddt_chain_A.png @/tmp/ma_designs_out/ma-rgcer/views/04_surface_hydrophobic.png
+
+Provide a structured analysis in **400–800 words**, with these section headers in this order:
+
+### 1. Identity & function
+Name the protein. State its biological role.
+
+### 2. Macromolecular composition
+What polymer types are present (protein, DNA, RNA, glycans, lipids)?
+
+### 3. Quaternary structure
+Oligomeric state (monomer, dimer, trimer, etc.), point-group symmetry if any, and explicitly note any difference between the asymmetric-unit chain count and the biological assembly.
+
+### 4. Fold class
+Name the fold(s) — be specific (β-grasp, TIM barrel, Rossmann, Ig fold, jelly-roll, 7TM bundle, etc.).
+
+### 5. Active site / catalytic mechanism
+If this is an enzyme, name the catalytic residues, the mechanism class (hydrolase / transferase / oxidoreductase / isomerase / lyase / ligase), and where the site is (intra-subunit, inter-subunit, pocket). If not an enzyme, say so.
+
+### 6. Cofactors, metals, ligands
+What's bound, and what chemistry does it support (redox / Schiff-base / methyl-donor / acyl-transfer / electron-transfer / etc.).
+
+### 7. Notable structural features
+Family-defining motifs, disulfides (including vicinal), modifications, post-translational features.
+
+### 8. Hypotheses & inferences
+Mark this section explicitly as inference. Distinguish "the materials tell me X" from "I infer Y."
+
+If you don't know something, write "unknown from the available materials" rather than fabricating.

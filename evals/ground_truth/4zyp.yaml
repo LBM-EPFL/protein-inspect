@@ -1,0 +1,67 @@
+pdb: 4zyp
+short_name: "Motavizumab Fab + RSV F-glycoprotein epitope (AM14 cross-quaternary antibody)"
+description: |
+  4ZYP is the crystal structure of Motavizumab — a humanized monoclonal
+  antibody — and the human antibody AM14 in complex with the RSV
+  (respiratory syncytial virus) fusion glycoprotein. AM14 is notable
+  for binding a "quaternary-specific" epitope that exists only on the
+  trimeric prefusion form of RSV F. The structure contains multiple
+  immunoglobulin Fab fragments (each ~215aa light chain + ~225aa heavy
+  chain Fab) with the characteristic Ig-fold (β-sandwich) domains and
+  the disulfide-stabilized VH/VL/CH1/CL architecture. Used in vaccine
+  design and respiratory infection therapeutics.
+
+identity:
+  must_mention_one_of:
+    - "Motavizumab"
+    - "AM14"
+    - "RSV"
+    - "respiratory syncytial virus"
+    - "antibody"
+    - "immunoglobulin Fab"
+  reference_phrase: "Motavizumab Fab + AM14 antibody complex with RSV F glycoprotein"
+
+oligomeric_state:
+  correct: higher_order
+  acceptable:
+    - "higher_order"
+    - "multiple Fab + antigen complex"
+    - "multi-chain antibody-antigen complex"
+    - "heterotetramer"
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "Ig fold"
+    - "immunoglobulin fold"
+    - "β-sandwich"
+    - "antibody fold"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: "RSV F glycoprotein (the antigen)"
+
+notable_features:
+  must_mention_one_of:
+    - "CDR"
+    - "complementarity-determining region"
+    - "Fab"
+    - "antibody-antigen"
+    - "quaternary epitope"
+    - "Ig fold"
+    - "RSV F"
+    - "fusion glycoprotein"
+
+negative_constraints:
+  - "must not call it an enzyme"
+  - "must not claim a catalytic mechanism"
+  - "must not identify it as a structural protein of a virus only (RSV F is antigen; antibodies are the main subject)"
+
+inference_hygiene:
+  required: false

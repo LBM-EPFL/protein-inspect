@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 2,
+      "rationale": "Mentions 'de novo designed Zn-binding mini-protein scaffold' in function_description, matching multiple required phrases."
+    },
+    "oligomer": {
+      "pts": 1,
+      "rationale": "Claimed_state is monomer (matches) and addresses_asu_vs_biological_distinction is true."
+    },
+    "fold_class": {
+      "pts": 2,
+      "rationale": "Mentions 'all-\u03b1' and 'helical' (via 'helical hairpin'), satisfying must_mention_one_of."
+    },
+    "active_site": {
+      "pts": 2,
+      "rationale": "Site_type_claimed matches 'metal-coord' (a), residues HIS7/ASP11/ASP45/HIS54 all match (b), but mechanism_class is 'unstated' not 'none' (c missed)."
+    },
+    "cofactors_metals_ligands": {
+      "pts": 2,
+      "rationale": "Zn is listed in ccd_codes_or_names, matching expected ZN."
+    },
+    "notable_features": {
+      "pts": 2,
+      "rationale": "Mentions '\u03b1-helices' (via 'two long \u03b1-helices') matching '\u03b1-helical'; also Zn/His/Asp appear in verbatim claims."
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "inferences_marked_as_inference is true."
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 12,
+  "penalty_total": 0,
+  "final_score": 12
+}

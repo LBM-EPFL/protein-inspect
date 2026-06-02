@@ -1,0 +1,56 @@
+{
+  "identity": {
+    "names_or_aliases": [],
+    "function_description": "Function unknown from available materials; suspected de novo designed Zn-binding mini-protein scaffold."
+  },
+  "oligomer": {
+    "claimed_state": "monomer",
+    "symmetry": null,
+    "addresses_asu_vs_biological_distinction": true
+  },
+  "fold_class": {
+    "fold_names_mentioned": [
+      "helical hairpin",
+      "two-helix bundle",
+      "all-\u03b1"
+    ]
+  },
+  "active_site": {
+    "residues_named": [
+      "HIS7",
+      "ASP11",
+      "ASP45",
+      "HIS54",
+      "GLU8",
+      "GLU20"
+    ],
+    "mechanism_class": "unstated",
+    "site_type_claimed": "metal-coord"
+  },
+  "cofactors_metals_ligands": {
+    "ccd_codes_or_names": [
+      "Zn"
+    ],
+    "chemistry_class_mentions": [
+      "2-His/2-Asp",
+      "2-His/2-carboxylate"
+    ]
+  },
+  "notable_features": {
+    "features_mentioned": [
+      "two long \u03b1-helices",
+      "antiparallel arrangement",
+      "compact single domain",
+      "low uniform B-factors"
+    ]
+  },
+  "inferences_marked_as_inference": true,
+  "verbatim_claims_used": [
+    "single bound Zn\u00b2\u207a ion coordinated by His7, Asp11, Asp45, and His54",
+    "the assembly is annotated as a monomer",
+    "This is a helical hairpin / two-helix bundle, the simplest member of the all-\u03b1 fold class",
+    "I suspect (inference) this is a de novo designed mini-protein scaffold",
+    "Marked as inference",
+    "No discrepancy between ASU and biological assembly is indicated"
+  ]
+}

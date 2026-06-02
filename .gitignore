@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Eval artifacts (regeneratable from ground_truth/ via evals/run_eval.py)
+evals/materials/
+evals/runs/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/

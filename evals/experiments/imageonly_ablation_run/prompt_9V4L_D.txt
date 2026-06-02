@@ -1,0 +1,17 @@
+# Protein structure analysis — identifier only
+
+You are asked about the protein with identifier **9V4L**. You have no
+materials. Answer from prior knowledge if any.
+
+Provide a structured analysis in **400–800 words**, with the section
+headers below. If you have no information, write "unknown — no prior
+knowledge of this identifier" for each section.
+
+### 1. Identity & function
+### 2. Macromolecular composition
+### 3. Quaternary structure
+### 4. Fold class
+### 5. Active site / catalytic mechanism
+### 6. Cofactors, metals, ligands
+### 7. Notable structural features
+### 8. Hypotheses & inferences

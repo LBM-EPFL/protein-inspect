@@ -1,0 +1,59 @@
+pdb: 1tim
+short_name: "Triosephosphate isomerase (canonical TIM barrel, homodimer)"
+description: |
+  Chicken triosephosphate isomerase — the eponymous (β/α)8 "TIM barrel"
+  fold. Catalyzes the interconversion of dihydroxyacetone phosphate and
+  D-glyceraldehyde 3-phosphate in glycolysis. Functional homodimer
+  (~248 aa per monomer) with one active site per chain. Catalytic
+  triad-like residues: Lys13, His95, Glu165 — not a Ser-His-Asp triad
+  but a glutamate-mediated proton-shuttle mechanism. Diffusion-limited
+  catalyst, often used as the benchmark "perfect enzyme."
+
+identity:
+  must_mention_one_of:
+    - "TIM"
+    - "triosephosphate isomerase"
+    - "triose-phosphate isomerase"
+  reference_phrase: "Triosephosphate isomerase (TIM) — glycolytic isomerase, canonical TIM-barrel fold"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "TIM barrel"
+    - "(β/α)8 barrel"
+    - "(βα)8"
+    - "TIM-barrel"
+
+active_site:
+  type: dyad
+  catalytic_residues:
+    - {name: LYS13,  role: "electrostatic stabilization"}
+    - {name: HIS95,  role: "general base/acid"}
+    - {name: GLU165, role: "general base"}
+  mechanism_class: isomerase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "TIM barrel"
+    - "(β/α)8"
+    - "Glu165"
+    - "perfect enzyme"
+    - "diffusion-limited"
+    - "loop 6"
+
+negative_constraints:
+  - "must not call it a kinase"
+  - "must not claim a metal cofactor (TIM is metal-free)"
+  - "must not call it a transferase"
+
+inference_hygiene:
+  required: false

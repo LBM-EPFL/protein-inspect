@@ -1,0 +1,419 @@
+# decision_tree.yaml — codified inspection logic, v1.1
+#
+# Tiered architecture. Tiers run in order; each tier can read state set by
+# previous tiers via the {features} context object.
+#
+# CONDITION LANGUAGE (small, inspectable, no eval):
+#   always: true
+#   has:     <list_path>                       → list at path is non-empty
+#   missing: <list_path>                       → list at path is empty/missing
+#   equals:  { path: <p>, value: <v> }
+#   greater: { path: <p>, value: <v> }
+#   less:    { path: <p>, value: <v> }
+#   any_in:  { list: <p>, where: <subcond> }
+#   all_of:  [<cond>, <cond>, ...]
+#   any_of:  [<cond>, <cond>, ...]
+#   not:     <cond>
+#   input_provided: <arg_name>
+#
+# ACTION TYPES:
+#   compute:     <feature_name>                     → mark feature for extraction
+#   render_view: { name: <view>, params?: {...} }   → add to render plan
+#   flag:        { priority, message, [rule_id] }   → adds to summary.flags
+#
+# Rule ids are stable (used in summary.flags[].rule_id) — do not rename.
+
+version: "1.1"
+
+rules:
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 1 — ALWAYS (type detection + baseline view battery)
+  # ═════════════════════════════════════════════════════════════════
+
+  - id: baseline
+    when: always
+    actions:
+      - { compute: chains }
+      - { compute: secondary_structure }
+      - { compute: bfactor_stats }
+      - { compute: disulfides }
+      - { compute: ligand_classification }
+      - { render_view: { name: overview_top } }
+      - { render_view: { name: overview_side } }
+      - { render_view: { name: surface } }
+
+  - id: macromolecule_type
+    when: always
+    actions:
+      - { compute: macromolecule_type }
+
+  - id: model_type
+    when: always
+    actions:
+      - { compute: model_type }
+      - { render_view: { name: bfactor_or_plddt_chain_a } }   # auto-routes to plddt view if computed
+
+  - id: low_plddt_regions
+    when: { equals: { path: model_quality.is_computed, value: true } }
+    actions:
+      - { compute: low_plddt_regions }
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Computed model — confidence varies across the structure. Treat low-pLDDT regions (<70) as unreliable for residue-level claims; treat high-pLDDT regions (>90) as reliable. Cofactors, metals, and modified residues are typically NOT modeled in AF predictions."
+
+  - id: plddt_not_bfactor
+    # Critical reframing for AF-DB and other computed models: the B-factor
+    # column of the input file carries pLDDT (0–100, higher = more confident),
+    # NOT crystallographic displacement (Å², higher = more flexible). High
+    # pLDDT mean ≠ mobile protein. We re-emit `fold.plddt_stats` instead of
+    # `fold.bfactor_stats` for computed models — this flag is the explicit
+    # reading instruction for Claude, in case the analyze prompt or the user
+    # reaches for "B-factor" reasoning out of habit.
+    when: { equals: { path: model_quality.is_computed, value: true } }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: high
+          message: "AF/computed model: the B-factor column stores **pLDDT** (predicted confidence, 0–100), NOT crystallographic displacement. Read `fold.plddt_stats` (not `bfactor_stats` — it is intentionally absent for AF models). Bands: ≥90 very_high, 70–90 confident, 50–70 low, <50 very_low. High mean pLDDT means a *well-predicted* model, NOT a flexible one — do NOT call high-pLDDT regions 'mobile' or 'flexible'. Disorder predictions live in `model_quality.plddt_summary.low_confidence_regions`."
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 2 — ASSEMBLY (no family claims; describe, don't pre-judge)
+  # ═════════════════════════════════════════════════════════════════
+
+  - id: multi_chain
+    when: { greater: { path: assembly.n_chains, value: 1 } }
+    actions:
+      - { compute: interface_contacts }
+      - { compute: chain_rmsds }
+      - { compute: oligomer_state }
+      - { compute: symmetry_label }
+      - { render_view: { name: interface_closeup } }
+
+  - id: hetero_oligomer
+    when: { equals: { path: assembly.homo_or_hetero, value: hetero } }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Hetero-oligomer (multiple distinct sequences). Subunits likely have distinct functional roles — interpret each chain separately and pay attention to inter-chain interfaces."
+
+  - id: interface_ligand
+    when:
+      any_in:
+        list: ligands.bio_ligand
+        where: { equals: { path: placement, value: subunit_interface } }
+    actions:
+      - flag:
+          evidence_quality: strong
+          priority: medium
+          message: "Bio-ligand bound at subunit interface — could be interface inhibitor, symmetric receptor binding mode, or co-substrate at shared active site."
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 3 — LIGAND TRIAGE (the critical filter)
+  # ═════════════════════════════════════════════════════════════════
+  # Note: ligand_classification is computed in `baseline` so all subsequent
+  # tiers can rely on partitioned ligand classes.
+
+  - id: crystallographic_artifacts_present
+    when:
+      any_of:
+        - { has: ligands.buffer }
+        - { has: ligands.cryoprotectant }
+        - { has: ligands.detergent }
+        - { has: ligands.heavy_atom_phasing }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: low
+          message: "Crystallographic artifacts (buffers/cryoprotectants/detergents/phasing atoms) present and have been filtered out of bio-ligand analysis. Listed under ligands.{class} for transparency."
+
+  - id: unclassified_ligand
+    when: { has: ligands.unclassified }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "One or more HETATM codes were not in the curated ligand_classes.yaml. Treated as bio-ligand by default. Verify and add to the classification list if appropriate."
+
+  - id: bio_ligand_present
+    when: { has: ligands.bio_ligand }
+    actions:
+      - { compute: binding_residues_5a }
+      - { compute: aromatic_cage_check }
+      - { compute: ligand_smiles }
+      - { render_view: { name: ligand_pocket, per_ligand: true } }
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 4 — FUNCTIONAL MOIETIES (descriptive — no family claims)
+  # ═════════════════════════════════════════════════════════════════
+
+  - id: metals_present
+    when: { has: metals }
+    actions:
+      - { render_view: { name: metal_closeup, per_metal: true } }
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Metal ion(s) coordinating protein. Catalytic vs structural role depends on coordination geometry and pocket context — see metals[].context heuristic."
+
+  - id: iron_sulfur_cluster
+    when:
+      any_in:
+        list: metals
+        where: { any_of: [
+          { equals: { path: cluster_type, value: FES } },
+          { equals: { path: cluster_type, value: F3S } },
+          { equals: { path: cluster_type, value: SF4 } },
+          { equals: { path: cluster_type, value: CFM } }
+        ] }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: high
+          message: "Iron-sulfur cluster present. Strong indicator of redox / electron-transfer / radical chemistry. Common in respiration, photosynthesis, nitrogen fixation, ribonucleotide metabolism."
+
+  - id: cofactors_present
+    when: { has: cofactors }
+    actions:
+      # Per-cofactor close-up that labels the cofactor CCD code, the
+      # coordinating residues, and the H-bond / salt-bridge distances on
+      # the contact lines. Without this view a downstream image-only reader
+      # gets fold + topology but cannot name FAD vs NAD vs heme.
+      - { render_view: { name: cofactor_closeup, per_cofactor: true } }
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Cofactor(s) present. Each entry in cofactors[] carries a chemistry_class hint (redox/Schiff/methyl/etc.). Family hint should come from fold + cofactor + active-site pattern combined, NOT from cofactor identity alone."
+
+  - id: nucleic_acid_present
+    when:
+      any_of:
+        - { equals: { path: macromolecule_type, value: protein_dna } }
+        - { equals: { path: macromolecule_type, value: protein_rna } }
+        - { equals: { path: macromolecule_type, value: dna_only } }
+        - { equals: { path: macromolecule_type, value: rna_only } }
+        - { equals: { path: macromolecule_type, value: mixed } }
+        - { has: nucleic_acids }
+    actions:
+      # Global cartoon (existing): protein + NA together for context.
+      - { render_view: { name: nucleic_acid_cartoon } }
+      # NEW: per-NA-chain interface close-up that labels nucleotides at the
+      # contact face, the contacting protein side chains, and the H-bond
+      # distances — the analogue of ligand_pocket for nucleic acid contact.
+      - { render_view: { name: na_interface_closeup, per_na_chain: true } }
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Nucleic acid (DNA/RNA) present in the structure. Inspect the protein-NA interface for sequence-specific recognition (groove contacts, base readout) vs. backbone contacts."
+
+  - id: glycosylation_present
+    when: { has: glycans }
+    actions:
+      # Per-glycan close-up labels each saccharide unit + the protein
+      # residue it contacts + the contact distances. Useful both for
+      # decorative N-linked glycans (where the inner core is often the
+      # functionally relevant part) and for bound glycan ligands at lectin
+      # / sialoglycan-binding sites.
+      - { render_view: { name: glycan_closeup, per_glycan: true } }
+      - flag:
+          evidence_quality: confirmed
+          priority: low
+          message: "Glycosylation present. Often indicates secreted, extracellular, or membrane-anchored glycoprotein. Modeled glycans may be incomplete (typically only the inner core is ordered)."
+
+  - id: peptide_ligand_present
+    when: { has: peptide_ligands }
+    actions:
+      # Per-peptide-chain interface close-up: labels every peptide residue,
+      # labels the contacting host-protein side chains, and draws distance
+      # lines on H-bond / salt-bridge contacts within 3.5 Å.
+      - { render_view: { name: peptide_interface_closeup, per_peptide_chain: true } }
+      - flag:
+          evidence_quality: confirmed
+          priority: high
+          message: "Bound peptide ligand detected (short polymer-protein chain distinct from the main protein). Common cases: macrocyclic peptide drugs (KRAS, MDM2, …), peptide-mimetic Mpro inhibitors, neuropeptide-bound GPCRs. Inspect the peptide_interface view for the binding mode."
+
+  - id: lipids_present
+    when: { has: lipids }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Lipid(s) present (distinct from detergents). Native lipid retention is a strong hint that this is a membrane protein, with the lipid potentially co-purified or functionally bound."
+
+  - id: free_nucleotide_present
+    when: { has: nucleotides_free }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Free nucleotide (ATP/GTP/etc. or analog) present. Indicates a nucleotide-binding protein — ATPase, GTPase, kinase, polymerase, or cofactor-bound enzyme. Check for adjacent phosphate-binding loop and metal ion."
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 5 — STRUCTURAL FEATURES (geometric, no family claims)
+  # ═════════════════════════════════════════════════════════════════
+
+  - id: disulfides_present
+    when: { has: disulfides }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: low
+          message: "Disulfide bond(s) detected. Indicates extracellular / secreted / oxidative environment, or structural stabilization."
+
+  - id: vicinal_disulfide
+    when:
+      any_in:
+        list: disulfides
+        where: { equals: { path: type, value: vicinal } }
+    actions:
+      - { render_view: { name: vicinal_ss_zoom, per_disulfide: true } }
+      - flag:
+          evidence_quality: confirmed
+          priority: high
+          message: "Vicinal disulfide (consecutive cysteines bonded). Rare structural motif. Strong markers: Cys-loop receptor alpha subunits (Loop C), some lectins, redox-switch proteins. Constrains conformation; can modulate ligand binding."
+
+  - id: interchain_disulfide
+    when:
+      any_in:
+        list: disulfides
+        where: { equals: { path: type, value: interchain } }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Inter-chain disulfide(s) present — covalent oligomer. Common in IgG hinges, insulin, von Willebrand factor, and many secreted dimers. Disrupts the assumption of non-covalent quaternary structure."
+
+  - id: catalytic_triad_geometry
+    when:
+      any_in:
+        list: active_site_patterns
+        where: { equals: { path: pattern, value: catalytic_triad } }
+    actions:
+      - flag:
+          evidence_quality: geometric_only
+          priority: high
+          message: "Catalytic-triad geometry detected (nucleophile-base-acid pattern). Suggestive of a hydrolase or transferase with covalent intermediate chemistry. Pattern alone does NOT name a family — confirm by combining with fold, ligand chemistry, and active-site pocket location."
+
+  - id: cysteine_dyad_geometry
+    when:
+      any_in:
+        list: active_site_patterns
+        where: { equals: { path: pattern, value: cys_his_dyad } }
+    actions:
+      - flag:
+          evidence_quality: geometric_only
+          priority: high
+          message: "Cys-His catalytic dyad geometry detected. Suggestive of cysteine protease / ubiquitin-class peptidase / glutathione-related enzyme / amidase. Confirm with pocket location and substrate identity."
+
+  - id: aspartate_dyad_geometry
+    when:
+      any_in:
+        list: active_site_patterns
+        where: { equals: { path: pattern, value: asp_dyad } }
+    actions:
+      - flag:
+          evidence_quality: geometric_only
+          priority: high
+          message: "Aspartate dyad / pair detected (two Asp carboxylates close together). Common in aspartyl proteases, glycosidases (acid/base + nucleophile), and some metallophosphatases. Family depends on whether they activate water (protease) or substrate (glycosidase)."
+
+  - id: phosphate_binding_loop
+    when:
+      any_in:
+        list: active_site_patterns
+        where: { equals: { path: pattern, value: phosphate_binding_loop } }
+    actions:
+      - flag:
+          evidence_quality: geometric_only
+          priority: medium
+          message: "Glycine-rich loop wrapping a phosphate group detected (P-loop / Walker-A-like geometry). Indicates a nucleotide- or phosphate-binding protein (kinase, ATPase, GTPase, polymerase). Confirm with bound nucleotide and Mg/Mn coordination."
+
+  - id: aromatic_cage_at_ligand_site
+    # Aromatic cage detection lives in active_site_patterns (set by the
+    # geometric detector in features.py:extract_active_site_patterns), not as a
+    # field on bio_ligand entries. Match against the pattern list.
+    when:
+      any_in:
+        list: active_site_patterns
+        where: { equals: { path: pattern, value: aromatic_cage } }
+    actions:
+      - flag:
+          evidence_quality: strong
+          priority: medium
+          message: "Aromatic cage (≥3 aromatic residues within 5 Å of ligand). Cation-π or carbohydrate-stacking interaction characteristic of nicotinic receptors, lectins, neurotransmitter binding proteins, and reader domains."
+
+  - id: multi_domain_likely
+    when: { greater: { path: domains.count, value: 1 } }
+    actions:
+      - { render_view: { name: multi_domain_view } }
+      - flag:
+          evidence_quality: heuristic
+          priority: medium
+          message: "Multi-domain protein detected (compact subdomains via intra-/inter-CA contact ratio). Each domain may have distinct function — analyze separately and consider linker flexibility."
+
+  - id: membrane_likely
+    when: { equals: { path: membrane_features.belt_detected, value: true } }
+    actions:
+      - { render_view: { name: hydrophobic_surface } }
+      - flag:
+          evidence_quality: heuristic
+          priority: high
+          message: "Membrane-binding signature detected (hydrophobic belt + Trp/Tyr aromatic girdle). Either an integral membrane protein or peripheral membrane-binding protein. Inspect the hydrophobic surface view to see the membrane interaction face."
+
+  - id: chain_disorder
+    when: { has: chain_disorder }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: low
+          message: "Residue gaps in chain (missing density / disordered loops). Common in flexible regions; can hide functionally important loops (e.g., kinase activation loop, GPCR ICL3)."
+
+  - id: disorder_at_functional_site
+    when:
+      any_in:
+        list: chain_disorder
+        where: { equals: { path: near_functional, value: true } }
+    actions:
+      - flag:
+          evidence_quality: heuristic
+          priority: high
+          message: "Disordered region within 8 Å of a functional moiety (ligand / metal / cofactor). The bound state may capture only a partial picture — possible induced fit, conformational selection, or misinterpretation if the disorder is in a key catalytic loop."
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 6 — QUALITY / PROVENANCE
+  # ═════════════════════════════════════════════════════════════════
+
+  - id: low_resolution
+    when: { equals: { path: provenance.resolution_class, value: low } }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: medium
+          message: "Low resolution (>3.0 Å). Sidechain conformations and water positions are unreliable. Treat distance measurements with care; backbone topology is still usable."
+
+  - id: cryo_em_resolution
+    when: { equals: { path: provenance.resolution_class, value: cryo_em } }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: low
+          message: "Cryo-EM structure. Local resolution typically varies — central regions resolved best, peripheral/flexible regions worse. Check reported global resolution but expect heterogeneity."
+
+  # ═════════════════════════════════════════════════════════════════
+  # TIER 7 — USER INPUT + SAFEGUARDS
+  # ═════════════════════════════════════════════════════════════════
+
+  - id: motif_specified
+    when: { input_provided: motif }
+    actions:
+      - { compute: motif_geometry }
+      - { render_view: { name: motif_focus } }
+
+  - id: no_narrative
+    when: { equals: { path: narrative, value: null } }
+    actions:
+      - flag:
+          evidence_quality: confirmed
+          priority: low
+          message: "No narrative description available (designed structure or unannotated entry). Functional-class statements must be flagged as inference and grounded in structural features only."

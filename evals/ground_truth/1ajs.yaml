@@ -1,0 +1,67 @@
+pdb: 1ajs
+short_name: "Aspartate aminotransferase (PLP-dependent, fold type I)"
+description: |
+  E. coli aspartate aminotransferase (AspAT / AAT) — archetype of the
+  pyridoxal 5'-phosphate (PLP)-dependent enzymes of fold type I. Homodimer
+  (~396 aa per subunit). Catalyzes transamination between aspartate /
+  glutamate and 2-oxoglutarate / oxaloacetate via the PLP cofactor
+  covalently linked to an active-site lysine (Lys258) as an internal
+  Schiff base. Two-domain structure: large domain (binds PLP and the
+  bulk of the active site) + small domain. Active site lies at the
+  dimer interface — substrate is delivered to one chain's PLP by
+  residues from the other chain.
+
+identity:
+  must_mention_one_of:
+    - "aspartate aminotransferase"
+    - "AspAT"
+    - "aminotransferase"
+    - "transaminase"
+  reference_phrase: "Aspartate aminotransferase — PLP-dependent transaminase, fold type I"
+
+oligomeric_state:
+  correct: dimer
+  acceptable: ["dimer", "homodimer", "functional dimer"]
+  symmetry: C2
+
+fold_class:
+  must_mention_one_of:
+    - "PLP fold type I"
+    - "aminotransferase fold"
+    - "fold type I PLP"
+    - "α/β"
+
+active_site:
+  type: none
+  mechanism_note: "PLP-dependent transaminase via internal Schiff-base aldimine (Lys258-PLP covalent linkage, CCD code LLP). Reaction proceeds through a Schiff-base intermediate with substrate amino acid; no metal cofactor involved. Fold-type-I PLP enzyme."
+  catalytic_residues:
+    - {name: LYS258, role: "PLP Schiff-base (internal aldimine)"}
+    - {name: ASP222, role: "PLP pyridinium N1 anchor"}
+    - {name: TYR225, role: "PLP pyridine 3'-O interaction"}
+  mechanism_class: transferase
+  location: inter-subunit
+
+cofactors_metals_ligands:
+  # PLP is covalently linked to Lys258 as an internal Schiff base, so it
+  # appears as the modified CCD code LLP (lysine-PLP aldimine) not the
+  # free PLP code. PLA is the substrate/transition-state mimic in this
+  # entry (pyridoxyl-alanine).
+  expected:
+    - {id: LLP, chemistry_class: schiff_base}
+  bio_ligand: "LLP (covalent PLP-Lys258 internal aldimine) + substrate analog"
+
+notable_features:
+  must_mention_one_of:
+    - "PLP"
+    - "pyridoxal"
+    - "Schiff base"
+    - "transamination"
+    - "Lys258"
+
+negative_constraints:
+  - "must not call it a hydrolase"
+  - "must not claim a Ser-His-Asp triad"
+  - "must not claim heme / Fe-S / NAD cofactor"
+
+inference_hygiene:
+  required: false

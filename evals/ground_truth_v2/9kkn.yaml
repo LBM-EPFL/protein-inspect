@@ -1,0 +1,66 @@
+pdb: 9KKN
+short_name: "Human vesicular acetylcholine transporter (VAChT / SLC18A3) + ACh"
+description: |
+  Cryo-EM structure (2.72 Å) of human vesicular acetylcholine transporter
+  (VAChT, gene SLC18A3) in complex with its physiological substrate
+  acetylcholine (ACh). VAChT is a 12-transmembrane-helix Major Facilitator
+  Superfamily (MFS) antiporter; it loads ACh into synaptic vesicles by
+  exchanging two H⁺ (out, from vesicle lumen) for one ACh⁺ (in). VAChT is
+  the target of vesamicol. This entry uses a soluble cytochrome b562
+  (BRIL) fusion as a crystallization/cryo-EM-fiducial chaperone — Claude
+  should recognize the fusion construct and avoid describing it as a
+  natural domain of VAChT. Native VAChT is a membrane-embedded monomer.
+
+identity:
+  must_mention_one_of:
+    - "VAChT"
+    - "vesicular acetylcholine transporter"
+    - "SLC18A3"
+    - "ACh transporter"
+    - "MFS"
+  reference_phrase: "Vesicular acetylcholine transporter — MFS antiporter that loads acetylcholine into synaptic vesicles in exchange for H⁺"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric MFS transporter"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "Major Facilitator Superfamily"
+    - "MFS"
+    - "MFS fold"
+    - "12-TM"
+    - "12 transmembrane"
+    - "α-helical bundle"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ACH, chemistry_class: substrate}
+  bio_ligand: "acetylcholine (ACh) — physiological transport substrate, bound in the central cavity between the N- and C-terminal six-TM bundles"
+
+notable_features:
+  must_mention_one_of:
+    - "MFS"
+    - "12-TM"
+    - "antiporter"
+    - "synaptic vesicle"
+    - "acetylcholine"
+    - "BRIL"
+    - "cytochrome b562"
+    - "fusion protein"
+
+negative_constraints:
+  - "must not call VAChT an enzyme — it is a transporter; ACh is moved, not chemically modified"
+  - "must not treat the BRIL fusion as a native domain of VAChT"
+  - "must not describe it as a Cys-loop or ion-channel receptor — it is a secondary-active transporter"
+  - "must not invoke a catalytic triad / dyad"
+
+inference_hygiene:
+  required: false

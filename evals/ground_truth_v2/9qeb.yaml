@@ -1,0 +1,79 @@
+pdb: 9QEB
+short_name: "Yeast RNA polymerase II elongation complex (12-subunit Pol II + DNA + RNA)"
+description: |
+  Cryo-EM structure (2.3 Å) of yeast (*Saccharomyces cerevisiae*) RNA
+  polymerase II in a transcribing elongation state. The complex contains
+  the full **12-subunit Pol II** (Rpb1 + Rpb2 catalytic core; Rpb3, Rpb4,
+  Rpb7, Rpb9, Rpb11; and shared subunits Rpb5, Rpb6, Rpb8, Rpb10, Rpb12),
+  plus a **transcription bubble**: template DNA strand (44-mer),
+  non-template DNA strand (44-mer), and the nascent RNA transcript (9-mer
+  in the catalytic cleft). The active site contains **two Mg²⁺ ions** that
+  carry out the nucleotidyl-transfer reaction (canonical two-metal-ion
+  catalysis). Ligands ATP, MG, K, ZN are all expected. Zn²⁺ structural
+  fingers anchor several subunits.
+
+identity:
+  must_mention_one_of:
+    - "RNA polymerase II"
+    - "Pol II"
+    - "RNAP II"
+    - "RNAPII"
+    - "transcription"
+    - "elongation complex"
+  reference_phrase: "RNA polymerase II elongation complex — 12-subunit eukaryotic transcription machinery with bubble (DNA template + non-template + nascent RNA)"
+
+oligomeric_state:
+  correct: higher_order
+  acceptable:
+    - "12-subunit complex"
+    - "Pol II + DNA + RNA elongation complex"
+    - "heteromeric multi-subunit assembly"
+    - "15-mer (12 protein + 2 DNA + 1 RNA)"
+  symmetry: C1
+
+fold_class:
+  must_mention_one_of:
+    - "RNA polymerase"
+    - "multi-subunit RNA polymerase"
+    - "double-ψ-β-barrel"
+    - "RNAP fold"
+    - "two-metal-ion polymerase"
+    - "nucleotidyltransferase"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: ASP, role: "Mg²⁺ A ligand (Rpb1 catalytic DDD motif)"}
+    - {name: ASP, role: "Mg²⁺ A ligand"}
+    - {name: ASP, role: "Mg²⁺ B coordination / nucleotidyl transfer"}
+  mechanism_class: transferase
+  location: inter-subunit
+
+cofactors_metals_ligands:
+  expected:
+    - {id: MG, chemistry_class: metal}
+    - {id: ATP, chemistry_class: nucleotide}
+    - {id: ZN, chemistry_class: metal}
+    - {id: K, chemistry_class: metal}
+  bio_ligand: "incoming NTP (ATP modeled here as substrate or analog), two catalytic Mg²⁺ ions, structural Zn²⁺ fingers; DNA template + non-template + nascent RNA in the transcription bubble"
+
+notable_features:
+  must_mention_one_of:
+    - "elongation complex"
+    - "transcription bubble"
+    - "two-metal-ion mechanism"
+    - "two metal"
+    - "nucleotidyl transfer"
+    - "RNAP II"
+    - "DNA-RNA hybrid"
+    - "Rpb1"
+    - "Rpb2"
+
+negative_constraints:
+  - "must not call it a DNA polymerase (Pol II makes RNA, not DNA)"
+  - "must not call it a reverse transcriptase"
+  - "must not invoke a proteolytic catalytic triad — this is nucleotidyl transferase chemistry"
+  - "must not omit DNA or RNA presence — both are central to this entry"
+
+inference_hygiene:
+  required: false

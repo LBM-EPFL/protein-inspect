@@ -1,0 +1,56 @@
+pdb: 1fxd
+short_name: "Desulfovibrio ferredoxin ([4Fe-4S] cluster, electron transfer)"
+description: |
+  Desulfovibrio gigas ferredoxin II — small (~58 aa) bacterial
+  ferredoxin carrying a single [3Fe-4S] cluster (CCD code F3S).
+  Function: one-electron transfer in sulfate-reduction respiration.
+  Cluster coordinated by cysteine sulfurs from the protein.
+  α+β bacterial ferredoxin fold.
+
+identity:
+  must_mention_one_of:
+    - "ferredoxin"
+    - "Fd"
+    - "iron-sulfur protein"
+  reference_phrase: "Ferredoxin — small bacterial Fe-S electron transfer protein"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "ferredoxin fold"
+    - "α+β"
+    - "bacterial ferredoxin"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: CYS,  role: "cluster ligand (multiple cysteines coordinating Fe)"}
+  mechanism_class: oxidoreductase
+  location: pocket
+
+cofactors_metals_ligands:
+  # 1FXD specifically contains a [3Fe-4S] cluster (CCD code F3S), not the
+  # [2Fe-2S] FES. Description has been corrected.
+  expected:
+    - {id: F3S, chemistry_class: other}
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "iron-sulfur"
+    - "Fe-S"
+    - "[3Fe-4S]"
+    - "electron transfer"
+    - "cluster"
+
+negative_constraints:
+  - "must not call it an enzyme with substrate turnover (its function is electron transfer)"
+  - "must not claim heme or FAD cofactors"
+  - "must not call it a membrane protein"
+
+inference_hygiene:
+  required: false

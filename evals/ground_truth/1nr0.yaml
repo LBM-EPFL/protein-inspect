@@ -1,0 +1,61 @@
+pdb: 1nr0
+short_name: "Transducin β-subunit (7-bladed β-propeller / WD40 repeats)"
+description: |
+  G-protein β-subunit (Gβ) of transducin — the paradigmatic 7-bladed
+  β-propeller fold built from 7 WD40 repeats (~340 aa). Each "blade" is
+  a four-stranded antiparallel β-sheet. The N-terminal α-helix wraps
+  around the propeller. In the heterotrimeric G-protein, Gβ couples
+  the GDP/GTP-cycling Gα subunit to receptor-driven signaling. Reference
+  for the very common β-propeller architecture (WD40, kelch, NHL,
+  YVTN, RCC1 etc.).
+
+identity:
+  must_mention_one_of:
+    - "Gβ"
+    - "G-beta"
+    - "G protein β"
+    - "transducin"
+    - "WD40"
+    - "β-propeller"
+  reference_phrase: "G-protein β subunit — 7-bladed β-propeller (WD40 repeats)"
+
+oligomeric_state:
+  # In this entry Gβ is bound to RGS9 or similar partner; consider monomer of Gβ
+  correct: monomer
+  acceptable: ["monomer", "Gβ alone or with effector"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "β-propeller"
+    - "WD40"
+    - "WD repeat"
+    - "seven-bladed propeller"
+    - "7-bladed β-propeller"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "WD40 repeat"
+    - "seven blades"
+    - "7-bladed"
+    - "β-propeller"
+    - "Gβγ"
+    - "signaling adapter"
+
+negative_constraints:
+  - "must not call it an enzyme"
+  - "must not claim a catalytic mechanism"
+  - "must not call it a membrane protein"
+
+inference_hygiene:
+  required: false

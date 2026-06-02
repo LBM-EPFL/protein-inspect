@@ -1,0 +1,60 @@
+pdb: 7rsa
+short_name: "Bovine ribonuclease A (small α+β, four disulfides)"
+description: |
+  Bovine pancreatic ribonuclease A — small (~124 aa) extracellular
+  ribonuclease cleaving RNA at the 3' side of pyrimidines. Two-stage
+  catalytic mechanism using His12 (general base) and His119 (general
+  acid) and Lys41 (transition-state stabilization) — an unusual
+  histidine pair rather than a triad. Stabilized by four disulfide
+  bonds (CYS26-CYS84, CYS40-CYS95, CYS58-CYS110, CYS65-CYS72), an
+  α+β fold with three α-helices and a curved antiparallel β-sheet.
+  Famous historically for Anfinsen's refolding experiments.
+
+identity:
+  must_mention_one_of:
+    - "ribonuclease"
+    - "RNase A"
+    - "RNase-A"
+  reference_phrase: "Bovine ribonuclease A — small secreted endoribonuclease"
+
+oligomeric_state:
+  correct: monomer
+  acceptable: ["monomer", "monomeric"]
+  symmetry: null
+
+fold_class:
+  must_mention_one_of:
+    - "α+β"
+    - "RNase A fold"
+    - "RNase fold"
+    - "mixed α/β"
+
+active_site:
+  type: none
+  mechanism_note: "Non-canonical active site: His12 (base), His119 (acid), Lys41 (TS stabilization); does not fit standard dyad/triad schema."
+  catalytic_residues:
+    - {name: HIS12, role: "general base"}
+    - {name: HIS119, role: "general acid"}
+    - {name: LYS41, role: "transition-state stabilization"}
+  mechanism_class: hydrolase
+  location: pocket
+
+cofactors_metals_ligands:
+  expected: []
+  bio_ligand: null
+
+notable_features:
+  must_mention_one_of:
+    - "disulfide"
+    - "four disulfide"
+    - "His12"
+    - "His119"
+    - "Anfinsen"
+
+negative_constraints:
+  - "must not call it a metalloprotease"
+  - "must not claim a Ser-His-Asp triad (it's a His-His-Lys mechanism)"
+  - "must not name it as a kinase"
+
+inference_hygiene:
+  required: false

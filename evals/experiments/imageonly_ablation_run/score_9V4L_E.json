@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "identity": {
+      "pts": 0,
+      "rationale": "extracted names_or_aliases and function_description are both empty; no required identity phrase appears in the extracted identity fields."
+    },
+    "oligomer": {
+      "pts": 1,
+      "rationale": "claimed_state 'monomer' matches; ASU vs biological distinction is addressed."
+    },
+    "fold_class": {
+      "pts": 2,
+      "rationale": "'all-\u03b1' appears in fold_names_mentioned, satisfying must_mention_one_of."
+    },
+    "active_site": {
+      "pts": 0,
+      "rationale": "Ground truth type is 'metal-coord' but extracted site_type_claimed is 'none'; no residues named; mechanism_class 'unstated' does not match 'none'."
+    },
+    "cofactors_metals_ligands": {
+      "pts": 0,
+      "rationale": "ccd_codes_or_names is empty; response explicitly declined to claim Zn from the filename."
+    },
+    "notable_features": {
+      "pts": 0,
+      "rationale": "features_mentioned contains only 'helical hairpin' and 'B-factor / pLDDT coloring'; none of the required phrases (Zn/zinc/His/Asp/designed/\u03b1-helical/etc.) appear there."
+    },
+    "inference_hygiene": {
+      "pts": 1,
+      "rationale": "inferences_marked_as_inference is true, satisfying the required hygiene flag."
+    }
+  },
+  "negative_violations": [],
+  "raw_total": 4,
+  "penalty_total": 0,
+  "final_score": 4
+}

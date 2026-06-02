@@ -1,0 +1,84 @@
+pdb: 9OHN
+short_name: "Human p97 / VCP AAA+ ATPase hexamer + inhibitor GND-135"
+description: |
+  Cryo-EM structure (2.5 Å) of human p97 / VCP (Valosin-Containing
+  Protein, transitional endoplasmic reticulum ATPase) bound to the small-
+  molecule inhibitor GND-135. p97/VCP is a **hexameric AAA+ ATPase** (six
+  identical ~800-residue protomers arranged as a stacked double ring of
+  D1 + D2 ATPase domains plus an N-terminal regulatory domain) that
+  remodels client substrates by ATP-driven mechanical unfolding —
+  essential for ERAD, autophagy, DNA-damage response, and protein
+  quality control more broadly. The deposited assembly is reported as
+  '12-meric' because the canonical hexamer has TWO ATPase rings (D1 and
+  D2) per protomer — 6 protomers × 2 ATPase domains = 12 "ATPase modules"
+  by some counting. The functional unit remains a **hexamer of one
+  polypeptide chain**.
+
+identity:
+  must_mention_one_of:
+    - "p97"
+    - "VCP"
+    - "valosin-containing protein"
+    - "AAA+ ATPase"
+    - "AAA"
+    - "ATPase"
+  reference_phrase: "p97 / VCP — hexameric AAA+ ATPase that drives substrate unfolding for ERAD, autophagy, and DNA-damage response"
+
+oligomeric_state:
+  correct: higher_order
+  acceptable:
+    - "hexamer"
+    - "homohexamer"
+    - "dodecamer"
+    - "12-mer"
+    - "dimer of hexamers"
+    - "AAA+ hexamer"
+    - "hexameric ring"
+    - "head-to-head stacked hexamers"
+  symmetry: D6
+  required_caveat: "The functional minimal unit of p97/VCP is a homohexamer; this entry deposits TWO stacked hexamers (12 protein chains total) — RCSB labels the assembly '12-meric'. The two hexamers stack head-to-head and may represent a higher-order arrangement seen in some cryo-EM preparations or in vivo. Either 'hexamer' or 'dodecamer' is acceptable phrasing as long as the AAA+ hexameric architecture is named correctly."
+
+fold_class:
+  must_mention_one_of:
+    - "AAA+ ATPase"
+    - "AAA"
+    - "AAA fold"
+    - "P-loop NTPase"
+    - "Rossmann"
+    - "hexameric ring"
+
+active_site:
+  type: metal-coord
+  catalytic_residues:
+    - {name: LYS, role: "Walker A / P-loop lysine — ATP β-phosphate"}
+    - {name: ASP, role: "Walker B aspartate — Mg²⁺ coordination"}
+    - {name: GLU, role: "Walker B glutamate — general base"}
+    - {name: ARG, role: "arginine finger from the neighbor protomer — ATP γ-phosphate sensing"}
+  mechanism_class: hydrolase
+  location: inter-subunit
+
+cofactors_metals_ligands:
+  expected:
+    - {id: ADP, chemistry_class: nucleotide}
+    - {id: A1CBF, chemistry_class: drug}
+  bio_ligand: "ADP (post-hydrolysis nucleotide state at one or both ATPase rings) + GND-135 small-molecule inhibitor"
+
+notable_features:
+  must_mention_one_of:
+    - "AAA+"
+    - "Walker A"
+    - "Walker B"
+    - "P-loop"
+    - "hexameric ring"
+    - "D1 D2"
+    - "ATPase"
+    - "arginine finger"
+    - "pore loop"
+
+negative_constraints:
+  - "must not invoke a Ser / Cys protease triad — p97 hydrolyzes ATP, not peptides"
+  - "must not describe p97 as a kinase or polymerase"
+  - "must not call the GND-135 binding site an ATP / nucleotide pocket without evidence (allosteric inhibitors of p97 typically bind a non-ATP-pocket site)"
+
+inference_hygiene:
+  required: false

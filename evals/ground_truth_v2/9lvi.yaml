@@ -1,0 +1,68 @@
+pdb: 9LVI
+short_name: "SARS-CoV-2 spike glycoprotein (one-RBD-up trimer)"
+description: |
+  Cryo-EM structure (2.86 Å) of the SARS-CoV-2 spike (S) ectodomain in the
+  prefusion conformation with one receptor-binding domain (RBD) in the "up"
+  (ACE2-accessible) configuration and two RBDs "down". Spike is a class I
+  viral fusion glycoprotein that decorates the SARS-CoV-2 virion as
+  ~25 prefusion homotrimers; each protomer is ~1273 residues and is
+  proteolytically primed into S1 (receptor binding) + S2 (fusion machinery)
+  subunits at the furin and TMPRSS2 sites. The "up" RBD is the obligatory
+  intermediate for receptor (ACE2) engagement. This particular entry has
+  NO antibody, drug, or ACE2 partner co-crystallized — only N-acetyl-
+  glucosamine (NAG) at native N-glycosylation sites.
+
+identity:
+  must_mention_one_of:
+    - "SARS-CoV-2"
+    - "spike"
+    - "S protein"
+    - "S glycoprotein"
+    - "coronavirus spike"
+  reference_phrase: "SARS-CoV-2 spike glycoprotein — class I viral fusion homotrimer, one-RBD-up prefusion state"
+
+oligomeric_state:
+  correct: trimer
+  acceptable: ["trimer", "homotrimer", "3-mer"]
+  symmetry: C3
+  required_caveat: "Asymmetric biological assembly: the trimer is C3 in nominal symmetry but this entry captures an *asymmetric* one-RBD-up state, breaking strict C3."
+
+fold_class:
+  must_mention_one_of:
+    - "class I viral fusion"
+    - "viral fusion glycoprotein"
+    - "coronavirus spike fold"
+    - "S1/S2"
+    - "trimeric coiled-coil"
+
+active_site:
+  type: none
+  catalytic_residues: []
+  mechanism_class: none
+  location: surface
+
+cofactors_metals_ligands:
+  expected:
+    - {id: NAG, chemistry_class: glycan}
+  bio_ligand: "N-glycans only — no receptor, antibody, or small molecule co-crystallized in this entry"
+
+notable_features:
+  must_mention_one_of:
+    - "RBD"
+    - "receptor-binding domain"
+    - "ACE2"
+    - "one RBD up"
+    - "prefusion"
+    - "class I fusion"
+    - "S1/S2"
+    - "glycosylated"
+    - "N-glycan"
+
+negative_constraints:
+  - "must not call it an enzyme (S has no catalytic activity)"
+  - "must not claim ACE2 is bound — none is present in this entry"
+  - "must not claim antibody bound — none is present in this entry"
+  - "must not describe the postfusion conformation — this is prefusion"
+
+inference_hygiene:
+  required: false

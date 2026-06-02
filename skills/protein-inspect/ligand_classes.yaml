@@ -1,0 +1,307 @@
+# ligand_classes.yaml — curated PDB Chemical Component Dictionary codes
+#
+# Used by Tier 3 rule `ligand_classification` to partition HETATM records
+# into biologically meaningful classes vs. crystallographic artifacts.
+#
+# Sources:
+#   - PDB Chemical Component Dictionary (CCD): https://www.wwpdb.org/data/ccd
+#   - RCSB ligand-of-the-month / common-additives lists
+#   - JCSG / Hampton Research crystallization screen contents
+#
+# Maintenance: when a new code appears that is not classified, the
+# `ligand_classification` rule emits an "unclassified" flag listing it,
+# so the curator can add it here. Better to under-classify than to
+# misclassify a buffer as a biological ligand.
+#
+# Note on metals: stand-alone metal ions are listed under `metals_biological`.
+# Whether a given metal is functional depends on its coordination — the
+# `metals_present` rule decides at run time using protein-residue contacts.
+
+version: "1.0"
+
+# ─────────────────────────────────────────────────────────────────
+# CRYSTALLOGRAPHIC ARTIFACTS — filter OUT of bio ligand analysis
+# ─────────────────────────────────────────────────────────────────
+
+cryoprotectants:
+  - GOL    # glycerol
+  - EDO    # 1,2-ethanediol (ethylene glycol)
+  - MPD    # 2-methyl-2,4-pentanediol
+  - DMS    # dimethyl sulfoxide
+  - SUC    # sucrose
+  - TRE    # trehalose
+  - GLY    # glycine (note: also a residue)
+  - PG4    # tetraethylene glycol
+  - PG5    # pentaethylene glycol
+  - PE3    # triethylene glycol
+  - PE4    # PEG-4
+  - PE5    # PEG-5
+  - PE8    # PEG-8
+  - 1PE    # PEG (mono)
+  - 2PE    # PEG (di)
+  - 7PE    # PEG-7
+  - PEG    # PEG generic
+  - 12P    # dodecylphosphocholine
+  - P33    # PEG-33
+  - P6G    # hexaethylene glycol (PEG-6) — common; missing in v1, was flagged as bio_ligand on 9R2B
+  - PE6    # PEG-6 (alt code)
+  - PE7    # PEG-7 (alt code)
+  - 6PG    # PEG-6 (alt code; not to be confused with 6-phosphogluconate which uses different name in metabolic context)
+  - 8PG    # PEG-8 (alt code)
+  - M2M    # diethylene glycol monomethyl ether
+
+buffers:
+  - TRS    # Tris (tris(hydroxymethyl)aminomethane)
+  - EPE    # HEPES
+  - HEP    # HEPES (alt code)
+  - MES    # MES
+  - BIS    # Bis-tris
+  - BTB    # Bis-tris propane
+  - BES    # BES buffer
+  - CHE    # CHES
+  - CAP    # CAPS
+  - CAA    # CAPSO
+  - PIP    # PIPES
+  - TCN    # tricine
+  - BCN    # bicine
+  - IMD    # imidazole (often buffer, sometimes substrate analog — context-dependent)
+  - TAU    # taurine
+
+precipitants_salts:
+  # These are usually crystallization additives but can be functionally meaningful.
+  # The rule annotates them as "ambiguous" rather than auto-filtering.
+  - SO4    # sulfate
+  - PO4    # phosphate
+  - ACT    # acetate ion
+  - ACY    # acetic acid
+  - FMT    # formate
+  - CIT    # citrate
+  - FLC    # citrate ion (alt code)
+  - MLT    # malate
+  - TLA    # tartrate
+  - MAL    # maleate
+  - OXL    # oxalate
+  - BO3    # borate
+
+halides_phasing_or_buffer:
+  - CL     # chloride
+  - BR     # bromide (also phasing)
+  - IOD    # iodide (also phasing)
+  - F      # fluoride
+
+heavy_atoms_phasing:
+  - HG     # mercury
+  - AU     # gold
+  - PT     # platinum
+  - IR     # iridium
+  - OS     # osmium
+  - W      # tungsten
+  - PB     # lead
+  - U      # uranium
+  - SM     # samarium
+  - LU     # lutetium
+  - YB     # ytterbium
+  - HO     # holmium
+  - GD     # gadolinium
+
+# Selenium appears as MSE (selenomethionine) in residues, not as a separate
+# HETATM in most cases — handled at the residue level by `chain_disorder`.
+
+# ─────────────────────────────────────────────────────────────────
+# BIOLOGICAL — keep IN bio ligand / functional analysis
+# ─────────────────────────────────────────────────────────────────
+
+# Metals coordinating protein → analyzed by `metals_present` rule.
+# Whether catalytic vs structural is determined by pocket context, not by code alone.
+metals_biological:
+  - ZN     # zinc
+  - FE     # iron (Fe2+ / Fe3+)
+  - FE2    # iron(II)
+  - MG     # magnesium
+  - CA     # calcium
+  - MN     # manganese
+  - CU     # copper (Cu1+ / Cu2+)
+  - CU1    # copper(I)
+  - NA     # sodium
+  - K      # potassium
+  - CO     # cobalt
+  - NI     # nickel
+  - CD     # cadmium (sometimes structural surrogate)
+  - MO     # molybdenum
+  - V      # vanadium
+
+iron_sulfur_clusters:
+  - FES    # [2Fe-2S]
+  - F3S    # [3Fe-4S]
+  - SF4    # [4Fe-4S]
+  - CFM    # FeMo cofactor (nitrogenase)
+  - CFN    # FeMo-Fe7-Mo-S9-C-homocitrate
+  - CLF    # [4Fe-4S] (alt)
+  - CZH    # CO dehydrogenase metal cluster
+  - HCA    # HCa-Mo cluster
+  - CUB    # Cu-Cu cluster
+
+# Cofactors: organized by redox/transfer chemistry.
+# The `cofactors_present` rule attaches the chemistry hint to each entry.
+cofactors:
+  redox_2e:
+    - NAD    # NAD+
+    - NAI    # NADH (reduced)
+    - NDP    # NADP+
+    - NAP    # NADPH (reduced)
+    - NAH    # NAD analog
+    - NHD    # NADH dimer
+    - NAJ    # NAD-related
+    - PAD    # 1,4,5,6-tetrahydronicotinamide adenine dinucleotide (NAD analog)
+    - PNS    # 5'-phosphonicotinate-N1-O-5'-adenosyl
+    - SND    # NAD adduct
+  redox_1e_or_2e:
+    - FAD    # flavin adenine dinucleotide
+    - FMN    # flavin mononucleotide
+    - FNR    # flavin nucleotide
+    - F42    # F420 (deazaflavin)
+  redox_heme:
+    - HEM    # heme b (protoporphyrin IX with Fe)
+    - HEC    # heme c
+    - HEA    # heme a
+    - HEB    # heme b (alt code)
+    - HAS    # heme a (alt code)
+    - HEO    # heme o
+    - SRM    # siroheme
+    - VER    # verdoheme
+    - HDD    # heme d
+  redox_quinone:
+    - PQQ    # pyrroloquinoline quinone
+    - MQ7    # menaquinone-7
+    - MQ8    # menaquinone-8
+    - UQ1    # ubiquinone-1
+    - UQ2    # ubiquinone-2
+    - UQ8    # ubiquinone-8
+    - PLQ    # plastoquinone
+  schiff_base:
+    - PLP    # pyridoxal 5'-phosphate
+    - PMP    # pyridoxamine 5'-phosphate
+    - PDP    # pyridoxal phosphate (alt)
+  thiamine:
+    - TPP    # thiamine pyrophosphate
+    - TDP    # thiamine diphosphate (alt code — distinct from thymidine diphosphate context)
+    - TPN    # thiamine analog
+  acyl_thioester:
+    - COA    # coenzyme A
+    - ACO    # acetyl-CoA
+    - MCA    # malonyl-CoA
+    - SCA    # succinyl-CoA
+    - HSC    # hydroxysuccinyl-CoA
+  methyl_donor:
+    - SAM    # S-adenosylmethionine
+    - SAH    # S-adenosylhomocysteine
+    - 5MD    # 5-methylated SAM analog
+  carrier:
+    - BTN    # biotin
+    - LIP    # lipoic acid (also lipoamide)
+    - LPA    # lipoic acid (alt)
+  one_carbon:
+    - FOL    # folate
+    - THF    # tetrahydrofolate
+    - 5FH    # 5-formyl-THF
+    - MEF    # methylene-THF
+  cobalamin:
+    - B12    # cobalamin
+    - COB    # cobamide / cobalamin
+    - BTI    # cobalamin analog
+  others:
+    - PPI    # diphosphate (PPi — cofactor / leaving group)
+
+# Phosphorylated nucleotides bound at active sites or as substrates.
+# These ARE biological ligands but get their own class so `phosphate_binding_loop`
+# rule can scan around them.
+nucleotides_free:
+  - ATP    # adenosine triphosphate
+  - ADP    # adenosine diphosphate
+  - AMP    # adenosine monophosphate
+  - GTP    # guanosine triphosphate
+  - GDP
+  - GMP
+  - CTP
+  - CDP
+  - CMP
+  - UTP
+  - UDP
+  - UMP
+  - TTP
+  - TDP
+  - TMP
+  - DAD    # dATP
+  - DGT    # dGTP
+  - DCT    # dCTP
+  - DTT    # dTTP / dithiothreitol — context dependent (also a buffer in many cases — flag both)
+  - ANP    # AMPPNP (non-hydrolyzable ATP analog)
+  - ACP    # AMPPCP
+  - AGS    # ATP-γ-S
+  - GNP    # GMPPNP
+  - GSP    # GTP-γ-S
+
+# Glycans: usually carried over from natural glycoprotein purification or modeled.
+glycans:
+  - NAG    # N-acetylglucosamine (most common)
+  - NGA    # N-acetylgalactosamine
+  - MAN    # α-D-mannose
+  - BMA    # β-D-mannose
+  - FUC    # α-L-fucose
+  - FUL    # β-L-fucose
+  - GAL    # α-D-galactose
+  - GLA    # β-D-galactose
+  - BGC    # β-D-glucose
+  - GLC    # α-D-glucose
+  - SIA    # sialic acid (N-acetylneuraminic acid)
+  - NDG    # 2-(acetylamino)-2-deoxy-α-D-glucopyranose
+  - XYP    # β-D-xylopyranose
+  - XYS    # α-D-xylose
+  - RIB    # β-D-ribose
+  - 2DG    # 2-deoxyglucose
+  - GLD    # glucitol
+
+# Detergents: used to solubilize membrane proteins. Almost never functional.
+detergents:
+  - LMT    # lauryl maltose
+  - DDM    # n-dodecyl-β-D-maltoside
+  - DDQ    # dodecyl-β-D-maltoside (alt)
+  - LMN    # LMNG (lauryl maltose neopentyl glycol)
+  - OG     # n-octyl-β-D-glucoside (alt code)
+  - BOG    # β-OG
+  - LDA    # lauryl-N,N-dimethylamine N-oxide
+  - LDO    # LDAO (alt)
+  - C8E    # octyl-PEG-ether
+  - F09    # FOS-Choline-9
+  - F12    # FOS-Choline-12
+  - DMU    # decyl maltoside
+  - HEG    # heptaethylene glycol monodecyl ether
+  - 12M    # dodecyl maltoside (alt)
+  - HTG    # heptyl thioglucoside
+  - C10    # decane
+  - C12    # dodecane
+  - SDS    # sodium dodecyl sulfate
+
+# Lipids: biologically meaningful, kept SEPARATE from detergents.
+# Presence often indicates membrane protein with native lipid retained.
+lipids:
+  - PCF    # phosphatidylcholine (general)
+  - POV    # POPC
+  - PEE    # POPE
+  - PEV    # phosphatidylethanolamine variant
+  - PSC    # phosphatidylserine choline
+  - PG4    # WARNING: alt use as PEG, see cryoprotectants — context disambiguates
+  - CDL    # cardiolipin
+  - CDM    # cardiolipin (alt)
+  - CHL    # chlorophyll
+  - CLA    # chlorophyll a
+  - CLB    # chlorophyll b
+  - CHO    # cholesterol (deprecated code)
+  - CLR    # cholesterol
+  - CHS    # cholesterol hemisuccinate
+  - SQA    # squalene
+  - 8PE    # phosphatidylethanolamine (1,2-dioctanoyl)
+  - DGL    # diacylglycerol
+
+# Anything not in the above lists falls through to `bio_ligand` UNLESS it's
+# a single atom. The rule emits an `unclassified_ligand` flag when this happens.

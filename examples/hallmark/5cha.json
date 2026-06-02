@@ -1,0 +1,69 @@
+{
+  "pdb": "5cha",
+  "desc": "Chymotrypsin (Ser-His-Asp triad, post-cleavage chains)",
+  "elapsed_sec": 0.02,
+  "checks": [
+    {
+      "check": "active_site_pattern",
+      "expected": "catalytic_triad",
+      "actual": true,
+      "matched": true
+    }
+  ],
+  "n_flags_potential": {
+    "is_computed": false,
+    "n_chains": 4,
+    "homo_or_hetero": "hetero",
+    "n_bio_ligands": 0,
+    "n_artifacts": 0,
+    "n_metals": 0,
+    "n_cofactors": 0,
+    "n_disulfides": 10,
+    "n_active_site_patterns": 4,
+    "membrane_likely": false,
+    "macromolecule_type": "protein_only"
+  },
+  "summary_excerpt": {
+    "macromolecule_type": "protein_only",
+    "assembly": {
+      "n_chains": 4,
+      "oligomer": "tetramer",
+      "homo_or_hetero": "hetero",
+      "symmetry": null,
+      "unique_sequences": 2
+    },
+    "fold": {
+      "length": 8,
+      "ss_fractions": {
+        "helix": 0.0,
+        "sheet": 1.0,
+        "loop": 0.0
+      }
+    },
+    "n_metals": 0,
+    "metals": [],
+    "n_cofactors": 0,
+    "cofactors": [],
+    "disulfide_types": [
+      "interchain",
+      "standard",
+      "interchain",
+      "standard",
+      "standard",
+      "interchain",
+      "standard",
+      "interchain",
+      "standard",
+      "standard"
+    ],
+    "active_site_patterns": [
+      "catalytic_triad",
+      "catalytic_triad",
+      "asp_dyad",
+      "asp_dyad"
+    ],
+    "bio_ligands": [],
+    "artifacts": {},
+    "membrane_likely": false
+  }
+}

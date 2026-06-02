@@ -1,0 +1,66 @@
+pdb: 9OVL
+short_name: "HCoV-OC43 spike glycoprotein + 9-O-acetyl-GD3 sialoglycan"
+description: |
+  Cryo-EM structure (1.68 Å) of the human coronavirus OC43 (HCoV-OC43)
+  spike glycoprotein in complex with the 9-O-acetylated sialoglycan
+  9-O-acetyl-GD3 (CCD code A1AR1). HCoV-OC43 is a common-cold-causing
+  β-coronavirus (subgenus Embecovirus); its spike differs from SARS-CoV-2
+  spike in that the **S1 N-terminal domain (NTD), not the RBD, is the
+  receptor-binding domain** — and the receptor is 9-O-acetylated sialic
+  acid on the cell surface (not a protein receptor like ACE2). The bound
+  sialoglycan in this entry illustrates the canonical 9-O-acetyl-sialic-
+  acid pocket. Trimeric class I viral fusion glycoprotein, like all
+  coronavirus spikes. NAG glycans also present at native N-glycosylation
+  sites.
+
+identity:
+  must_mention_one_of:
+    - "HCoV-OC43"
+    - "OC43"
+    - "betacoronavirus"
+    - "spike"
+    - "common cold"
+  reference_phrase: "HCoV-OC43 spike glycoprotein — class I viral fusion trimer; binds 9-O-acetyl-sialic acid via the S1 N-terminal domain"
+
+oligomeric_state:
+  correct: trimer
+  acceptable: ["trimer", "homotrimer", "3-mer"]
+  symmetry: C3
+
+fold_class:
+  must_mention_one_of:
+    - "class I viral fusion"
+    - "viral fusion glycoprotein"
+    - "coronavirus spike fold"
+    - "S1/S2"
+    - "trimeric coiled-coil"
+
+active_site:
+  type: aromatic-cage
+  catalytic_residues: []
+  mechanism_class: none
+  location: pocket
+
+cofactors_metals_ligands:
+  expected:
+    - {id: A1AR1, chemistry_class: substrate}
+    - {id: NAG, chemistry_class: glycan}
+  bio_ligand: "9-O-acetyl-GD3 sialoglycan (host-receptor mimetic); plus N-glycans at native sites"
+
+notable_features:
+  must_mention_one_of:
+    - "sialic acid"
+    - "9-O-acetyl"
+    - "sialoglycan"
+    - "NTD"
+    - "N-terminal domain"
+    - "lectin-like"
+    - "carbohydrate binding"
+
+negative_constraints:
+  - "must not claim ACE2 is the receptor (that's SARS-CoV / SARS-CoV-2 — OC43 uses sialic acid)"
+  - "must not claim the RBD binds the sialoglycan (it's the NTD that binds carbohydrate in OC43)"
+  - "must not describe it as a protease or enzyme"
+
+inference_hygiene:
+  required: false

@@ -1,0 +1,2857 @@
+{
+  "fetched_at": "2026-05-28T12:56:39.539128Z",
+  "cutoff_date": "2026-02-01T00:00:00Z",
+  "n_records": 150,
+  "records": [
+    {
+      "pdb": "10bu",
+      "title": "Adenovirus hexon displaying BAP insertion in the HVR5 region",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-10T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2973,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10dk",
+      "title": "Structure of an adenovirus hexon with Zwitterionic insertion in HVR5",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-13T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.22,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2778,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10dp",
+      "title": "Human adenovirus hexon and polyclonal antibody complex",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-13T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.25,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2868,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10eo",
+      "title": "Chloroplast Glutamyl Peptidase S781R in closed-closed conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10ep",
+      "title": "Chloroplast Glutamyl Peptidase S781R in open-closed conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10eq",
+      "title": "Chloroplast Glutamyl Peptidase WT in open-closed conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.3,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10er",
+      "title": "Chloroplast Glutamyl Peptidase S781R in open-open conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10es",
+      "title": "Chloroplast Glutamyl Peptidase WT in open-open conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10et",
+      "title": "Chloroplast Glutamyl Peptidase D855N in open-closed conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10eu",
+      "title": "Chloroplast Glutamyl Peptidase D855N in open-open conformation",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1814,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "10sm",
+      "title": "Importin-9 bound to ETS homologous factor (EHF)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-05T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1341,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "10tl",
+      "title": "Cryo-EM structure of human MOR bound with DAMGO and BMS986187",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-08T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 786,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "10tm",
+      "title": "Cryo-EM structure of MOR bound with DAMGO",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-08T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 786,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "11ha",
+      "title": "Crystal structure of a GII.4 norovirus capsid P domain in complex with neutralizing antibody 24C10",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-23T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.7,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1504,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "11hb",
+      "title": "Crystal structure of a GII.4 norovirus capsid P domain in complex with neutralizing antibody 17A5",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-23T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 3.36,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2280,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "11hq",
+      "title": "Type-III c-MET Inhibitor Enabled by Free-Energy Perturbation Calculations",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-25T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.65,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 930,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "11lt",
+      "title": "Cryo-EM structure of EV-D68 B3 VLP bound by neutralizing antibody 1E11",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-03T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.63,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 5,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 921,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 5,
+        "oligomeric_details": "pentameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "11ov",
+      "title": "Cryo-EM structure of EV-D68 B3 VLP bound by neutralizing antibody 5H03",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.83,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 5,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 923,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 5,
+        "oligomeric_details": "pentameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "11qc",
+      "title": "Human transferrin receptor ectodomain",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-10T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.4,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1278,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "11rn",
+      "title": "Complex of B19V VP1u RBD and human transferrin receptor ectodomain",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-10T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.4,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1398,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "12fc",
+      "title": "Crystal structure of unliganded Fab 7118",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-01T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.29,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 450,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "12fd",
+      "title": "Crystal structure of unliganded Fab 7160",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-01T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.39,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 898,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "12fe",
+      "title": "Crystal structure of unliganded Fab 399",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-01T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.29,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 886,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "13iu",
+      "title": "E. coli DnaK bound to peptide PA9",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-08T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.87,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 219,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "13iv",
+      "title": "E. coli DaK bound to peptide PA1, structure A",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-08T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 3.23,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 438,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "13jg",
+      "title": "E. coli DnaK bound to peptide PA1, structure B",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-09T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.52,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 219,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "13jk",
+      "title": "E. coli DnaK bound to peptide PA5",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-09T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.62,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 438,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21ng",
+      "title": "structure of IFP35 NID domain dimer form",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-19T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.53,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 170,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21nh",
+      "title": "structure of NMI NID domain dimer form",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-19T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 460,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21np",
+      "title": "Structure of human SLC37A4 bound to chlorogenic acid in a lipid nanodisc",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-21T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.3,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 429,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21nq",
+      "title": "Structure of human SLC37A4-apo",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-21T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.8,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 429,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21or",
+      "title": "Structure of human SLC37A4 bound to G6P",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-22T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.8,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 429,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21ot",
+      "title": "structure of IFP35 NID domain octamer form",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-22T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 688,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 8,
+        "oligomeric_details": "octameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21ou",
+      "title": "DRT4 homohexamer",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-22T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.34,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 3288,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 12,
+        "oligomeric_details": "dodecameric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "21ro",
+      "title": "DRT4 homohexamer with dGTPaS",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-23T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.68,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 3288,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 12,
+        "oligomeric_details": "dodecameric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "21rp",
+      "title": "DRT4 homohexamer with dATP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-23T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.84,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 3270,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 12,
+        "oligomeric_details": "dodecameric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "21rs",
+      "title": "DRT4 homohexamer with dATP, dGTPaS, SSB, RNA",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-12-23T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.76,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3240,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "21wo",
+      "title": "DRT4 homohexamer with dATP, SSB",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-01T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.96,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 3270,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 12,
+        "oligomeric_details": "12-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "22hh",
+      "title": "Beta-1,2-glucan-binding protein complex with linear beta-1,2-glucan",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.53,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 474,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "22hi",
+      "title": "Beta-1,2-glucan-binding protein complexed with cyclic beta-1,2-glucoheptadecaose",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.95,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 474,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "22hj",
+      "title": "Beta-1,2-glucan-binding protein soaked with cyclic beta-1,2-glucooctaose",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.6,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 474,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "22hk",
+      "title": "Beta-1,2-glucan-binding protein complexed with cyclc beta-1,2-glucononadecaose",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.27,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 474,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "22hl",
+      "title": "Beta-1,2-glucan-binding protein soaked with cyclic beta-1,2-glucoeicosaose",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-01-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.37,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 474,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "23lo",
+      "title": "crystal structure of a flavin dependent Baeyer Villiger monooxygenase from Micromonospora lupini NBC_00409 in complex with FAD",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-10T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3066,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "23sf",
+      "title": "Cryo-EM structure of icosahedrally averaged bacteriophage RAN69 capsid",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.4,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2801,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 720,
+        "oligomeric_details": "720-meric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "23sg",
+      "title": "The composite Cryo-EM structure of bacteriophage RAN69 pre-ejectosome-portal complex",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 5,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 5182,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 70,
+        "oligomeric_details": "70-meric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "23sh",
+      "title": "The composite Cryo-EM structure of the tail region of bacteriophage RAN69",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-15T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 5,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 4879,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 121,
+        "oligomeric_details": "121-meric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "24hr",
+      "title": "Human KRAS G12D (GDP-bound) in complex with macrocyclic peptide inhibitor AP6252",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-04T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.07,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 764,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "24hs",
+      "title": "Human KRAS G12D (GDP-bound) in complex with macrocyclic peptide inhibitor AP4959",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-04T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.53,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1528,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "24ht",
+      "title": "Human KRAS G12D (GDP-bound) in complex with macrocyclic peptide inhibitor AP2527",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-04T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.7,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 190,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "24na",
+      "title": "DRT4 homohexamer with dGTP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.8,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3240,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "24nb",
+      "title": "DRT4 homohexamer with dGTP, GMP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.54,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3240,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "24nc",
+      "title": "DRT4 homohexamer with dGTP, RNA",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.22,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3240,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "24nd",
+      "title": "DRT4 homohexamer with dGTP, ssRNA (local refinement)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.68,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 3250,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 7,
+        "oligomeric_details": "heptameric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "24rc",
+      "title": "Cryo-EM structure of human sodium pump W931R mutant in K+-occluded E2-Pi state",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-17T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.61,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1252,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 5,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "25hn",
+      "title": "Cryo-EM structure of native Rubisco from Nitrosospira multiformis",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-03T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.26,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 5064,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 16,
+        "oligomeric_details": "hexadecameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "25pv",
+      "title": "Structure of the anthrax protective antigen in complex with a potent neutralizing antibody",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-14T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.03,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 861,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "25wn",
+      "title": "Crystal structure of Candida albicans Eukaryotic translation initiation factor 5A",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-21T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 139,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "26jk",
+      "title": "Crystal structure of C36S mutant Glutathione peroxidase of Staphylococcus aureus.",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-01T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.55,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 158,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "26qz",
+      "title": "Crystal structure of Rhodostomin ARGDP mutant",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.804,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 272,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "26tb",
+      "title": "Crystal structure of 4-Amino-4-deoxychorismate lyase from Micromonospora aurantiaca ATCC 27029 (holo form) in complex with chorismate",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-14T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.85,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 283,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "26tc",
+      "title": "Crystal structure of 4-Amino-4-deoxychorismate lyase from Micromonospora aurantiaca ATCC 27029 in its holo form",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-14T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 283,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "26ui",
+      "title": "Dimeric C-terminal domain of Nucleocapsid protein of SARS-CoV-2.",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-15T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.85,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 222,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "28pb",
+      "title": "Crystal structure of CbcA periplasmic domain from Geobacter sulfurreducens",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-12T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.91,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 556,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "28wl",
+      "title": "Crystal structure of human Monoamine Oxidase B (MAO B) in complex with 7-[(4-{[(3,4-dimethoxybenzyl(methyl)amino]methyl}benzyl)oxy]-4-(hydroxymethyl)-2H-chromen-2-one) (LP1488)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-02-24T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1040,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "29iv",
+      "title": "Crystal structure of Borrelia burgdorferi nicotinamidase BBE22",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-15T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 201,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "29os",
+      "title": "AD fold in mouse injected with seeds of AD",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-27T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2580,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 6,
+        "oligomeric_details": "hexameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "29ou",
+      "title": "CBD fold in mouse injected with seeds of CBD",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-03-27T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.4,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1290,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "29sb",
+      "title": "Solution structure of inhibitor (6-NBT)-bound de novo designed Kemp eliminase KABLE2.5.",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-02T00:00:00.000+00:00",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 127,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "30ib",
+      "title": "NMR Solution Structure of Cold Shock Protein CspA",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-04-28T00:00:00.000+00:00",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 70,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "30qz",
+      "title": "E. coli 50S ribosome with peptidyl-tRNA and Hsp15",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-10T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.23,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 30,
+      "polymer_entity_count_nucleic_acid": 3,
+      "deposited_polymer_monomer_count": 6615,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 33,
+        "oligomeric_details": "33-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "30ra",
+      "title": "E. coli 70S ribosome with peptidyl-tRNA, mRNA and Hsp15",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-10T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.78,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 50,
+      "polymer_entity_count_nucleic_acid": 5,
+      "deposited_polymer_monomer_count": 10701,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 55,
+        "oligomeric_details": "55-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "30rb",
+      "title": "E. coli 70S ribosome with peptidyl-tRNA and Hsp15",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-10T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.92,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 49,
+      "polymer_entity_count_nucleic_acid": 4,
+      "deposited_polymer_monomer_count": 10628,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 53,
+        "oligomeric_details": "53-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "35uh",
+      "title": "Crystal structure of TFPI K2 domain in complex with TFPI-23 Fab fragment",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-18T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 3.11,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3072,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "35ui",
+      "title": "Crystal structure of TFPI K2 domain in complex with TFPI-24 Fab fragment",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-18T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.75,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 506,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "35uj",
+      "title": "Crystal structure of TFPI K2 domain in complex with 4D8 Fab fragment",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2026-05-18T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.9,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 505,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9h51",
+      "title": "Assembly intermediate of human mitochondrial ribosome small subunit in complex with PUS1, METTL15 and RBFA(IN conformation) (state M1)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-10-22T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.1,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 33,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 9973,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 9,
+      "assembly": {
+        "oligomeric_count": 34,
+        "oligomeric_details": "34-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "9hef",
+      "title": "Crystal Structure of MfpD from Mycobacterium tuberculosis",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-11-14T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.83,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 266,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9hyf",
+      "title": "Cryo-EM structure of the C. elegans UBR4/KCMF1 complex (composite map)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-01-09T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 8752,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9hz3",
+      "title": "PCSK9 AZD0780 complex",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-01-13T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.432,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 705,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9ke1",
+      "title": "Crystal structure of ScRhaGT in complex with TDP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-11-04T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.73,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 748,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ke2",
+      "title": "Crystal structure of SxRhaGT in complex with TDP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-11-04T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.61,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 750,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9kkn",
+      "title": "Cryo-EM structure of human VAChT in complex with ACh",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-11-14T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.72,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 637,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9kko",
+      "title": "Cryo-EM structure of human VAChT in apo state",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-11-14T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.25,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 637,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ku8",
+      "title": "Solution NMR structure of P1 peptide bound with E. coli LPS",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2024-12-03T00:00:00.000+00:00",
+      "method": "SOLUTION NMR",
+      "resolution": null,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 23,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9lfa",
+      "title": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist ELN441958",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-01-08T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 511,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9lfc",
+      "title": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist R715",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-01-08T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 521,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9lfd",
+      "title": "Cryo-EM structure of human bradykinin receptor B2R bound to antagonist Win64338",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-01-08T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 498,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9lrn",
+      "title": "The crystal structure of PDE2A with 13t",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-01-31T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 2.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3764,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9lvi",
+      "title": "Cryo-EM structure of SARS-CoV-2 spike protein",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-12T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.86,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3825,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9lw3",
+      "title": "TMEM164-substrate",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-13T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 594,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 5,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9lzh",
+      "title": "Prefusion structure of HKU4 spike glycoprotein",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-21T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.16,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3873,
+      "n_branched_entities": 4,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9lzm",
+      "title": "Crystal structure of SARS-Cov-2 main protease in complex with Pomotrelvir",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-22T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.94,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 604,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9n97",
+      "title": "Crystal structure of the cysteine-free anti-UTag intrabody",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-10T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.45,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 554,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ni3",
+      "title": "Cryo-EM structure of the PI3K alpha/KRas complex on POPC/POPS/PIP2 nanodiscs",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-25T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.82,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1285,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9ni8",
+      "title": "Cryo-EM structure of the Class 2 PI3K alpha/KRas complex on POPC/POPS nanodiscs",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-02-25T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.23,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2009,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9oa5",
+      "title": "Crystal structure of bovine RPE65 in complex with an emixustat azolog",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-19T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.75,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1066,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ohm",
+      "title": "Cryo-EM structure of bovine phosphodiesterase 6 bound to CB-5083",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-05T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.72,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1886,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9ohn",
+      "title": "Cryo-EM structure of human p97/VCP bound to inhibitor GND-135",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-05T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.46,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 9852,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 12,
+        "oligomeric_details": "12-meric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oi9",
+      "title": "Structure of ADan amyloid filaments extracted from human brain of Familial Danish Dementia patient",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 375,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 15,
+        "oligomeric_details": "15-meric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oid",
+      "title": "Structure of ADan amyloid filaments from synthesized ADan peptide",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 320,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 10,
+        "oligomeric_details": "decameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oif",
+      "title": "Structure of Type I ABri amyloid filaments extracted from human brain of Familial British Dementia patient",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.1,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 310,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 10,
+        "oligomeric_details": "decameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oig",
+      "title": "Structure of Type II ABri amyloid filaments extracted from human brain of Familial British Dementia patient",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 1,
+      "deposited_polymer_monomer_count": 355,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 15,
+        "oligomeric_details": "15-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "9oii",
+      "title": "Structure of Type III ABri amyloid filaments extracted from human brain of Familial British Dementia patient",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 495,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 15,
+        "oligomeric_details": "15-meric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oip",
+      "title": "Structure of ABri amyloid filaments from synthesized ABri peptide",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-06T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 320,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 10,
+        "oligomeric_details": "decameric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oko",
+      "title": "CryoEM structure of the E. coli zinc ABC transporter ZnuB-ZnuC in complex with AMP-PNP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1006,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9okp",
+      "title": "CryoEM structure of the E. coli zinc ABC transporter ZnuB-ZnuC E146Q in complex with ATP",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.9,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1022,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9okq",
+      "title": "CryoEM structure of the E. coli zinc ABC transporter ZnuB-ZnuC",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.9,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1022,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9okr",
+      "title": "CryoEM structure of the E. coli zinc ABC transporter ZnuB-ZnuC treated with EDTA",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-11T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 4.1,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1022,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9om5",
+      "title": "Composite map of six VRC35 Fabs and three MEDI8852 Fabs bound to influenza H3N2 Victoria 2011 hemagglutinin",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-13T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.4,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 6,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 5658,
+      "n_branched_entities": 3,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 24,
+        "oligomeric_details": "24-meric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9on3",
+      "title": "Cryo-EM structure of the salivary protein complex Saglin-SGS4 from Anopheles gambiae",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-14T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.4,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 4182,
+      "n_branched_entities": 2,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9oq7",
+      "title": "Chlamydia muridarum Major Outer Membrane Protein",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-20T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.96,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1095,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 5,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9oqd",
+      "title": "Chlamydia muridarum major outer membrane protein bound to Mus musculus MAB-18B Fab",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-20T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.36,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2406,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 9,
+        "oligomeric_details": "nonameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9ota",
+      "title": "Structure of hTWIK-2 (K2P6.1) ion channel in lipid nanodisc",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-27T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.2,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 540,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9otk",
+      "title": "Structure of hTWIK-2 (K2P6.1) ion channel in DDM detergent",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-27T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.7,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 544,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ov0",
+      "title": "Structure of hTWIK2RM (K2P6.1RM) ion channel with lipid plug in DDM detergent",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-29T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.9,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 544,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ov9",
+      "title": "Structure of hTWIK2RM (K2P6.1RM) ion channel without lipid plug in DDM detergent",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-29T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.9,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 544,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ovd",
+      "title": "Structure of hTWIK2RM-R257A (K2P6.1RM-R257A) ion channel with lipid plug in DDM detergent",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-29T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.9,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 544,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ove",
+      "title": "Structure of hTWIK2RM-R257A (K2P6.1RM-R257A) ion channel without lipid plug in DDM detergent",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-29T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 4.1,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 544,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ovk",
+      "title": "Cryo-EM structure of HCoV-OC43-Lab Spike glycoprotein in complex with 9O-acetyl GD3 sialoglycan (D1 domain local refine)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.7,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1344,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ovl",
+      "title": "Cryo-EM structure of HCoV-OC43-Lab Spike glycoprotein in complex with 9O-acetyl GD3 sialoglycan",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.68,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 4032,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ovm",
+      "title": "Cryo-EM structure of HCoV-OC43-C2 Spike glycoprotein (local refined D1 domain)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.05,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1326,
+      "n_branched_entities": 2,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ovn",
+      "title": "Cryo-EM structure of HCoV-OC43-C2 Spike glycoprotein",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.93,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3978,
+      "n_branched_entities": 2,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9ovo",
+      "title": "Cryo-EM structure of HCoV-OC43-C2 Spike glycoprotein in complex with 9O-acetyl GD3 sialoglycan (Local refined D1 domain)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-05-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 1.98,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1326,
+      "n_branched_entities": 1,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9p77",
+      "title": "Structure of Bovine Trypsin Complexed with Mellitic Acid at Room Temperature",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-06-20T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.3,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 246,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 5,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9p7b",
+      "title": "The Structure of Bovine Trypsin Complexed With Mellitic Acid at 173 Degrees",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-06-20T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 246,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 6,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9pd9",
+      "title": "The Structure of Porcine Trypsin in Complex with Crystallization Additives I",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-06-30T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.28,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 231,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 9,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9pdc",
+      "title": "Porcine Trypsin grown from PEG and Complexed with Crystallization Additives II",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-06-30T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.27,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 231,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 7,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9pfz",
+      "title": "Architecture of human Voltage Dependent Anion Channel 1 in nanodiscs",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-07-07T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 5.4,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 283,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 0,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9pll",
+      "title": "TRIM21-NUP98 Molecular Glue Complex (MAN-056)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-07-15T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.6,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 355,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9plm",
+      "title": "TRIM21-NUP98 Molecular Glue Complex (MAN-021)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-07-15T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.32,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 2,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 355,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 2,
+        "oligomeric_details": "dimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9pu5",
+      "title": "Cryo-EM structure of human MOR-Gi1 complex protein bound with DAMGO and BMS986187",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-07-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 5,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2338,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 10,
+        "oligomeric_details": "decameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9pud",
+      "title": "Cryo-EM structure of MOR-Gi1 complex protein bound with DAMGO",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-07-30T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.0,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 5,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 2338,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 10,
+        "oligomeric_details": "decameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9q09",
+      "title": "Cryo-EM structure of PGT121 Fab and Rhesus macaque Ab76 Fab in complex with HIV-1 Env trimer BG505 SOSIP.664",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-08-12T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.23,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 6,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 4602,
+      "n_branched_entities": 7,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 18,
+        "oligomeric_details": "octadecameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9q3s",
+      "title": "Cryo-EM structure of PGT121 Fab and Rhesus macaque Ab4 Fab in complex with HIV-1 Env trimer BG505 SOSIP.664",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-08-19T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.01,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 6,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 4578,
+      "n_branched_entities": 5,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 18,
+        "oligomeric_details": "octadecameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9q3x",
+      "title": "The CryoEM structure of Rhesus macaque 1G3 and PGT121 Fabs in complex with BG505 SOSIP.664",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-08-19T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.64,
+      "polymer_composition": "Protein/Oligosaccharide",
+      "polymer_entity_count_protein": 6,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 3909,
+      "n_branched_entities": 5,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 18,
+        "oligomeric_details": "octadecameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9qeb",
+      "title": "CryoEM structure of transcribing RNA polymerase II elongation complex",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-03-08T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.26,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 12,
+      "polymer_entity_count_nucleic_acid": 3,
+      "deposited_polymer_monomer_count": 4662,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 4,
+      "assembly": {
+        "oligomeric_count": 15,
+        "oligomeric_details": "15-meric",
+        "polymer_composition": "protein/NA"
+      }
+    },
+    {
+      "pdb": "9qnm",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R2M2",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-03-25T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.12,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 534,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qqs",
+      "title": "Structure of the MEGF8-MOSMO complex with nanobody 270 (Focused refinement)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-02T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.65,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 817,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9qru",
+      "title": "Cryo-EM structure of the MMM ubiquitin ligase complex with nanobody 270 (Composite map)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-04T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.03,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 4,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1356,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9qs6",
+      "title": "Cryo-EM structure of the helix-stabilized MMM ubiquitin ligase complex with nanobody 270 (Composite map)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-04T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.3,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 4,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1356,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9qsh",
+      "title": "Cryo-EM structure of the MMM ubiquitin ligase complex with nanobody 992 (Composite map)",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-04T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.5,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 4,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 1353,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 3,
+      "assembly": {
+        "oligomeric_count": 4,
+        "oligomeric_details": "tetrameric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9qt8",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R2M2-P155G",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-08T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.21,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 534,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qty",
+      "title": "Cryo-EM structure of the binary MEGF8-MOSMO complex with nanobody 270",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-09T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 2.98,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 3,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 684,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 3,
+        "oligomeric_details": "trimeric",
+        "polymer_composition": "heteromeric protein"
+      }
+    },
+    {
+      "pdb": "9qv8",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R2M2-A186S",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.25,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 534,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qva",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R2M2-P155G-A186S",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-11T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.59,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 534,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qya",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R4M6",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-17T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.53,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 259,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qyb",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R4M10",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-17T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.1,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 264,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qyc",
+      "title": "Polyester Hydrolase Leipzig 7 (PHL7) variant R4M12",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-17T00:00:00.000+00:00",
+      "method": "X-RAY DIFFRACTION",
+      "resolution": 1.16,
+      "polymer_composition": "Protein (only)",
+      "polymer_entity_count_protein": 1,
+      "polymer_entity_count_nucleic_acid": 0,
+      "deposited_polymer_monomer_count": 262,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 1,
+      "assembly": {
+        "oligomeric_count": 1,
+        "oligomeric_details": "monomeric",
+        "polymer_composition": "homomeric protein"
+      }
+    },
+    {
+      "pdb": "9qzp",
+      "title": "Mouse Ribosome Classical Pre translocation state",
+      "release_date": "2026-05-27T00:00:00.000+00:00",
+      "deposit_date": "2025-04-23T00:00:00.000+00:00",
+      "method": "ELECTRON MICROSCOPY",
+      "resolution": 3.43,
+      "polymer_composition": "Protein/NA",
+      "polymer_entity_count_protein": 77,
+      "polymer_entity_count_nucleic_acid": 6,
+      "deposited_polymer_monomer_count": 18791,
+      "n_branched_entities": 0,
+      "n_nonpolymer_entities": 2,
+      "assembly": {
+        "oligomeric_count": 85,
+        "oligomeric_details": "85-meric",
+        "polymer_composition": "protein/NA"
+      }
+    }
+  ]
+}
