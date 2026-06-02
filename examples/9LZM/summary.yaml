@@ -1,0 +1,188 @@
+entry: 9lzm
+schema_version: '1.1'
+generated: '2026-06-02T16:45:36Z'
+narrative: Crystal structure of SARS-Cov-2 main protease in complex with Pomotrelvir
+macromolecule_type: protein_only
+model_quality:
+  is_computed: false
+  confidence_metric: bfactor
+provenance:
+  source: rcsb
+  input_path: /tmp/protein_inspect_cache/9lzm.cif
+  resolution: 1.94
+  method: X-RAY DIFFRACTION
+  resolution_class: high
+  space_group: P 1 21 1
+  unit_cell:
+  - 55.212
+  - 98.464
+  - 58.891
+  - 90.0
+  - 108.213
+  - 90.0
+  deposition_date: '2025-02-22'
+assembly:
+  n_chains: 2
+  chains:
+  - A
+  - B
+  homo_or_hetero: homo
+  oligomer: dimer
+  symmetry: C2
+  unique_sequences: 1
+  chain_rmsd_max: null
+  interface_contacts:
+  - pair:
+    - A
+    - B
+    n_residues: 28
+fold:
+  representative_chain: A
+  length: 302
+  ss_fractions:
+    helix: 0.48344370860927155
+    sheet: 0.5033112582781457
+    loop: 0.013245033112582781
+  ss_string: EEEEEEEHHHHHHHHEEEEHHHHHEEEEEHHHHHEEEELLEEHHHHHHEEHHHHHHHHHHHHHHEEEHHHHHEEEEEEEEHHHHHEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEHHHHHEEEEEEEEEELEEEEEEEEEEEEEEEEEEHHHHHHEEEEEEEEEEELEEEEEEHHHHHEEEEEEEEEEEEEEEEEEEHHHHHHHHHHHHHHHHEEEEEEEEEEHHHHHHHHHHHHHEEEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHEEEEEEHHHHHHHHHHHEE
+  bfactor_stats:
+    mean: 23.4600993181696
+    min: 10.380000114440918
+    max: 54.540000915527344
+    std: 9.1893244371407
+ligands:
+  unclassified:
+  - id: ZQB
+    n_copies: 2
+  bio_ligand:
+  - id: ZQB
+    n_copies: 2
+    placement: unknown
+active_site_patterns:
+- pattern: cys_his_dyad
+  residues:
+  - CYS145
+  - HIS41
+  chain: A
+  geometry:
+    sg_to_ne2_a: 3.83
+  rule_id: cysteine_dyad_geometry
+- pattern: cys_his_dyad
+  residues:
+  - CYS145
+  - HIS41
+  chain: B
+  geometry:
+    sg_to_ne2_a: 3.4
+  rule_id: cysteine_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - GLU14
+  - GLU14
+  chain: A+B
+  geometry:
+    closest_o_o_a: 4.53
+  rule_id: aspartate_dyad_geometry
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 2
+  detected_by: contact_map_ratio
+  boundaries:
+  - &id001
+    chain: A
+    range:
+    - 0
+    - 151
+  - &id002
+    chain: A
+    range:
+    - 151
+    - 302
+coords_ref:
+  path: examples/9LZM/9lzm.cif
+  format: cif
+flags:
+- rule_id: unclassified_ligand
+  priority: medium
+  message: One or more HETATM codes were not in the curated ligand_classes.yaml. Treated as bio-ligand by default. Verify
+    and add to the classification list if appropriate.
+  evidence_quality: confirmed
+- rule_id: cysteine_dyad_geometry
+  priority: high
+  message: Cys-His catalytic dyad geometry detected. Suggestive of cysteine protease / ubiquitin-class peptidase / glutathione-related
+    enzyme / amidase. Confirm with pocket location and substrate identity.
+  evidence_quality: geometric_only
+- rule_id: aspartate_dyad_geometry
+  priority: high
+  message: Aspartate dyad / pair detected (two Asp carboxylates close together). Common in aspartyl proteases, glycosidases
+    (acid/base + nucleophile), and some metallophosphatases. Family depends on whether they activate water (protease) or substrate
+    (glycosidase).
+  evidence_quality: geometric_only
+- rule_id: multi_domain_likely
+  priority: medium
+  message: "Multi-domain protein detected (compact subdomains via intra-/inter-CA contact ratio). Each domain may have distinct\
+    \ function \u2014 analyze separately and consider linker flexibility."
+  evidence_quality: heuristic
+visual:
+  views_dir: examples/9LZM/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: examples/9LZM/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: examples/9LZM/views/02_side.png
+    ray: true
+  - name: surface
+    path: examples/9LZM/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: examples/9LZM/views/03_bfactor_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: bfactor
+  - name: interface_closeup
+    path: examples/9LZM/views/08_interface_A-B.png
+    ray: true
+    details:
+      chain_a: A
+      chain_b: B
+  - name: ligand_pocket
+    path: examples/9LZM/views/05_pocket_ZQB_A401.png
+    ray: true
+    details:
+      ligand_resn: ZQB
+      ligand_chain: A
+      ligand_resi: 401
+  - name: ligand_pocket
+    path: examples/9LZM/views/05_pocket_ZQB_B401.png
+    ray: true
+    details:
+      ligand_resn: ZQB
+      ligand_chain: B
+      ligand_resi: 401
+  - name: multi_domain_view
+    path: examples/9LZM/views/09_domains_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      domain_boundaries:
+      - *id001
+      - *id002
+  montage:
+    path: examples/9LZM/montage.png
+    n_panels: 8
+    grid:
+    - 3
+    - 3
+    panel_size:
+    - 1200
+    - 900
+    total_size:
+    - 3600
+    - 2892

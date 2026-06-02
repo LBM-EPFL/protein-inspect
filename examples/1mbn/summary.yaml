@@ -1,0 +1,128 @@
+entry: 1mbn
+schema_version: '1.1'
+generated: '2026-06-02T16:48:05Z'
+narrative: The stereochemistry of the protein myoglobin
+macromolecule_type: protein_only
+model_quality:
+  is_computed: false
+  confidence_metric: bfactor
+provenance:
+  source: rcsb
+  input_path: /tmp/protein_inspect_cache/1mbn.cif
+  resolution: 2.0
+  method: X-RAY DIFFRACTION
+  resolution_class: medium
+  space_group: P 1 21 1
+  unit_cell:
+  - 64.5
+  - 30.9
+  - 34.7
+  - 90.0
+  - 106.0
+  - 90.0
+  deposition_date: '1973-04-05'
+assembly:
+  n_chains: 1
+  chains:
+  - A
+  homo_or_hetero: monomer
+  oligomer: monomer
+  unique_sequences: 1
+fold:
+  representative_chain: A
+  length: 153
+  ss_fractions:
+    helix: 0.9215686274509803
+    sheet: 0.0718954248366013
+    loop: 0.006535947712418301
+  ss_string: EEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHLHHHHHHHHHHHHHHHEEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEEE
+  bfactor_stats:
+    mean: 0.0
+    min: 0.0
+    max: 0.0
+    std: 0.0
+ligands:
+  unclassified:
+  - id: OH
+    n_copies: 1
+  bio_ligand:
+  - id: OH
+    n_copies: 1
+    placement: unknown
+cofactors:
+- id: HEM
+  n_copies: 1
+  chemistry_class: redox_heme
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 1
+  detected_by: cath_api
+  boundaries:
+  - chain: A
+    range:
+    - 1
+    - 153
+coords_ref:
+  path: examples/1mbn/1mbn.cif
+  format: cif
+flags:
+- rule_id: unclassified_ligand
+  priority: medium
+  message: One or more HETATM codes were not in the curated ligand_classes.yaml. Treated as bio-ligand by default. Verify
+    and add to the classification list if appropriate.
+  evidence_quality: confirmed
+- rule_id: cofactors_present
+  priority: medium
+  message: Cofactor(s) present. Each entry in cofactors[] carries a chemistry_class hint (redox/Schiff/methyl/etc.). Family
+    hint should come from fold + cofactor + active-site pattern combined, NOT from cofactor identity alone.
+  evidence_quality: confirmed
+visual:
+  views_dir: examples/1mbn/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: examples/1mbn/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: examples/1mbn/views/02_side.png
+    ray: true
+  - name: surface
+    path: examples/1mbn/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: examples/1mbn/views/03_bfactor_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: bfactor
+  - name: ligand_pocket
+    path: examples/1mbn/views/05_pocket_OH_A154.png
+    ray: true
+    details:
+      ligand_resn: OH
+      ligand_chain: A
+      ligand_resi: 154
+  - name: cofactor_closeup
+    path: examples/1mbn/views/12_cofactor_HEM_A155.png
+    ray: true
+    details:
+      cofactor_resn: HEM
+      cofactor_chain: A
+      cofactor_resi: 155
+  montage:
+    path: examples/1mbn/montage.png
+    n_panels: 6
+    grid:
+    - 2
+    - 3
+    panel_size:
+    - 1200
+    - 900
+    total_size:
+    - 3600
+    - 1928

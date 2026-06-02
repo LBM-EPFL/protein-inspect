@@ -1,0 +1,214 @@
+entry: 2por
+schema_version: '1.1'
+generated: '2026-06-02T16:45:31Z'
+narrative: STRUCTURE OF PORIN REFINED AT 1.8 ANGSTROMS RESOLUTION
+macromolecule_type: protein_only
+model_quality:
+  is_computed: false
+  confidence_metric: bfactor
+provenance:
+  source: rcsb
+  input_path: /tmp/protein_inspect_cache/2por.cif
+  resolution: 1.8
+  method: X-RAY DIFFRACTION
+  resolution_class: high
+  space_group: H 3
+  unit_cell:
+  - 92.3
+  - 92.3
+  - 146.2
+  - 90.0
+  - 90.0
+  - 120.0
+  deposition_date: '1992-04-24'
+assembly:
+  n_chains: 1
+  chains:
+  - A
+  homo_or_hetero: monomer
+  oligomer: monomer
+  unique_sequences: 1
+fold:
+  representative_chain: A
+  length: 301
+  ss_fractions:
+    helix: 0.29900332225913623
+    sheet: 0.6877076411960132
+    loop: 0.013289036544850499
+  ss_string: EEEEEEEEEEEEEEHHHHHEEEEEEEEEEEEEEEEELEEEEEEEEHHHHHHHHHHHHEEEEEEEHHHHHEEEEEEEHHHHHHHEEEEEEHHHHHLLLEEEEEEEEEHHHHHHHHHHHEEEEEEEHHHHHEEEEEEEEEHHHHHEEEEEEEEEEEEEEHHHHHEEEEEEEEEEEHHHHHEEEEEEEEEEEEEHHHHHEEEEEEEEEEHHHHHHHHHHEEEEEEEEEEEEEEEEEEEEEEEHHHHHEEEEEEEEEEEEEEEEEEEEEEEEEEEHHHHHEEEEEEEEEEEEEEEEEEEEEEEEE
+  bfactor_stats:
+    mean: 24.623754146487215
+    min: 12.15999984741211
+    max: 73.1500015258789
+    std: 8.609051645126357
+ligands:
+  detergent:
+  - id: C8E
+    n_copies: 4
+metals:
+- id: CA
+  n_copies: 3
+  cluster_type: mononuclear
+  coordinating_residues:
+  - ASN100
+  - ASN116
+  - ASP101
+  - ASP108
+  - ASP136
+  - ASP93
+  - ASP95
+  - GLU80
+  - GLY140
+  - LYS138
+  context: catalytic_likely
+active_site_patterns:
+- pattern: asp_dyad
+  residues:
+  - ASP74
+  - ASP108
+  chain: A
+  geometry:
+    closest_o_o_a: 4.78
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - GLU80
+  - ASP85
+  chain: A
+  geometry:
+    closest_o_o_a: 3.66
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - GLU80
+  - ASP108
+  chain: A
+  geometry:
+    closest_o_o_a: 3.39
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - ASP85
+  - ASP101
+  chain: A
+  geometry:
+    closest_o_o_a: 4.04
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - GLU88
+  - ASP93
+  chain: A
+  geometry:
+    closest_o_o_a: 3.69
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - ASP93
+  - ASP101
+  chain: A
+  geometry:
+    closest_o_o_a: 4.48
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - ASP95
+  - ASP101
+  chain: A
+  geometry:
+    closest_o_o_a: 3.31
+  rule_id: aspartate_dyad_geometry
+- pattern: asp_dyad
+  residues:
+  - ASP115
+  - GLU141
+  chain: A
+  geometry:
+    closest_o_o_a: 4.42
+  rule_id: aspartate_dyad_geometry
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 1
+  detected_by: cath_api
+  boundaries:
+  - chain: A
+    range:
+    - 1
+    - 301
+coords_ref:
+  path: examples/2por/2por.cif
+  format: cif
+flags:
+- rule_id: crystallographic_artifacts_present
+  priority: low
+  message: Crystallographic artifacts (buffers/cryoprotectants/detergents/phasing atoms) present and have been filtered out
+    of bio-ligand analysis. Listed under ligands.{class} for transparency.
+  evidence_quality: confirmed
+- rule_id: metals_present
+  priority: medium
+  message: "Metal ion(s) coordinating protein. Catalytic vs structural role depends on coordination geometry and pocket context\
+    \ \u2014 see metals[].context heuristic."
+  evidence_quality: confirmed
+- rule_id: aspartate_dyad_geometry
+  priority: high
+  message: Aspartate dyad / pair detected (two Asp carboxylates close together). Common in aspartyl proteases, glycosidases
+    (acid/base + nucleophile), and some metallophosphatases. Family depends on whether they activate water (protease) or substrate
+    (glycosidase).
+  evidence_quality: geometric_only
+visual:
+  views_dir: examples/2por/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: examples/2por/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: examples/2por/views/02_side.png
+    ray: true
+  - name: surface
+    path: examples/2por/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: examples/2por/views/03_bfactor_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: bfactor
+  - name: metal_closeup
+    path: examples/2por/views/06_metal_CA_A302.png
+    ray: true
+    details:
+      metal_resn: CA
+      metal_chain: A
+      metal_resi: 302
+  - name: metal_closeup
+    path: examples/2por/views/06_metal_CA_A303.png
+    ray: true
+    details:
+      metal_resn: CA
+      metal_chain: A
+      metal_resi: 303
+  - name: metal_closeup
+    path: examples/2por/views/06_metal_CA_A304.png
+    ray: true
+    details:
+      metal_resn: CA
+      metal_chain: A
+      metal_resi: 304
+  montage:
+    path: examples/2por/montage.png
+    n_panels: 7
+    grid:
+    - 3
+    - 3
+    panel_size:
+    - 1200
+    - 900
+    total_size:
+    - 3600
+    - 2892

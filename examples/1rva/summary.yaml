@@ -1,0 +1,172 @@
+entry: 1rva
+schema_version: '1.1'
+generated: '2026-06-02T16:46:07Z'
+narrative: 'MG2+ BINDING TO THE ACTIVE SITE OF ECO RV ENDONUCLEASE: A CRYSTALLOGRAPHIC STUDY OF COMPLEXES WITH SUBSTRATE AND
+  PRODUCT DNA AT 2 ANGSTROMS RESOLUTION'
+macromolecule_type: protein_dna
+model_quality:
+  is_computed: false
+  confidence_metric: bfactor
+provenance:
+  source: rcsb
+  input_path: /tmp/protein_inspect_cache/1rva.cif
+  resolution: 2.0
+  method: X-RAY DIFFRACTION
+  resolution_class: medium
+  space_group: P 1
+  unit_cell:
+  - 49.44
+  - 50.15
+  - 63.95
+  - 96.54
+  - 109.05
+  - 108.11
+  deposition_date: '1994-10-21'
+assembly:
+  n_chains: 2
+  chains:
+  - A
+  - B
+  homo_or_hetero: homo
+  oligomer: dimer
+  symmetry: C2
+  unique_sequences: 1
+  chain_rmsd_max: null
+  interface_contacts:
+  - pair:
+    - A
+    - B
+    n_residues: 37
+fold:
+  representative_chain: A
+  length: 244
+  ss_fractions:
+    helix: 0.4713114754098361
+    sheet: 0.5
+    loop: 0.028688524590163935
+  ss_string: HHHHHHHHHHHHHHHHHHEEEEEEELEEEEEEEEHHHHHHHHHHHHHHHHHHHHHHHHHEEEEEEEEEEEEEEEEEEHHHHHLEEEEEEEEEEEEEEEEEEEEEEEEEEEHHHHHEEEEEEEEELEEEEEEEEEEEEEEEEEEELLEEEEHHHHHHHHEEEEEEEEEEEEHHHHHHEEEEEEHHHHHEEEEEEHHHHHHHHHEEEEHHHHHHHHHHHHEEHHHHHHHHHHHHHHHHHHHHHHLL
+  bfactor_stats:
+    mean: 25.931762281011363
+    min: 12.229999542236328
+    max: 65.97000122070312
+    std: 9.935081907839455
+nucleic_acids:
+  type: DNA
+  chains:
+  - C
+  - D
+  n_residues: 22
+  is_double_stranded: true
+active_site_patterns:
+- pattern: asp_dyad
+  residues:
+  - GLU27
+  - ASP19
+  chain: A+B
+  geometry:
+    closest_o_o_a: 4.72
+  rule_id: aspartate_dyad_geometry
+- pattern: phosphate_binding_loop
+  residues:
+  - GLY178
+  - GLY182
+  - GLY184
+  chain: A
+  geometry:
+    near_phosphate_of: DA/D2
+    min_ca_to_p_a: 5.92
+  rule_id: phosphate_binding_loop
+- pattern: phosphate_binding_loop
+  residues:
+  - GLY178
+  - GLY182
+  - GLY184
+  chain: A
+  geometry:
+    near_phosphate_of: DA/D2
+    min_ca_to_p_a: 5.92
+  rule_id: phosphate_binding_loop
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 1
+  detected_by: cath_api
+  boundaries:
+  - chain: A
+    range:
+    - 2
+    - 245
+coords_ref:
+  path: examples/1rva/1rva.cif
+  format: cif
+flags:
+- rule_id: nucleic_acid_present
+  priority: medium
+  message: Nucleic acid (DNA/RNA) present in the structure. Inspect the protein-NA interface for sequence-specific recognition
+    (groove contacts, base readout) vs. backbone contacts.
+  evidence_quality: confirmed
+- rule_id: aspartate_dyad_geometry
+  priority: high
+  message: Aspartate dyad / pair detected (two Asp carboxylates close together). Common in aspartyl proteases, glycosidases
+    (acid/base + nucleophile), and some metallophosphatases. Family depends on whether they activate water (protease) or substrate
+    (glycosidase).
+  evidence_quality: geometric_only
+- rule_id: phosphate_binding_loop
+  priority: medium
+  message: Glycine-rich loop wrapping a phosphate group detected (P-loop / Walker-A-like geometry). Indicates a nucleotide-
+    or phosphate-binding protein (kinase, ATPase, GTPase, polymerase). Confirm with bound nucleotide and Mg/Mn coordination.
+  evidence_quality: geometric_only
+visual:
+  views_dir: examples/1rva/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: examples/1rva/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: examples/1rva/views/02_side.png
+    ray: true
+  - name: surface
+    path: examples/1rva/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: examples/1rva/views/03_bfactor_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: bfactor
+  - name: interface_closeup
+    path: examples/1rva/views/08_interface_A-B.png
+    ray: true
+    details:
+      chain_a: A
+      chain_b: B
+  - name: nucleic_acid_cartoon
+    path: examples/1rva/views/07_protein_na.png
+    ray: true
+  - name: na_interface_closeup
+    path: examples/1rva/views/14_na_interface_chain_C.png
+    ray: true
+    details:
+      na_chain: C
+  - name: na_interface_closeup
+    path: examples/1rva/views/14_na_interface_chain_D.png
+    ray: true
+    details:
+      na_chain: D
+  montage:
+    path: examples/1rva/montage.png
+    n_panels: 8
+    grid:
+    - 3
+    - 3
+    panel_size:
+    - 1200
+    - 900
+    total_size:
+    - 3600
+    - 2892

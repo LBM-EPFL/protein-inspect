@@ -1,0 +1,348 @@
+entry: AF-P00533-F1
+schema_version: '1.1'
+generated: '2026-06-02T16:45:54Z'
+narrative: null
+macromolecule_type: protein_only
+model_quality:
+  is_computed: true
+  confidence_metric: plddt
+  plddt_summary:
+    mean: 76.28925890085847
+    fraction_high: 0.47902470187393525
+    fraction_medium: 0.2320059625212947
+    fraction_low: 0.28896933560477
+    low_confidence_regions:
+    - chain: A
+      range:
+      - 1
+      - 27
+      mean_plddt: 45.434444710060404
+    - chain: A
+      range:
+      - 181
+      - 185
+      mean_plddt: 63.33000106811524
+    - chain: A
+      range:
+      - 637
+      - 656
+      mean_plddt: 49.68449993133545
+    - chain: A
+      range:
+      - 672
+      - 704
+      mean_plddt: 46.98454556320653
+    - chain: A
+      range:
+      - 748
+      - 762
+      mean_plddt: 57.53066660563151
+    - chain: A
+      range:
+      - 856
+      - 875
+      mean_plddt: 47.35799980163574
+    - chain: A
+      range:
+      - 985
+      - 1210
+      mean_plddt: 33.36557510679802
+provenance:
+  source: local_file
+  input_path: /tmp/af_dl/AF-P00533-F1.cif
+  resolution: null
+  method: null
+  resolution_class: computed
+  space_group: null
+  unit_cell: null
+  deposition_date: '2025-08-01'
+assembly:
+  n_chains: 1
+  chains:
+  - A
+  homo_or_hetero: monomer
+  oligomer: monomer
+  unique_sequences: 1
+fold:
+  representative_chain: A
+  length: 1210
+  ss_fractions:
+    helix: 0.32727272727272727
+    sheet: 0.6388429752066116
+    loop: 0.033884297520661154
+  ss_string: EEEEEEHHHHHHHHHHHHHEEEEEEEEEEEEEEEEEEEEEEEHHHHHHHHHHHHHHEEEEEEEEEEEEEEEEEEEELLLLEEEEEEEEEEEEEEEEEEEEELEEEEEELEEEEEEEEEEEEEEEEHHHHHEEEEELLLEEEEEEEEEEEEEELLEEEELLEEHHHHHHHHHHHHHHEEEEEEEEEEEEEEEEEHHHHHEEEEHHHHHEEEHHHHHEEEEEEEEEEEHHHHHEEEEHHHHHEEEHHHHHEEHHHHHHHHHHEEEEEEEEEEEELLEEEEEEEEEEEEHHHHHEEEEEEEEEEEELEEEEEEEEEEEEEEEHHHHHEEEEEEEEEEEEEEEEEEEELLEEEEEHHHHHLLEEEEEEEEEEEEEEHHHHHHHHHHHHEEEHHHHHLLLLEEEEEEEEEEEEEEEEEEEEHHHHHEEEEEELEEEEEEEEEEEEEEEEEEEELLLEEEEEEEEEEEEEELLEEEHHHHHEHHHHHEEEEEEEEEEEEEHHHHHHHHHHEEEEEEEEEEEEEEHHHHHEEHHHHHHHHHHEEEEEEEEEEEEEEHHHHHHEEEEEEEEEHHHHHEEEEEEELEEEEHHHHHHHHHHEEEEEEEEEEEEEEEEEEEEEELEEEEEEEELHHHHHEEEEELEEEEEEEEEEEEEEEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEEEEEEEEEEEEELEEEEEEELEEEEEEEEEEHHHHHEEEEEEEEEEEEEEEEEEEEEEEEEEHHHHHHHHHHHHHHHHHHEEEEEEEEEEEEEEEEEEEEEEEEEEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEEEEEHHHHHEEEHHHHHEEEELLEEEEEEEEEEEEEEEEEEEHHHHHHHHHHHEEEEHHHHHHHHHHHHHHHHHHHHEEEEEEEHHHHHHHHHHHHEEEEEEEEEHHHHHHHHHHHHHEHHHHHEHHHHHHHHHHHHHHHHHHHHHEEHHHHHEEEEEEEHHHHHHHHHEEEEEEEEHHHHHHHHEELLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEELEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+  plddt_stats:
+    mean: 75.94988423497223
+    min: 23.809999465942383
+    max: 98.55999755859375
+    std: 25.01212352058006
+    fraction_very_high: 0.4735537190082645
+    fraction_confident: 0.23305785123966943
+    fraction_low: 0.0652892561983471
+    fraction_very_low: 0.228099173553719
+disulfides:
+- residues:
+  - CYS31
+  - CYS58
+  chains:
+  - A
+  distance_a: 2.029
+  type: standard
+- residues:
+  - CYS157
+  - CYS187
+  chains:
+  - A
+  distance_a: 2.036
+  type: standard
+- residues:
+  - CYS190
+  - CYS199
+  chains:
+  - A
+  distance_a: 2.025
+  type: standard
+- residues:
+  - CYS194
+  - CYS207
+  chains:
+  - A
+  distance_a: 2.038
+  type: standard
+- residues:
+  - CYS215
+  - CYS223
+  chains:
+  - A
+  distance_a: 2.031
+  type: standard
+- residues:
+  - CYS219
+  - CYS231
+  chains:
+  - A
+  distance_a: 2.038
+  type: standard
+- residues:
+  - CYS232
+  - CYS240
+  chains:
+  - A
+  distance_a: 2.032
+  type: standard
+- residues:
+  - CYS236
+  - CYS248
+  chains:
+  - A
+  distance_a: 2.036
+  type: standard
+- residues:
+  - CYS251
+  - CYS260
+  chains:
+  - A
+  distance_a: 2.033
+  type: standard
+- residues:
+  - CYS264
+  - CYS291
+  chains:
+  - A
+  distance_a: 2.042
+  type: standard
+- residues:
+  - CYS295
+  - CYS307
+  chains:
+  - A
+  distance_a: 2.031
+  type: standard
+- residues:
+  - CYS311
+  - CYS326
+  chains:
+  - A
+  distance_a: 2.039
+  type: standard
+- residues:
+  - CYS329
+  - CYS333
+  chains:
+  - A
+  distance_a: 2.038
+  type: standard
+- residues:
+  - CYS337
+  - CYS362
+  chains:
+  - A
+  distance_a: 2.011
+  type: standard
+- residues:
+  - CYS470
+  - CYS499
+  chains:
+  - A
+  distance_a: 2.028
+  type: standard
+- residues:
+  - CYS506
+  - CYS515
+  chains:
+  - A
+  distance_a: 2.034
+  type: standard
+- residues:
+  - CYS510
+  - CYS523
+  chains:
+  - A
+  distance_a: 2.036
+  type: standard
+- residues:
+  - CYS526
+  - CYS535
+  chains:
+  - A
+  distance_a: 2.035
+  type: standard
+- residues:
+  - CYS539
+  - CYS555
+  chains:
+  - A
+  distance_a: 2.033
+  type: standard
+- residues:
+  - CYS558
+  - CYS571
+  chains:
+  - A
+  distance_a: 2.037
+  type: standard
+- residues:
+  - CYS562
+  - CYS579
+  chains:
+  - A
+  distance_a: 2.032
+  type: standard
+- residues:
+  - CYS582
+  - CYS591
+  chains:
+  - A
+  distance_a: 2.031
+  type: standard
+- residues:
+  - CYS595
+  - CYS617
+  chains:
+  - A
+  distance_a: 2.036
+  type: standard
+- residues:
+  - CYS620
+  - CYS628
+  chains:
+  - A
+  distance_a: 2.029
+  type: standard
+- residues:
+  - CYS624
+  - CYS636
+  chains:
+  - A
+  distance_a: 2.021
+  type: standard
+membrane_features:
+  belt_detected: false
+  belt_residues: []
+  trp_girdle: false
+  tyr_girdle: false
+  estimated_belt_width_a: null
+domains:
+  count: 2
+  detected_by: contact_map_ratio
+  boundaries:
+  - &id001
+    chain: A
+    range:
+    - 0
+    - 605
+  - &id002
+    chain: A
+    range:
+    - 605
+    - 1210
+coords_ref:
+  path: examples/AF-P00533-F1_EGFR/AF-P00533-F1.cif
+  format: cif
+flags:
+- rule_id: low_plddt_regions
+  priority: medium
+  message: "Computed model \u2014 confidence varies across the structure. Treat low-pLDDT regions (<70) as unreliable for\
+    \ residue-level claims; treat high-pLDDT regions (>90) as reliable. Cofactors, metals, and modified residues are typically\
+    \ NOT modeled in AF predictions."
+  evidence_quality: confirmed
+- rule_id: plddt_not_bfactor
+  priority: high
+  message: "AF/computed model: the B-factor column stores **pLDDT** (predicted confidence, 0\u2013100), NOT crystallographic\
+    \ displacement. Read `fold.plddt_stats` (not `bfactor_stats` \u2014 it is intentionally absent for AF models). Bands:\
+    \ \u226590 very_high, 70\u201390 confident, 50\u201370 low, <50 very_low. High mean pLDDT means a *well-predicted* model,\
+    \ NOT a flexible one \u2014 do NOT call high-pLDDT regions 'mobile' or 'flexible'. Disorder predictions live in `model_quality.plddt_summary.low_confidence_regions`."
+  evidence_quality: confirmed
+- rule_id: disulfides_present
+  priority: low
+  message: Disulfide bond(s) detected. Indicates extracellular / secreted / oxidative environment, or structural stabilization.
+  evidence_quality: confirmed
+- rule_id: multi_domain_likely
+  priority: medium
+  message: "Multi-domain protein detected (compact subdomains via intra-/inter-CA contact ratio). Each domain may have distinct\
+    \ function \u2014 analyze separately and consider linker flexibility."
+  evidence_quality: heuristic
+- rule_id: no_narrative
+  priority: low
+  message: No narrative description available (designed structure or unannotated entry). Functional-class statements must
+    be flagged as inference and grounded in structural features only.
+  evidence_quality: confirmed
+visual:
+  views_dir: examples/AF-P00533-F1_EGFR/views
+  battery_version: '1.1'
+  rendered:
+  - name: overview_top
+    path: examples/AF-P00533-F1_EGFR/views/01_top.png
+    ray: true
+  - name: overview_side
+    path: examples/AF-P00533-F1_EGFR/views/02_side.png
+    ray: true
+  - name: surface
+    path: examples/AF-P00533-F1_EGFR/views/04_surface_hydrophobic.png
+    ray: true
+  - name: bfactor_or_plddt_chain_a
+    path: examples/AF-P00533-F1_EGFR/views/03_plddt_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      confidence_metric: plddt
+  - name: multi_domain_view
+    path: examples/AF-P00533-F1_EGFR/views/09_domains_chain_A.png
+    ray: true
+    details:
+      repr_chain: A
+      domain_boundaries:
+      - *id001
+      - *id002
+  montage:
+    path: examples/AF-P00533-F1_EGFR/montage.png
+    n_panels: 5
+    grid:
+    - 2
+    - 3
+    panel_size:
+    - 1200
+    - 900
+    total_size:
+    - 3600
+    - 1928
