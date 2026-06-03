@@ -24,13 +24,32 @@ The decision tree is hand-curated structural-biology knowledge — the equivalen
 
 ## Install
 
+There are two ways to install. The first is what you almost certainly want.
+
+### Path 1 — as a Claude Code plugin (recommended)
+
+From inside a Claude Code session:
+
+```
+/plugin marketplace add https://gitlab.epfl.ch/benedikt.singer/protein-inspect
+/plugin install protein-inspect@protein-inspect-marketplace
+```
+
+This registers the `/protein-inspect` slash command, loads `SKILL.md` so Claude automatically knows *when* to invoke it ("look at this PDB", "what's in this structure", etc.) and *how* to interpret its YAML output, and installs the Python package + CLI behind the scenes. After this, any future Claude Code session — in any directory — can act on a structure with a one-line ask.
+
+### Path 2 — as a standalone CLI
+
+If you want the tool outside Claude (in scripts, notebooks, CI):
+
 ```bash
 uv tool install git+https://gitlab.epfl.ch/benedikt.singer/protein-inspect
 ```
 
-That installs the `protein-inspect` CLI globally. The Claude Code plugin layer in `.claude-plugin/` is picked up automatically when the package is on your path.
+This puts `protein-inspect` on your `$PATH`. Claude in any session can still call it via Bash, but without the skill registered it won't *automatically* know to render views or how to read the output — you'll need to explain that yourself.
 
-Dependencies: [PyMOL](https://github.com/schrodinger/pymol-open-source) (required for `--render-views`), and optionally [Merizo](https://github.com/psipred/Merizo) for ML-based domain segmentation.
+### Dependencies
+
+[PyMOL](https://github.com/schrodinger/pymol-open-source) (required for `--render-views`), and optionally [Merizo](https://github.com/psipred/Merizo) for ML-based domain segmentation.
 
 ## Quick start
 
