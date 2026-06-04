@@ -24,6 +24,15 @@ protein-inspect 1mbn
 # with rendered view battery (slower, requires running PyMOL with claudemol plugin)
 protein-inspect 1mbn --render-views
 
+# with vision-judged render quality — scores each PNG against a per-view rubric
+# and re-renders failing views with pre-declared knobs (best-of-N retained).
+# Adds ~$0.05-0.25 per run on top of the render; requires ANTHROPIC_API_KEY or
+# ANTHROPIC_AUTH_TOKEN. Per-view scores land in summary.yaml#visual[].judge.
+protein-inspect 1mbn --render-views --judge-views
+
+# pick a cheaper or stronger judge model (default: claude-sonnet-4-6)
+protein-inspect 1mbn --render-views --judge-views --judge-model claude-haiku-4-5
+
 # local file
 protein-inspect /path/to/design.pdb --render-views
 
@@ -52,6 +61,17 @@ protein-inspect 1mbn --out ./analysis/1mbn/
 ## How Claude should read the output
 
 After invoking, read `prompts/analyze.md` and follow it. The prompt walks through the YAML and images in a fixed order so that analyses are reproducible across calls.
+
+## When to add `--judge-views`
+
+Default: leave it off. The deterministic render battery is good enough for routine triage. Add `--judge-views` when:
+
+- The user asks for "publication-quality" / "high-quality" / "clean" figures.
+- The task hinges on a specific image being readable (e.g. "identify the residues coordinating this metal" — if the metal closeup is illegible, the analysis is blocked).
+- You're triaging an unfamiliar design and want a sanity-check that the default views actually showed the relevant features.
+- A first pass without `--judge-views` produced an image where you couldn't read what you needed.
+
+Do NOT add `--judge-views` for fast sequence-style questions, batch screens across many structures, or anything where the YAML alone answers the question.
 
 ## Requirements
 

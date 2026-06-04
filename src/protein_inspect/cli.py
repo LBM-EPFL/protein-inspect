@@ -64,6 +64,9 @@ def run_pipeline(
     motif: str | None = None,
     use_merizo: bool = False,
     fetch_narrative: bool = True,
+    judge_views: bool = False,
+    judge_model: str = "claude-sonnet-4-6",
+    judge_retries: int | None = None,
 ) -> dict:
     """End-to-end: extract → decide → plan → optional render → emit summary.yaml.
 
@@ -121,6 +124,15 @@ def run_pipeline(
             try:
                 runner.load_structure(str(struct_path), obj_name="obj")
                 results = runner.render_plan(plan_out["render_plan"], obj_name="obj")
+                if judge_views:
+                    from protein_inspect.view_judge import judge_and_retry
+                    results = judge_and_retry(
+                        results=results,
+                        plan=plan_out["render_plan"],
+                        runner=runner,
+                        model=judge_model,
+                        max_retries=judge_retries,
+                    )
             finally:
                 runner.disconnect()
 
@@ -130,6 +142,8 @@ def run_pipeline(
                     entry = {"name": r["name"], "path": r["path"], "ray": True}
                     if r.get("details"):
                         entry["details"] = r["details"]
+                    if r.get("judge"):
+                        entry["judge"] = r["judge"]
                     rendered.append(entry)
             summary["visual"] = {
                 "views_dir": str(views_dir),
@@ -194,6 +208,17 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Use Merizo for ML-based domain segmentation. Merizo "
                         "must be installed manually (see README). Default "
                         "uses CATH (deposited) + length heuristic (everything else).")
+    p.add_argument("--judge-views", action="store_true",
+                   help="After rendering, ask a Claude vision model to score "
+                        "each view against its YAML rubric and re-render failing "
+                        "views with pre-declared retry_knobs. Requires "
+                        "ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN. No-op "
+                        "without --render-views; logs a warning and continues "
+                        "if neither is set.")
+    p.add_argument("--judge-model", default="claude-sonnet-4-6",
+                   help="Vision model for --judge-views (default: claude-sonnet-4-6)")
+    p.add_argument("--judge-retries", type=int, default=None,
+                   help="Max retries per failing view (default from view_battery.yaml: 2)")
     p.add_argument("--no-narrative", action="store_true",
                    help="Skip the RCSB title fetch (offline mode)")
     p.add_argument("--quiet", "-q", action="store_true",
@@ -229,6 +254,9 @@ def main(argv: list[str] | None = None) -> int:
             motif=args.motif,
             use_merizo=args.use_merizo,
             fetch_narrative=not args.no_narrative,
+            judge_views=args.judge_views,
+            judge_model=args.judge_model,
+            judge_retries=args.judge_retries,
         )
     except FileNotFoundError as e:
         log.error("File not found: %s", e)

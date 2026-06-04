@@ -13,6 +13,10 @@ defaults:
   ray: true
   size: [1200, 900]
   ray_shadows: 1
+  judge:
+    pass_threshold: 4
+    model: "claude-sonnet-4-6"
+    max_retries: 2
 
 views:
 
@@ -21,6 +25,12 @@ views:
   overview_top:
     description: "Oligomeric topology — top down"
     output: "01_top.png"
+    judge_rubric: |
+      A good overview_top image shows the full cartoon trace of every chain
+      centered and uncropped, filling most of the frame. Each chain is
+      colored distinctly enough to be visually separable — a single-chain
+      protein needs only one color; a multi-chain assembly should show
+      each chain in its own color. Background is clean white.
     commands:
       - { fn: hide,           args: [everything, "{obj}"] }
       - { fn: show,           args: [cartoon, "{obj}"] }
@@ -30,6 +40,19 @@ views:
   overview_side:
     description: "Side view — disc/spool/elongated shape, membrane orientation"
     output: "02_side.png"
+    judge_rubric: |
+      A good overview_side image shows the structure rotated to a side
+      profile visually distinct from the top-down view. The overall shape
+      (disc, spool, elongated, globular) is readable. Every chain is fully
+      visible within the frame; if there are multiple chains, each is
+      colored distinctly. A single-chain protein needs only one color.
+    retry_knobs:
+      - name: "turn_y90"
+        description: "Rotate around Y instead of X if the side view is unclear"
+        overrides: {}
+      - name: "turn_z180"
+        description: "Flip Z if the side view shows the back face"
+        overrides: {}
     commands:
       - { fn: hide,           args: [everything, "{obj}"] }
       - { fn: show,           args: [cartoon, "{obj}"] }
@@ -41,6 +64,14 @@ views:
     description: "B-factor heat map (deposited) OR pLDDT heat map (computed model)"
     parameters: [repr_chain, confidence_metric]
     output: "03_{confidence_metric}_chain_{repr_chain}.png"
+    judge_rubric: |
+      A good bfactor/pLDDT image shows the representative chain colored
+      along a blue-white-red spectrum that visibly varies across residues
+      (not flat). If the structure has additional chains beyond the
+      representative one, they are rendered in gray and clearly de-emphasized;
+      a single-chain protein needs no de-emphasis. The colored chain is
+      oriented to display the spread of values and fills the frame without
+      clipping.
     commands:
       - { fn: hide,     args: [everything, "{obj}"] }
       - { fn: show,     args: [cartoon, "{obj}"] }
@@ -52,6 +83,20 @@ views:
     description: "Hydrophobicity-colored molecular surface (Eisenberg scale, white→red)"
     output: "04_surface_hydrophobic.png"
     ray: false
+    judge_rubric: |
+      A good surface image shows a fully-opaque molecular surface colored
+      along the Eisenberg white-to-red hydrophobicity gradient. There
+      should be no transparent gaps revealing the underlying cartoon, and
+      hydrophobic (red) patches should be visible somewhere on the surface
+      rather than the whole molecule being uniformly white. The structure
+      fills the frame without clipping.
+    retry_knobs:
+      - name: "semi_opaque"
+        description: "Add slight transparency if the surface is too solid"
+        overrides: { transparency: 0.3 }
+      - name: "ray_true"
+        description: "Force ray tracing for cleaner surface render"
+        overrides: {}
     commands:
       - { fn: hide,         args: [everything, "{obj}"] }
       - { fn: show,         args: [surface, "{obj} and polymer"] }
@@ -65,6 +110,15 @@ views:
     description: "Same as `surface` but oriented to show hydrophobic belt for membrane proteins"
     output: "04b_membrane_belt.png"
     ray: false
+    judge_rubric: |
+      A good hydrophobic_surface image is viewed edge-on with a visible
+      horizontal hydrophobic (red) band corresponding to the membrane-
+      embedded region, sandwiched between more polar (white/pink) caps.
+      The structure is centered and fills the frame.
+    retry_knobs:
+      - name: "turn_y90"
+        description: "Rotate around Y to find the belt orientation"
+        overrides: {}
     commands:
       - { fn: hide,         args: [everything, "{obj}"] }
       - { fn: show,         args: [surface, "{obj} and polymer"] }
@@ -76,6 +130,20 @@ views:
     description: "Per-ligand-INSTANCE binding-site close-up with chemistry labeled directly on the image: ligand CCD code on the ligand, residue labels on the contacting side-chains, dashed lines drawn to all contacts within ~3.5 Å of the ligand (hydrogen-bond / salt-bridge / close-contact distance) and annotated with the distance in Å. Same pattern as metal_closeup — the goal is that the chemistry of the binding interaction is readable from the image alone, without requiring the YAML."
     parameters: [ligand_resn, ligand_chain, ligand_resi]
     output: "05_pocket_{ligand_resn}_{ligand_chain}{ligand_resi}.png"
+    judge_rubric: |
+      A good ligand_pocket image shows the ligand centered and fully
+      visible in yellow, all heavy-atom contacts within 3.5 A drawn as
+      gold dashes with legible distance annotations (in A), and side-chain
+      labels of the form RESN+RESI readable at ~28pt. The cartoon backbone
+      should frame but not occlude the ligand or contact dashes. The CCD
+      code label on the ligand itself must be present and legible.
+    retry_knobs:
+      - name: "loose_context"
+        description: "Wider zoom and bigger labels for crowded pockets"
+        overrides: { zoom: 12, label_size: 32 }
+      - name: "thin_dashes"
+        description: "Thinner dashes when contacts crowd the ligand"
+        overrides: { dash_width: 2.0, dash_radius: 0.05, label_size: 24 }
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       - { fn: show,    args: [cartoon, "byres {obj} and polymer within 8 of (resn {ligand_resn} and chain {ligand_chain} and resi {ligand_resi})"] }
@@ -110,6 +178,20 @@ views:
     description: "Metal ion(s) with coordinating residues, residue labels, metal label, and distance lines (in Å) drawn to each coordinating atom — makes the chemistry readable from the image alone."
     parameters: [metal_resn, metal_chain, metal_resi]
     output: "06_metal_{metal_resn}_{metal_chain}{metal_resi}.png"
+    judge_rubric: |
+      A good metal_closeup image shows a magenta sphere clearly labeled
+      with the metal's CCD code (e.g. ZN, MG, FE), gold dashed lines to
+      each coordinating side-chain heavy atom within ~3 A with the
+      distance numerically annotated in A, and the coordinating residues
+      labeled as RESN+RESI. The metal is centered and the labels are
+      readable (no overlap that hides the metal identity).
+    retry_knobs:
+      - name: "bigger_sphere"
+        description: "Enlarge the metal sphere when it's tiny vs. residues"
+        overrides: { sphere_scale: 1.0 }
+      - name: "wider_zoom"
+        description: "Open the view if labels collide with the sphere"
+        overrides: { zoom: 10 }
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       - { fn: show,    args: [cartoon, "byres {obj} and polymer within 8 of (resn {metal_resn} and chain {metal_chain} and resi {metal_resi})"] }
@@ -145,6 +227,11 @@ views:
   nucleic_acid_cartoon:
     description: "Protein cartoon + nucleic acid cartoon with bases as rings"
     output: "07_protein_na.png"
+    judge_rubric: |
+      A good nucleic_acid_cartoon shows the protein in marine blue and the
+      nucleic acid in orange, with bases rendered as visible flat rings
+      (not just a backbone ribbon). Both polymers are framed within the
+      image and oriented so the protein-NA contact region is visible.
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       - { fn: show,    args: [cartoon, "{obj}"] }
@@ -158,6 +245,20 @@ views:
     description: "Per-cofactor binding-site close-up with chemistry labeled. Cofactors (FAD, NAD, NADP, HEM, PLP, BTN, SAM, COA, …) are large multi-ring chemical entities — getting Claude to *name* them from the image alone matters more than for bulk metabolites. Same labeling pattern as ligand_pocket: CCD code on the cofactor, residue labels on side-chain contacts, dashed lines to all ≤3.5 Å heavy-atom contacts with the distance in Å."
     parameters: [cofactor_resn, cofactor_chain, cofactor_resi]
     output: "12_cofactor_{cofactor_resn}_{cofactor_chain}{cofactor_resi}.png"
+    judge_rubric: |
+      A good cofactor_closeup shows the cofactor as orange sticks fully
+      visible (the entire multi-ring entity, not just a fragment), with
+      its CCD code legible as a label. Contacting residues are labeled
+      RESN+RESI and gold dashes annotate ≤3.5 A heavy-atom contacts with
+      distance numbers. The view is wide enough that the cofactor is not
+      clipped at the edges.
+    retry_knobs:
+      - name: "wider_zoom"
+        description: "Open the view further for large cofactors like FAD/NAD"
+        overrides: { zoom: 12, label_size: 24 }
+      - name: "thick_dashes"
+        description: "Thicker dashes when they fade against the cofactor"
+        overrides: { dash_radius: 0.12 }
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       - { fn: show,    args: [cartoon, "byres {obj} and polymer within 10 of (resn {cofactor_resn} and chain {cofactor_chain} and resi {cofactor_resi})"] }
@@ -182,6 +283,18 @@ views:
     description: "Per-glycan binding-site close-up. Useful for lectins, sialoglycan-binding viral spike proteins, sugar transporters, and carbohydrate-binding domains. Labels each saccharide unit's CCD code (NAG, BGC, MAN, FUC, A1AR1, …) and the contacting protein residues, with dashed lines + distances on the H-bond / stacking contacts. Distinct from N-linked glycosylation (which is rendered separately as decoration on the protein surface)."
     parameters: [glycan_resn, glycan_chain, glycan_resi]
     output: "13_glycan_{glycan_resn}_{glycan_chain}{glycan_resi}.png"
+    judge_rubric: |
+      A good glycan_closeup shows the saccharide as forest-green sticks
+      with the sugar ring clearly visible and the CCD code labeled on it.
+      Contacting protein residues are labeled and gold dashes connect
+      hydrogen-bonded heavy atoms with distance annotations in A.
+    retry_knobs:
+      - name: "wider_zoom"
+        description: "Open the view if the sugar ring is clipped"
+        overrides: { zoom: 12 }
+      - name: "thin_dashes"
+        description: "Thinner dashes around the small sugar"
+        overrides: { dash_width: 2.0 }
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       - { fn: show,    args: [cartoon, "byres {obj} and polymer.protein within 8 of (resn {glycan_resn} and chain {glycan_chain} and resi {glycan_resi})"] }
@@ -207,6 +320,19 @@ views:
     description: "Protein-NA interface close-up. Distinct from the global nucleic_acid_cartoon view: this one zooms to where the protein and the nucleic acid actually contact, labels the nucleotides at the interface (DA/DC/DG/DT/A/U/C/G), labels the contacting protein residues, and draws distance lines on H-bond / base-readout / backbone contacts. Useful for transcription factors, polymerases, nucleases, ribosomal proteins."
     parameters: [na_chain]
     output: "14_na_interface_chain_{na_chain}.png"
+    judge_rubric: |
+      A good na_interface_closeup shows the NA chain in orange with bases
+      rendered as flat rings at the protein contact zone, the protein in
+      marine, labels on the interface nucleotides (RESN+RESI like DA/DT),
+      and labels on contacting protein residues. Gold dashes mark contacts
+      ≤3.5 A with distance numbers visible.
+    retry_knobs:
+      - name: "wider_zoom"
+        description: "Open the view when the interface is crowded"
+        overrides: { label_size: 30 }
+      - name: "tighter_label"
+        description: "Shrink labels when they overlap each other"
+        overrides: { label_size: 22 }
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       # Cartoon for the NA chain + the protein chain(s) within contact.
@@ -240,6 +366,18 @@ views:
     description: "Bound-peptide binding-site close-up. Triggers when a short polymer-protein chain (≤30 residues, distinct from the main protein) is present — peptide drugs (macrocyclic peptides, peptide inhibitors), substrate-mimicking peptides, or one chain of a hetero-peptide complex. Labels each peptide residue and each contacting host-protein residue; draws distance lines to all heavy-atom contacts within 3.5 Å."
     parameters: [peptide_chain]
     output: "15_peptide_interface_chain_{peptide_chain}.png"
+    judge_rubric: |
+      A good peptide_interface_closeup shows the entire peptide (yellow)
+      visible without clipping, every peptide residue labeled RESN+RESI,
+      the host protein around it in marine, and gold dashes annotating
+      heavy-atom contacts ≤3.5 A with distances in A.
+    retry_knobs:
+      - name: "bigger_labels"
+        description: "Larger labels when the peptide is short"
+        overrides: { label_size: 32 }
+      - name: "tighter_labels"
+        description: "Smaller labels when they crowd each other"
+        overrides: { label_size: 22 }
     commands:
       - { fn: hide,    args: [everything, "{obj}"] }
       - { fn: show,    args: [cartoon, "byres {obj} and polymer.protein within 10 of (chain {peptide_chain})"] }
@@ -268,6 +406,11 @@ views:
     description: "Representative subunit-subunit interface (default A-B), residue-level"
     parameters: [chain_a, chain_b]
     output: "08_interface_{chain_a}-{chain_b}.png"
+    judge_rubric: |
+      A good interface_closeup shows two chains (marine and salmon) with
+      the interface region centered, side-chain sticks visible on both
+      sides of the interface, and the structure framed so the contact
+      zone fills most of the image.
     commands:
       - { fn: hide,   args: [everything, "{obj}"] }
       - { fn: show,   args: [cartoon, "{obj} and chain {chain_a}+{chain_b}"] }
@@ -281,6 +424,11 @@ views:
     description: "Same chain colored by detected domain"
     parameters: [repr_chain]
     output: "09_domains_chain_{repr_chain}.png"
+    judge_rubric: |
+      A good multi_domain_view shows the chain colored with distinct
+      colors for each detected domain (at least 2 colors visible). The
+      whole chain is framed without clipping and the domain boundaries
+      are visually apparent.
     commands:
       - { fn: hide,           args: [everything, "{obj}"] }
       - { fn: show,           args: [cartoon, "{obj} and chain {repr_chain}"] }
@@ -291,6 +439,18 @@ views:
     description: "Close-up of consecutive-cysteine vicinal disulfide(s)"
     parameters: [chain, resi_a, resi_b]
     output: "10_vicinal_ss_{chain}_{resi_a}-{resi_b}.png"
+    judge_rubric: |
+      A good vicinal_ss_zoom shows two consecutive cysteine side chains
+      (orange) with their sulphur atoms visibly adjacent (the S-S bond
+      should be visible), labeled CYS+resi for both residues, and the
+      surrounding chain in cyan cartoon for context.
+    retry_knobs:
+      - name: "tight_zoom"
+        description: "Zoom tighter on the disulfide"
+        overrides: { zoom: 4 }
+      - name: "wider_zoom"
+        description: "Open the view if context is missing"
+        overrides: { zoom: 8 }
     commands:
       - { fn: hide,   args: [everything, "{obj}"] }
       - { fn: show,   args: [cartoon, "{obj} and chain {chain}"] }
@@ -305,6 +465,18 @@ views:
     description: "Close-up of user-specified motif residues"
     parameters: [motif_selection]
     output: "11_motif.png"
+    judge_rubric: |
+      A good motif_focus shows all motif residues as magenta sticks,
+      every one labeled RESN+RESI, the surrounding chain in gray cartoon
+      for context, and the motif centered and fully visible without
+      clipping.
+    retry_knobs:
+      - name: "tight_zoom"
+        description: "Zoom tighter on the motif"
+        overrides: { zoom: 4 }
+      - name: "wider_zoom"
+        description: "Open the view if motif residues are clipped"
+        overrides: { zoom: 10 }
     commands:
       - { fn: hide,   args: [everything, "{obj}"] }
       - { fn: show,   args: [cartoon, "{obj}"] }

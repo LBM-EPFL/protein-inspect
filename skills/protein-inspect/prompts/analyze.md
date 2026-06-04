@@ -19,6 +19,7 @@ You are reading the output of `protein-inspect`. Your inputs:
 5. **Cofactor chemistry, not cofactor family.** A flag of "NAD present" tells you 2-electron redox chemistry. It does NOT tell you "Rossmann-fold oxidoreductase" — many non-Rossmann proteins use NAD. Family hypotheses must combine cofactor + fold + active-site pattern.
 6. **`narrative: null` means designed/unannotated.** Mark function statements as inference, not fact.
 7. **Computed models** (`model_quality.is_computed: true`) lack metals/cofactors/modified residues. Do not infer absence; assume "not modeled." Treat low-pLDDT regions (<70) as unreliable for residue-level claims.
+8. **Image-quality scores when present.** If `summary.yaml#visual[].judge` is populated, the figure was scored 0–5 by a vision judge. Treat scores ≥4 as trustworthy, score 3 as usable with light hedging, and scores ≤2 as a signal *not* to make confident spatial claims from that image — fall back to the YAML or caveat the claim explicitly. The `judge.issues` list tells you exactly what the judge flagged (e.g. "ligand not visible", "labels unreadable"). When `judge` is absent, the image was not scored — fall back to your own visual assessment.
 
 ## Output structure
 

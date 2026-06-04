@@ -209,8 +209,17 @@ class RenderPlanner:
     # ─────────── per-request expansion ───────────
 
     def _expand_one(self, req: ViewRequest, summary: dict, structure: gemmi.Structure) -> list[tuple[str, dict]]:
-        # bfactor_or_plddt_chain_a — auto-route based on model_quality
+        # bfactor_or_plddt_chain_a — auto-route based on model_quality.
+        # Skip on deposited structures whose B-factor field is flat (pre-1980
+        # depositions like 1mbn record B-iso=0 for every atom — spectrum would
+        # collapse to a uniform color and the view would be uninformative).
         if req.name == "bfactor_or_plddt_chain_a":
+            is_computed = summary.get("model_quality", {}).get("is_computed", False)
+            if not is_computed:
+                bf_std = ((summary.get("fold") or {}).get("bfactor_stats") or {}).get("std", 0.0)
+                if bf_std < 0.5:
+                    log.info("skipping bfactor view: B-factors are flat (std=%.3f)", bf_std)
+                    return []
             return [(req.name, self._params_bfactor_plddt(summary))]
 
         # multi_domain_view — needs repr_chain + threads domain_boundaries through ctx
