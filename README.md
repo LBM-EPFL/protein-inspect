@@ -90,6 +90,24 @@ Then point Claude at it:
 in this structure, what its likely function is, and what's noteworthy.
 ```
 
+## Vision-judged renders (`--judge-views`)
+
+Optional feedback loop on top of the render battery. After PyMOL writes each PNG, a Claude vision model scores it against a per-view rubric declared in `view_battery.yaml`; views that fail the rubric get re-rendered with pre-declared `retry_knobs` (e.g. wider zoom, semi-opaque surface, larger sphere scale). Best-of-N is kept on disk, per-view scores and the judge's specific complaints land in `summary.yaml#visual[].judge`.
+
+```bash
+# default judge (claude-sonnet-4-6 — best calibration, ~$0.05-0.25/run)
+uv run protein-inspect 1mbn --render-views --judge-views
+
+# cheaper / fast — judge with Haiku 4.5 (~$0.02/run, more permissive)
+uv run protein-inspect 1mbn --render-views --judge-views --judge-model claude-haiku-4-5
+```
+
+Authentication: needs either `ANTHROPIC_API_KEY` (developer console key) or `ANTHROPIC_AUTH_TOKEN` (Claude Code's bearer token also works, including for Claude Max subscribers). Without credentials the flag is a clean no-op with a single log line.
+
+Worth the call when (a) you need publication-quality figures, (b) the analysis hinges on a specific image being readable (a ligand-pocket closeup where the chemistry must be legible), or (c) you're triaging an unfamiliar design and want a sanity-check that the default views actually showed the relevant features. Leave it off for routine triage, batch screens across many structures, or anything the YAML already answers.
+
+The judge has earned its keep on real runs by catching things the deterministic pipeline can't — degraded renders from a PyMOL license watermark, illegible label sizes at certain zoom levels, and rubric-vs-data mismatches like B-factor spectrum collapse on pre-1980 depositions.
+
 ## Examples
 
 Five worked examples ship in `examples/`, each chosen to exercise distinct decision-tree rules:
