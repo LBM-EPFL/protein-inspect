@@ -136,7 +136,7 @@ skills/protein-inspect/        # SKILL.md, decision_tree.yaml, view_battery.yaml
 schema/summary.schema.json     # JSON Schema for summary.yaml
 examples/                      # 5 worked examples (above)
 evals/                         # evaluation harness + ground-truth sets + results
-tests/                         # 148 pytest tests
+tests/                         # 135 pytest tests
 .claude-plugin/                # plugin.json, marketplace.json
 PLAN.md                        # architectural notes, design decisions, open questions
 EVAL.md                        # eval methodology
@@ -144,7 +144,7 @@ EVAL.md                        # eval methodology
 
 ## Status
 
-v0.1.0 — actively developed. Test suite: 148/148 green. See `PLAN.md` for open work items.
+v0.1.0 — actively developed. Test suite: 133 passing, 2 network-gated tests skipped offline (135 total). See `PLAN.md` for open work items.
 
 ## License
 

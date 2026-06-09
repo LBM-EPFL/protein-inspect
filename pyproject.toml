@@ -46,3 +46,7 @@ packages = ["src/protein_inspect"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-v --tb=short"
+markers = [
+    "network: test requires network access (skipped offline)",
+    "slow: test is slow to run (e.g. full hallmark suite over many PDBs)",
+]

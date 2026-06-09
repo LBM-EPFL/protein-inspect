@@ -16,6 +16,9 @@ evals/runs/
 # Integration-test output (written by tests/test_pymol_runner.py)
 examples/integration_*/
 
+# Upstream staging — local-only until explicitly published (see SKILL.md upstream prep)
+upstream-skill-package/
+
 # OS / editor
 .DS_Store
 *.swp

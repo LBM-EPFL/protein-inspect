@@ -9,14 +9,14 @@ A Claude Code plugin that turns any PDB ID or local structure file into a layere
 
 ---
 
-## Current status (2026-05-28)
+## Current status (2026-06-09)
 
 | Phase | Status | Notes |
 |---|---|---|
 | 0 — Scaffolding | ✅ done | Repo layout, `pyproject.toml`, plugin manifest all present. |
 | 1 — Skill v1 | ✅ done, larger than scoped | All four contract files exist (schema, decision tree, view battery, analyze prompt). `features.py` ended up ~1600 lines (vs. 1-day estimate). View battery expanded to 10+ views. Added `ligand_classes.yaml` and a fold-class "hallmark" suite that weren't in the original plan. Test suite: 7 files, ~1.5 K lines. |
 | 2 — Eval harness (v1 breadth + v2 holdout) | ✅ done | **v1 breadth set**: 29 famous PDBs (incl. 3 AlphaFold-DB), canonical run `2026-05-14_1140_nogit`, 120/120 cells scored. Useful as a breadth check but ceiling-limited. **v2 holdout set**: 19 PDBs released ≥2026-02-01 (post Opus 4.7 training cutoff), canonical run `2026-05-28_1345_nogit`, 74/76 cells scored (2 cells of 9OVL/extract refused on policy; full 25PV entry was unrecoverable on anthrax-topic refusal and dropped). 4 conditions A/B/C/D. Eval driver at v12: cache-on-disk, resume-aware, rate-limit-aware, content-refusal-aware (with 3-tier academic-context retry). Ground-truth verifier at v1.3 (biological-assembly-aware): **29/29 clean on v1, 19/19 clean on v2.** Results published at `evals/results.md`. |
-| 3 — Publication | ⛔ blocked on git only | `plugin.json` still has placeholder `https://github.com/USER/...` URLs. Repo has no git commits and no GitHub remote. Eval-findings story is now well-supported (see below); README can be written. |
+| 3 — Publication | 🟢 self-publish shipped; official marketplace pending | Repo committed and pushed to `git@gitlab.epfl.ch:benedikt.singer/protein-inspect.git`. `plugin.json` + `marketplace.json` carry the real gitlab URLs (no placeholders). README rewritten around the eval findings; `--judge-views` documented. **Self-publish install path works today.** Remaining for the *official* Anthropic marketplace: tag `v0.1.0`, optionally mirror to GitHub (the marketplace flow is GitHub-shaped), and add CI. |
 
 ### Eval findings (TL;DR; see `evals/results.md` for the full tables)
 
@@ -46,10 +46,17 @@ Implications for shipping:
 
 ### Remaining work to ship v0.1
 
-- Replace `USER` placeholders in `.claude-plugin/plugin.json` (homepage + repository) with the real GitHub URL.
-- Make the first git commit, push to a GitHub remote, tag `v0.1.0`.
-- Add `summary.yaml` to `examples/integration_1mbn/` (only the 7 rendered PNGs are there now) so the demo dir is complete.
-- Write the README headline around the **+10.37 / +10.08 / +10.13 holdout lift** with the negative-constraint caveat on C and the per-protein table from `evals/results.md` as the supporting evidence.
+Done since this section was first written:
+- ✅ Real gitlab URLs in `.claude-plugin/plugin.json` + `marketplace.json` (no `USER` placeholders).
+- ✅ Repo committed and pushed to `origin` (gitlab.epfl.ch).
+- ✅ `examples/1mbn/` is a complete demo dir (`summary.yaml` + `montage.png` + `views/` + source `.cif`).
+- ✅ README headline written around the **+10.37 / +10.08 / +10.13 holdout lift** with the negative-constraint caveat on C.
+- ✅ `--judge-views` vision-judged render loop added and documented (README, SKILL.md, analyze.md).
+
+Still open for the *official* Anthropic marketplace (self-publish already works):
+- Tag `v0.1.0` and push the tag.
+- Optionally mirror to GitHub — the official marketplace install flow is `user/repo` GitHub-shaped; confirm a gitlab URL is accepted or push a mirror.
+- Add CI to run the test suite on push (nice-to-have; reviewers expect it).
 - Optional: investigate the 9N97 / 9QNM "A beats materials" pattern. If a small features.py fix recovers those, the B and C numbers go up; if not, document the limitation in the README.
 
 ### Known limitation — Claude Code CLI image-attachment cap
@@ -538,14 +545,18 @@ Score against the rubric. **Original hypothesis** (PLAN v1): **C > B >> A**, wit
 
 ---
 
-## Phase 3 — Publication (1 day across both tracks) — ⛔ blocked
+## Phase 3 — Publication (1 day across both tracks) — 🟢 self-publish shipped
 
-**Blockers as of 2026-05-28** (in priority order):
-1. `.claude-plugin/plugin.json` has placeholder URLs (`https://github.com/USER/protein-inspect`) — replace with the real GitHub URL once the remote exists.
-2. No git commits in the repo. `git log` is empty; everything is untracked. Make the first commit before anything else.
-3. No GitHub remote. Create the repo, push, tag `v0.1.0`.
-4. `examples/integration_1mbn/` has 7 rendered PNGs but no `summary.yaml`. Add it so the demo dir is a complete example.
-5. README headline (and any marketplace blurb) should reflect the actual eval findings, not the original "C > B >> A" prediction.
+**Status as of 2026-06-09:** the original blockers (1–5 below) are all cleared.
+Self-publish via gitlab works today. What remains is the official-marketplace
+track: tag `v0.1.0`, optionally mirror to GitHub, add CI.
+
+Original blockers, now resolved:
+1. ✅ `.claude-plugin/plugin.json` carries the real gitlab URL (no `USER` placeholder).
+2. ✅ Repo committed — `git log` has the full history.
+3. ✅ Remote exists (`git@gitlab.epfl.ch:benedikt.singer/protein-inspect.git`); pushed. Tag `v0.1.0` still to do.
+4. ✅ `examples/1mbn/` is a complete demo dir (`summary.yaml` + montage + views + `.cif`).
+5. ✅ README headline reflects the actual eval findings (A≈B≈C tied at ~12.6, not the original "C > B >> A").
 
 ### 3.1 — Self-publish (immediate, no review)
 
