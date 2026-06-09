@@ -31,7 +31,7 @@ There are two ways to install. The first is what you almost certainly want.
 From inside a Claude Code session:
 
 ```
-/plugin marketplace add https://gitlab.epfl.ch/benedikt.singer/protein-inspect
+/plugin marketplace add https://github.com/LBM-EPFL/protein-inspect
 /plugin install protein-inspect@protein-inspect-marketplace
 ```
 
@@ -42,7 +42,7 @@ This registers the `/protein-inspect` slash command, loads `SKILL.md` so Claude 
 If you want the tool outside Claude (in scripts, notebooks, CI):
 
 ```bash
-uv tool install git+https://gitlab.epfl.ch/benedikt.singer/protein-inspect
+uv tool install git+https://github.com/LBM-EPFL/protein-inspect
 ```
 
 This puts `protein-inspect` on your `$PATH`. Claude in any session can still call it via Bash, but without the skill registered it won't *automatically* know to render views or how to read the output — you'll need to explain that yourself.
