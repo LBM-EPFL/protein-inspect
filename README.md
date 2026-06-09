@@ -1,5 +1,7 @@
 # protein-inspect
 
+[![CI](https://github.com/LBM-EPFL/protein-inspect/actions/workflows/ci.yml/badge.svg)](https://github.com/LBM-EPFL/protein-inspect/actions/workflows/ci.yml)
+
 A Claude Code plugin that turns any PDB ID, mmCIF/PDB file, or AlphaFold model into a layered semantic representation Claude can reason over fluently — `summary.yaml` describing fold, ligands, cofactors, interfaces, and predicted-confidence regions, plus a labeled grid of PyMOL views composed into a single image.
 
 ![montage example](examples/1mbn/montage.png)
